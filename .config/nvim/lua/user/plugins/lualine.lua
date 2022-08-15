@@ -1,0 +1,5 @@
+return {
+  options = {
+    theme = "tokyonight",
+  },
+}

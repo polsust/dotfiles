@@ -1,0 +1,39 @@
+configuration {
+    show-icons: true;
+    sort: true;
+    sorting-method: "fzf";
+	  matching: "fuzzy";
+    icon-theme: "Papirus";
+
+// VIM-LIKE KEYS  
+    kb-row-up:                      "Up,Control+k";
+    kb-remove-to-eol:               "";
+
+    kb-row-down:                    "Down,Control+j";
+    kb-accept-entry:                "Return";
+
+    kb-row-left:                    "Control+h";
+    kb-remove-char-back:            "BackSpace";
+
+    kb-row-right:                   "Control+l";
+    kb-mode-complete: "";
+
+    terminal:                       "alacritty";
+    // kb-mode-next:                "Shift+Right,Control+Tab,Control+l";
+    // kb-mode-previous:            "Shift+Left,Control+Shift+Tab,Control+h";
+}
+
+//@theme "/home/polsust/.local/share/rofi/themes/launchpad.rasi"
+//@theme "/home/polsust/.local/share/rofi/themes/spotlight-dark.rasi"
+//@theme "/usr/share/rofi/themes/base16-apathy.rasi"
+//@theme "/home/polsust/.local/share/rofi/themes/launchpad.rasi"
+//@theme "/home/polsust/.local/share/rofi/themes/spotlight-dark.rasi"
+//@theme "/home/polsust/.local/share/rofi/themes/windows11-list-dark.rasi"
+//@theme "/home/polsust/.local/share/rofi/themes/launchpad.rasi"
+//@theme "/home/polsust/.local/share/rofi/themes/squared-everforest.rasi"
+//@theme "/home/polsust/.local/share/rofi/themes/spotlight.rasi"
+//@theme "/home/polsust/.local/share/rofi/themes/spotlight-dark.rasi"
+//@theme "/usr/share/rofi/themes/dmenu.rasi"
+//@theme "/home/polsust/.local/share/rofi/themes/spotlight-dark.rasi"
+//@theme "/usr/share/rofi/themes/dmenu.rasi"
+@theme "/home/polsust/.local/share/rofi/themes/spotlight-dark.rasi"

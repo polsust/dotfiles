@@ -1,0 +1,9 @@
+#!/bin/sh
+
+Fix: networkmanager_dmenu,
+Fix: calendar first day,
+Fix: notifications panel error message
+Fix: clock randomly stops
+Fix: rofi prompt appears at startup
+
+Feat: keybinding to open the bar pannels

@@ -1,0 +1,34 @@
+# vim: filetype=neomuttrc
+# muttrc file for account polsust@gmail.com
+set realname = "polsust"
+set from = "polsust@gmail.com"
+set sendmail = "msmtp -a polsust@gmail.com"
+alias me polsust <polsust@gmail.com>
+set folder = "/home/polsust/.local/share/mail/polsust@gmail.com"
+set header_cache = /home/polsust/.cache/mutt-wizard/polsust@gmail.com/headers
+set message_cachedir = /home/polsust/.cache/mutt-wizard/polsust@gmail.com/bodies
+set mbox_type = Maildir
+set hostname = "gmail.com"
+source /usr/local/share/mutt-wizard/switch.muttrc
+set spoolfile = +INBOX
+set postponed = +Drafts
+set trash = +Trash
+set record = +Sent
+
+macro index o "<shell-escape>mw -y polsust@gmail.com<enter>" "run mbsync to sync polsust@gmail.com"
+macro index \eg "<enter-command>unset wait_key<enter><shell-escape>gpg --list-secret-keys; printf 'Enter email ID of user to publish: '; read eID; printf 'Enter fingerprint of GPG key to publish: '; read eFGPT; /usr/local/libexec/gpg-wks-client --create \$eFGPT \$eID | msmtp --read-envelope-from --read-recipients -a polsust@gmail.com<enter>"  "publish GPG key to WKS provider"
+macro index \eh "<pipe-message>/usr/local/libexec/gpg-wks-client --receive | msmtp --read-envelope-from --read-recipients -a polsust@gmail.com<enter>" "confirm GPG publication"
+
+mailboxes "=INBOX" "=[Gmail]/All Mail" "=[Gmail]/Drafts" "=[Gmail]/Important" "=[Gmail]/Sent Mail" "=[Gmail]/Spam" "=[Gmail]/Starred" "=[Gmail]/Trash"
+
+set timeout=10
+
+# notification
+set new_mail_command='notify-send -t 100 "📨 New Mail!"'
+
+# for viewing html e-mails inside mutt.  See also .mailcap
+auto_view text/html
+alternative_order text/enriched text/plain text text/html
+
+# editor
+set editor='nvim' 

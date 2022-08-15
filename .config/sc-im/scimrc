@@ -1,0 +1,15 @@
+set COPY_TO_CLIPBOARD_DELIMITED_TAB=1
+
+# insert
+nmap "i" "\"
+
+nnoremap "Ir" "ir" 
+nnoremap "Ic" "ic" 
+
+#clipboard
+nnoremap "p" ":cpaste<cr>"
+nnoremap "yy" ":ccopy<cr>"
+nnoremap "x" ":ccopy<cr>x"
+
+
+vnoremap "x" ":ccopy<cr>x"

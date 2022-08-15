@@ -1,0 +1,6 @@
+#!/bin/sh
+
+#awesome-client "awesome.restart()"
+
+# not sure if xmonad needs this
+#xmonad --restart
