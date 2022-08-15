@@ -95,6 +95,7 @@ if status is-interactive
     alias rm trash-put
     alias rmdir trash-put
     alias r ranger
+    alias z zathura
 
     ### END ALIASES ###
 
