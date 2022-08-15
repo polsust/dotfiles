@@ -88,6 +88,7 @@ if status is-interactive
 
     # git
     alias gitc "git commit -m"
+    alias gits "git status"
 
     # apps
     alias scim sc-im
