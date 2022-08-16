@@ -62,7 +62,7 @@ if status is-interactive
     export LC_ALL="en_US.UTF-8"
 
     ### PATH ###
-    export PATH="$(yarn global bin):$PATH"
+    export PATH="(yarn global bin):$PATH"
     export PATH="$HOME/.scripts:$PATH"
     export PATH="$HOME/.emacs.d/bin:$PATH"
 
