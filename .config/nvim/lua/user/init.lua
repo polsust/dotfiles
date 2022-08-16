@@ -178,7 +178,7 @@ local config = {
     i = {
       ["<A-k>"] = { "<Esc>:m .-2<CR>==gi", desc = "Move line to the line above" },
       ["<A-j>"] = { "<Esc>:m .+1<CR>==gi", desc = "Move line to the line below" },
-      ["C-S"] = { ":w<CR>", desc = "Save" },
+      ["<C-S>"] = { "<cmd>w<CR>", desc = "Save" },
     },
     t = {
       -- setting a mapping to false will disable it
