@@ -103,5 +103,7 @@ if status is-interactive
     set -lx fish_number (random 1 6)
     # print the random fish 
     /bin/cat ~/.config/fish/ascii/fish$fish_number | lolcat
+    # Remove greeting
+    set fish_greeting
 
 end
