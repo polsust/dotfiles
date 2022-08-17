@@ -17,7 +17,7 @@ local config = {
 	},
 
 	-- Set colorscheme
-	colorscheme = "tokyonight",
+	colorscheme = "onedark",
 
 	-- Override highlight groups in any theme
 	highlights = {
