@@ -10,7 +10,8 @@ return {
 	{ "APZelos/blamer.nvim" }, -- Git blame in-line
 	{ "noahfrederick/vim-laravel" }, -- Laravel support
 	{ "github/copilot.vim" }, -- Github copilot
-	{ "joshdick/onedark.vim" }, -- onedark theme
+	{ "joshdick/onedark.vim" }, -- Onedark theme
+	{ "sheerun/vim-polyglot" }, -- Language syntax hightlighting
 
 	-- CMP
 	-- {
