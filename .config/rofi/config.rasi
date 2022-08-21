@@ -23,17 +23,4 @@ configuration {
     // kb-mode-previous:            "Shift+Left,Control+Shift+Tab,Control+h";
 }
 
-//@theme "/home/polsust/.local/share/rofi/themes/launchpad.rasi"
-//@theme "/home/polsust/.local/share/rofi/themes/spotlight-dark.rasi"
-//@theme "/usr/share/rofi/themes/base16-apathy.rasi"
-//@theme "/home/polsust/.local/share/rofi/themes/launchpad.rasi"
-//@theme "/home/polsust/.local/share/rofi/themes/spotlight-dark.rasi"
-//@theme "/home/polsust/.local/share/rofi/themes/windows11-list-dark.rasi"
-//@theme "/home/polsust/.local/share/rofi/themes/launchpad.rasi"
-//@theme "/home/polsust/.local/share/rofi/themes/squared-everforest.rasi"
-//@theme "/home/polsust/.local/share/rofi/themes/spotlight.rasi"
-//@theme "/home/polsust/.local/share/rofi/themes/spotlight-dark.rasi"
-//@theme "/usr/share/rofi/themes/dmenu.rasi"
-//@theme "/home/polsust/.local/share/rofi/themes/spotlight-dark.rasi"
-//@theme "/usr/share/rofi/themes/dmenu.rasi"
-@theme "/home/polsust/.local/share/rofi/themes/spotlight-dark.rasi"
+@theme "/home/polsust/.local/share/rofi/themes/one-dark.rasi"
