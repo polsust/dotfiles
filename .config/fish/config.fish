@@ -64,7 +64,6 @@ if status is-interactive
     ### PATH ###
     export PATH="$HOME/.yarn/bin:$PATH"
     export PATH="$HOME/.scripts:$PATH"
-    export PATH="$HOME/.emacs.d/bin:$PATH"
 
     ### ALIASES ####
     alias f editFinder
@@ -87,8 +86,7 @@ if status is-interactive
     alias dnfu "sudo dnf update"
 
     # git
-    alias gitc "git commit -m"
-    alias gits "git status"
+    alias dotfiles "git -C ~/.dotfiles/"
 
     # apps
     alias scim sc-im
