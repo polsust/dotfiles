@@ -12,6 +12,8 @@ return {
 	{ "github/copilot.vim" }, -- Github copilot
 	{ "joshdick/onedark.vim" }, -- Onedark theme
 	{ "sheerun/vim-polyglot" }, -- Language syntax hightlighting
+	{ "wfxr/minimap.vim" }, -- Minimap
+	{ "Pocco81/auto-save.nvim" }, -- Auto save
 
 	-- CMP
 	-- {
