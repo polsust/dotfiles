@@ -1,37 +1,26 @@
 #!/bin/sh
 
 # This has to be without the "&" so the monitors are configured properly before proceading
-##setupMonitors
+setupMonitors
 
-# ~/.fehbg &
+~/.fehbg &
 
-##picom --experimental-backends &
+picom --experimental-backends &
 
-##setxkbmap -option ctrl:nocaps &
+setxkbmap -option ctrl:nocaps &
 
-##honeygain &
-
-# Xmonad specific
-
-# trayer --monitor 1 --edge top --align right --SetDockType true --SetPartialStrut true \
-    #                    --expand true --width 10 --transparent true --tint 0x303145 --height 22 &
-
-# End xmonad specific
+honeygain &
 
 # Daemons
 
-##clipmenud &
+clipmenud &
 
-##dunst &
-
-# /usr/bin/emacs --daemon &
+dunst &
 
 # Applications
 
-## nm-applet &
+nm-applet &
 
-# firefox &
-
-# alacritty &
+firefox &
 
 exec qtile start
