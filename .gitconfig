@@ -1,5 +1,13 @@
 [init]
 	defaultBranch = main
+
 [user]
 	email = polsust@gmail.com
 	name = polsust
+
+[alias]
+	s = status
+	c = commit -m 
+	b = branch
+	a = add
+  d = diff
