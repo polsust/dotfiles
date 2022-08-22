@@ -14,6 +14,7 @@ return {
 	{ "sheerun/vim-polyglot" }, -- Language syntax hightlighting
 	{ "wfxr/minimap.vim" }, -- Minimap
 	{ "Pocco81/auto-save.nvim" }, -- Auto save
+	{ "jwalton512/vim-blade" }, -- blade hightlighting
 
 	-- CMP
 	-- {
