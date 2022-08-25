@@ -1,35 +1,39 @@
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 local null_ls = require("null-ls")
+
 local format_on_save = true
+
+local f = null_ls.builtins.formatting
+local d = null_ls.builtins.diagnostics
 
 null_ls.setup({
 	sources = {
 		---- pyhton ----
-		null_ls.builtins.diagnostics.flake8,
-		null_ls.builtins.formatting.blue,
+		d.flake8,
+		f.blue,
 
 		---- webdev ----
-		null_ls.builtins.diagnostics.eslint,
-		null_ls.builtins.formatting.prettierd.with({
+		d.eslint,
+		f.prettierd.with({
 			disabled_filetypes = { "json" },
 		}),
-		null_ls.builtins.formatting.stylelint,
-		null_ls.builtins.formatting.sqlfluff.with({
+		f.stylelint,
+		f.sqlfluff.with({
 			extra_args = { "--dialect", "mysql" },
 		}),
 
 		---- lua ----
-		null_ls.builtins.diagnostics.selene,
-		null_ls.builtins.formatting.stylua,
+		d.selene,
+		f.stylua,
 
 		---- php ----
-		null_ls.builtins.formatting.blade_formatter,
+		f.blade_formatter,
 
 		---- shells ----
-		null_ls.builtins.formatting.fish_indent,
-		null_ls.builtins.diagnostics.fish,
-		null_ls.builtins.formatting.shellharden,
-		null_ls.builtins.diagnostics.shellcheck,
+		f.fish_indent,
+		d.fish,
+		f.shellharden,
+		d.shellcheck,
 	},
 
 	-- Format on save
