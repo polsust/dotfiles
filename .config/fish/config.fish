@@ -65,6 +65,7 @@ if status is-interactive
     export PATH="$HOME/.yarn/bin:$PATH"
     export PATH="$HOME/.scripts:$PATH"
     export PATH="$HOME/.config/composer/vendor/bin/:$PATH"
+    export PATH="$HOME/.cargo/bin/:$PATH"
 
     ### ALIASES ####
     alias f editFinder
