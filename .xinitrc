@@ -9,6 +9,8 @@ picom --experimental-backends &
 
 setxkbmap -option ctrl:nocaps &
 
+unclutter -idle 5 &
+
 honeygain &
 
 # Daemons
