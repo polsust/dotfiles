@@ -1,6 +1,6 @@
 from libqtile.config import Key
 from libqtile.lazy import lazy
-from modules.settings import mod
+from modules.settings import mod, alt
 
 binds_system = [
     Key([mod, 'control'], 'r', lazy.reload_config(), desc='Reload the config'),
@@ -16,4 +16,6 @@ binds_system = [
     Key([], 'XF86AudioPlay', lazy.spawn('playerctl play-pause')),
     Key([], 'XF86AudioNext', lazy.spawn('playerctl next')),
     Key([], 'XF86AudioPrev', lazy.spawn('playerctl previous')),
+    #
+    Key([mod, alt], 'l', lazy.spawn('betterlockscreen -l')),
 ]

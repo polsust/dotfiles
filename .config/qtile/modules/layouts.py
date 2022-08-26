@@ -13,7 +13,7 @@ layouts = [
         margin=5,
         wrap_focus_columns=False,
         wrap_focus_rows=False,
-        wrap_focus_stacks=False,
+        wrap_focus_stacks=True,
     ),
     layout.Max(),
     # layout.Stack(num_stacks=2),
