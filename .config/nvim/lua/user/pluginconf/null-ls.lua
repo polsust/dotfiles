@@ -1,5 +1,9 @@
+local null_ls_status_ok, null_ls = pcall(require, "null-ls")
+if not null_ls_status_ok then
+	return
+end
+
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
-local null_ls = require("null-ls")
 
 local format_on_save = true
 
@@ -14,21 +18,18 @@ null_ls.setup({
 
 		---- webdev ----
 		d.eslint,
-		f.prettierd.with({
-			disabled_filetypes = { "json" },
+		f.prettier.with({
+			disabled_filetypes = { "json" }, -- its kinda bad, jsonls does it better
 		}),
-		f.stylelint,
-		f.sqlfluff.with({
-			extra_args = { "--dialect", "mysql" },
-		}),
+		d.stylelint,
 
 		---- lua ----
-		d.selene,
+		-- d.selene,
 		f.stylua,
 
 		---- php ----
 		f.blade_formatter,
-		f.phpcsfixer,
+		-- f.phpcsfixer,
 		d.php,
 
 		---- shells ----
