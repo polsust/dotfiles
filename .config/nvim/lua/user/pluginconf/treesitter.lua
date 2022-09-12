@@ -20,10 +20,15 @@ configs.setup({
 		additional_vim_regex_highlighting = true,
 	},
 
+	indent = {
+		enable = false,
+	},
+
 	-- PLUGINS
 	rainbow = {
 		enable = true,
 	},
+
 	autotag = {
 		enable = true,
 	},

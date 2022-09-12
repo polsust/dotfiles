@@ -17,7 +17,7 @@ null_ls.setup({
 		f.blue,
 
 		---- webdev ----
-		d.eslint,
+		d.eslint_d,
 		f.prettier.with({
 			disabled_filetypes = { "json" }, -- its kinda bad, jsonls does it better
 		}),

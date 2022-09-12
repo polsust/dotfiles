@@ -23,14 +23,14 @@ keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
 -- Resize with arrows
-keymap("n", "<C-Up>", ":resize -2<CR>", opts)
-keymap("n", "<C-Down>", ":resize +2<CR>", opts)
-keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
-keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
+keymap("n", "<C-Up>", "<cmd>resize -2<CR>", opts)
+keymap("n", "<C-Down>", "<cmd>resize +2<CR>", opts)
+keymap("n", "<C-Left>", "<cmd>vertical resize -2<CR>", opts)
+keymap("n", "<C-Right>", "<cmd>vertical resize +2<CR>", opts)
 
 -- Navigate buffers
-keymap("n", "<S-l>", ":bnext<CR>", opts)
-keymap("n", "<S-h>", ":bprevious<CR>", opts)
+keymap("n", "<S-l>", "<cmd>bnext<CR>", opts)
+keymap("n", "<S-h>", "<cmd>bprevious<CR>", opts)
 
 -- Clear highlights
 keymap("n", "<Esc>", "<cmd>nohlsearch<CR>", opts)
@@ -59,18 +59,18 @@ keymap("i", "<C-S>", "<cmd>w<CR>")
 keymap("n", "<C-s>", "<cmd>lua vim.lsp.buf.formatting()<CR> | <cmd> w<CR>", opts)
 
 -- Move text
-keymap("n", "<A-k>", ":m .-2<CR>==", opts)
-keymap("n", "<A-j>", ":m .+1<CR>==", opts)
+keymap("n", "<A-k>", "<cmd>m .-2<CR>==", opts)
+keymap("n", "<A-j>", "<cmd>m .+1<CR>==", opts)
 keymap("i", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 keymap("i", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
-keymap("v", "<A-k>", ":m '<-2<CR>gv-gv", opts)
-keymap("v", "<A-j>", ":m '>+1<CR>gv-gv", opts)
+keymap("v", "<A-k>", "<cmd>m '<-2<CR>gv-gv", opts)
+keymap("v", "<A-j>", "<cmd>m '>+1<CR>gv-gv", opts)
 
 -- Plugins --
 keymap("n", "gs", "<cmd>ToggleAlternate<CR>", opts)
 
 -- NvimTree
-keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
+keymap("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", opts)
 
 -- Telescope
 -- keymap("n", "<C-t>", "<cmd>Telescope<CR>", opts)
@@ -85,6 +85,11 @@ keymap("n", "<leader>fh", "<cmd>Telescope help_tags<CR>", opts)
 keymap("n", "<leader>gb", "<cmd>Telescope git_branches<CR>", opts)
 keymap("n", "<leader>gc", "<cmd>Telescope git_bcommits<CR>", opts)
 keymap("n", "<leader>gs", "<cmd>Telescope git_status<CR>", opts)
+keymap("n", "<leader>gj", "<cmd>Gitsigns next_hunk<CR>", opts)
+keymap("n", "<leader>gk", "<cmd>Gitsigns prev_hunk<CR>", opts)
+keymap("n", "<leader>gh", "<cmd>Gitsigns reset_hunk<CR>", opts)
+keymap("n", "<leader>gd", "<cmd>Gitsigns diffthis<CR>", opts)
+keymap("n", "<leader>gl", "<cmd>Gitsigns blame_line<CR>", opts)
 
 -- LSP
 keymap("n", "<leader>li", "<cmd>LspInfo<cr>", opts)
@@ -103,4 +108,9 @@ keymap("n", "<leader>du", "<cmd>lua require'dapui'.toggle()<cr>", opts)
 keymap("n", "<leader>dt", "<cmd>lua require'dap'.terminate()<cr>", opts)
 
 -- Aerial
-keymap("n", "<leader>a", ":AerialToggle<CR>")
+keymap("n", "<leader>la", "<cmd>AerialToggle<CR>")
+
+-- Terminal
+local termCmd = "ToggleTerm direction=float"
+keymap("n", "<C-j>", "<cmd>" .. termCmd .. "<CR>")
+keymap("t", "<C-j>", "<cmd>" .. termCmd .. "<CR>")

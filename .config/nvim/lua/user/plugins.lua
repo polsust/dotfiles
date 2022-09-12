@@ -115,6 +115,7 @@ return packer.startup(function(use)
 	use({ "ravenxrz/DAPInstall.nvim" })
 
 	use({ "navarasu/onedark.nvim" })
+	use({ "gpanders/editorconfig.nvim" })
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
