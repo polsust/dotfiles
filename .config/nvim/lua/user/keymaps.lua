@@ -59,12 +59,12 @@ keymap("i", "<C-S>", "<cmd>w<CR>")
 keymap("n", "<C-s>", "<cmd>lua vim.lsp.buf.formatting()<CR> | <cmd> w<CR>", opts)
 
 -- Move text
-keymap("n", "<A-k>", "<cmd>m .-2<CR>==", opts)
-keymap("n", "<A-j>", "<cmd>m .+1<CR>==", opts)
+keymap("n", "<A-k>", ":m .-2<CR>==", opts)
+keymap("n", "<A-j>", ":m .+1<CR>==", opts)
 keymap("i", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 keymap("i", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
-keymap("v", "<A-k>", "<cmd>m '<-2<CR>gv-gv", opts)
-keymap("v", "<A-j>", "<cmd>m '>+1<CR>gv-gv", opts)
+keymap("v", "<A-k>", ":m '<-2<CR>gv-gv", opts)
+keymap("v", "<A-j>", ":m '>+1<CR>gv-gv", opts)
 
 -- Plugins --
 keymap("n", "gs", "<cmd>ToggleAlternate<CR>", opts)
