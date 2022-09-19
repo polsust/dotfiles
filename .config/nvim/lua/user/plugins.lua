@@ -66,6 +66,10 @@ return packer.startup(function(use)
 		requires = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
 	})
 	use({ "rmagatti/alternate-toggler" })
+	use({ "karb94/neoscroll.nvim" })
+	use({ "chentoast/marks.nvim" })
+	use({ "norcalli/nvim-colorizer.lua" })
+	use({ "ThePrimeagen/harpoon" })
 
 	-- Colorschemes
 	use({ "folke/tokyonight.nvim" })
@@ -78,6 +82,8 @@ return packer.startup(function(use)
 	use({ "saadparwaiz1/cmp_luasnip" }) -- snippet completions
 	use({ "hrsh7th/cmp-nvim-lsp" })
 	use({ "hrsh7th/cmp-nvim-lua" })
+	use({ "hrsh7th/cmp-nvim-lsp-signature-help" }) -- vscode-like info about current param on a function
+	use({ "lukas-reineke/cmp-under-comparator"  }) -- sorting
 
 	-- snippets
 	use({ "L3MON4D3/LuaSnip" }) --snippet engine

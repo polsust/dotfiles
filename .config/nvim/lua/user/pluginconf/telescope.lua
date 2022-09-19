@@ -10,21 +10,24 @@ telescope.setup({
 		-- config_key = value,
 		mappings = {
 			i = {
-				-- ["<C-k>"] =
+				["<C-k>"] = "move_selection_previous",
+				["<C-j>"] = "move_selection_next",
 			},
 		},
 	},
+	file_ignore_patterns = {
+		"node_modules",
+		".next",
+		".git",
+		"composer.lock",
+		"package-lock.json",
+		"yarn.lock",
+		"vendor",
+	},
 	pickers = {
 		find_files = {
-			find_command = { "fd", "--type", "f", "--strip-cwd-prefix", "-I" },
+			-- find_command = { "rg", "-uuu", "--files" },
 		},
 	},
-	extensions = {
-		-- Your extension configuration goes here:
-		-- extension_name = {
-		--   extension_config_key = value,
-		-- }
-		-- please take a look at the readme of the extension you want to configure
-	},
 })
-telescope.load_extension("aerial")
+-- telescope.load_extension("aerial")

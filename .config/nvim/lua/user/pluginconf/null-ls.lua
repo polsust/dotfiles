@@ -9,6 +9,7 @@ local format_on_save = true
 
 local f = null_ls.builtins.formatting
 local d = null_ls.builtins.diagnostics
+local a = null_ls.builtins.code_actions
 
 null_ls.setup({
 	sources = {
@@ -17,7 +18,8 @@ null_ls.setup({
 		f.blue,
 
 		---- webdev ----
-		d.eslint_d,
+		d.eslint,
+		a.eslint,
 		f.prettier.with({
 			disabled_filetypes = { "json" }, -- its kinda bad, jsonls does it better
 		}),
