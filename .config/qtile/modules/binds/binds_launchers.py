@@ -43,6 +43,12 @@ binds_launchers = [
         desc='Launch colorpicker',
     ),
     Key(
+        [mod, 'shift'],
+        's',
+        lazy.spawn('flameshot gui'),
+        desc='Launch flameshot',
+    ),
+    Key(
         [mod],
         'p',
         lazy.spawn(spawn_in_terminal('pulsemixer')),

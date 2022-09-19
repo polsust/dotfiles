@@ -18,4 +18,7 @@ binds_system = [
     Key([], 'XF86AudioPrev', lazy.spawn('playerctl previous')),
     #
     Key([mod, alt], 'l', lazy.spawn('betterlockscreen -l')),
+    #
+    Key([mod, alt], 'u', lazy.spawn('setxkbmap us')),
+    Key([mod, alt], 'e', lazy.spawn('setxkbmap es')),
 ]
