@@ -32,7 +32,6 @@ null_ls.setup({
 		---- php ----
 		f.blade_formatter,
 		-- f.phpcsfixer,
-		d.php,
 
 		---- shells ----
 		f.fish_indent,
