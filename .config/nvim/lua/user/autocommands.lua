@@ -29,7 +29,7 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
 	end,
 })
 
-vim.cmd("autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif")
+-- vim.cmd("autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif")
 
 -- Fixes Autocomment
 vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
@@ -44,3 +44,18 @@ vim.api.nvim_create_autocmd({ "TextYankPost" }, {
 		vim.highlight.on_yank({ higroup = "Visual", timeout = 200 })
 	end,
 })
+
+-- Relative numbers only for normal mode
+vim.api.nvim_create_autocmd({ "InsertEnter" }, {
+	callback = function()
+    vim.opt.relativenumber = false;
+	end,
+})
+
+-- Relative numbers only for normal mode
+vim.api.nvim_create_autocmd({ "InsertLeave" }, {
+	callback = function()
+    vim.opt.relativenumber = true;
+	end,
+})
+

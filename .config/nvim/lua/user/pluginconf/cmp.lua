@@ -66,6 +66,8 @@ local vscode_kinds = {
 	TypeParameter = "  ",
 }
 
+local allModes = { "i", "c", "s" }
+
 cmp.setup({
 	snippet = {
 		expand = function(args)
@@ -76,14 +78,17 @@ cmp.setup({
 		completion = cmp.config.window.bordered(),
 		documentation = cmp.config.window.bordered(),
 	},
-	mapping = cmp.mapping.preset.insert({
-		["<C-b>"] = cmp.mapping.scroll_docs(-4),
-		["<C-f>"] = cmp.mapping.scroll_docs(4),
-		["<C-Space>"] = cmp.mapping.complete(),
-		["<C-e>"] = cmp.mapping.abort(),
-		["<CR>"] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
-		["<C-k>"] = cmp.mapping.select_prev_item(),
-		["<C-j>"] = cmp.mapping.select_next_item(),
+	-- mapings for seach mode
+	mapping = {
+		["<C-b>"] = cmp.mapping(cmp.mapping.scroll_docs(-4), allModes),
+		["<C-f>"] = cmp.mapping(cmp.mapping.scroll_docs(4), allModes),
+		["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), allModes),
+		["<C-e>"] = cmp.mapping(cmp.mapping.abort(), allModes),
+		["<CR>"] = cmp.mapping(cmp.mapping.confirm({ select = true }), { "i" }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+		["<C-k>"] = cmp.mapping(cmp.mapping.select_prev_item(), allModes),
+		["<C-j>"] = cmp.mapping(cmp.mapping.select_next_item(), allModes),
+		-- ["<C-p>"] = cmp.mapping(),
+		-- ["<C-n>"] = cmp.mapping(),
 
 		-- Super tab
 		["<Tab>"] = cmp.mapping(function(fallback)
@@ -103,7 +108,7 @@ cmp.setup({
 				fallback()
 			end
 		end, { "i", "s" }),
-	}),
+	},
 	formatting = {
 		fields = { "kind", "abbr", "menu" },
 		format = function(entry, vim_item)
