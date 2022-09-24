@@ -111,7 +111,7 @@ setup_lsp("sumneko_lua", {
 	settings = require("user.lsp.settings.sumneko_lua"),
 })
 setup_lsp("tsserver")
-setup_lsp("cssls")
+setup_lsp("cssls", { filetypes = { "css", "sass", "scss", "style.js", "style.ts" } })
 setup_lsp("pyright")
 setup_lsp("html", { filetypes = { "html", "blade.php", "jsx", "tsx" } })
 setup_lsp("intelephense")

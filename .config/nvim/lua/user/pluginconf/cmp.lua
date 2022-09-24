@@ -16,22 +16,22 @@ local kind_icons = {
 	Function = "",
 	Constructor = "",
 	Field = "",
-	Variable = "",
+	Variable = "",
 	Class = "ﴯ",
 	Interface = "",
 	Module = "",
 	Property = "ﰠ",
-	Unit = "",
+	Unit = "",
 	Value = "",
 	Enum = "",
 	Keyword = "",
-	Snippet = "",
+	Snippet = "",
 	Color = "",
 	File = "",
 	Reference = "",
 	Folder = "",
 	EnumMember = "",
-	Constant = "",
+	Constant = "",
 	Struct = "",
 	Event = "",
 	Operator = "",
@@ -120,14 +120,26 @@ cmp.setup({
 			return vim_item
 		end,
 	},
+	sorting = {
+		comparators = {
+			cmp.config.compare.offset,
+			cmp.config.compare.exact,
+			cmp.config.compare.score,
+			require("cmp-under-comparator").under,
+			cmp.config.compare.kind,
+			cmp.config.compare.sort_text,
+			cmp.config.compare.length,
+			cmp.config.compare.order,
+		},
+	},
 	sources = cmp.config.sources({
 		{ name = "nvim_lsp" },
+		{ name = "nvim_lsp_signature_help" },
 		{ name = "luasnip" },
 		{ name = "path" },
 		{ name = "buffer" },
 	}),
 })
-
 
 -- Set configuration for specific filetype.
 -- DOESN'T IMPLEMENT GLOBAL SOURCES
