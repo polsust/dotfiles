@@ -2,7 +2,7 @@
 	defaultBranch = main
 
 [user]
-	email = polsust@gmail.com
+	email = psust@easycapital.fr
 	name = polsust
 
 [alias]
@@ -10,4 +10,9 @@
 	c = commit -m 
 	b = branch
 	a = add
-  d = diff
+	d = difftool
+
+[diff]
+    tool = nvimdiff
+[difftool "nvimdiff"]
+    cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
