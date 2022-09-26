@@ -1,7 +1,7 @@
 return {
 	Lua = {
 		diagnostics = {
-			globals = { "vim" },
+			globals = { "vim", "require" },
 		},
 	},
 }

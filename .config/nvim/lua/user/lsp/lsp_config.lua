@@ -60,6 +60,7 @@ local on_attach = function(client, bufnr)
 		client.resolved_capabilities.rsl = false
 		client.resolved_capabilities.include_text = false
 	end
+  require("aerial").on_attach(client, bufnr);
 
 	-- Mappings.
 	-- See `:help vim.lsp.*` for documentation on any of the below functions

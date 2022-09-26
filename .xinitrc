@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # This has to be without the "&" so the monitors are configured properly before proceading
-autorandr --change
+setupMonitors
 
 ~/.fehbg &
 
