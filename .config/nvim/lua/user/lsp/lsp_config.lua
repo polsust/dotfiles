@@ -60,7 +60,7 @@ local on_attach = function(client, bufnr)
 		client.resolved_capabilities.rsl = false
 		client.resolved_capabilities.include_text = false
 	end
-  require("aerial").on_attach(client, bufnr);
+	require("aerial").on_attach(client, bufnr)
 
 	-- Mappings.
 	-- See `:help vim.lsp.*` for documentation on any of the below functions
@@ -116,4 +116,13 @@ setup_lsp("cssls", { filetypes = { "css", "sass", "scss", "style.js", "style.ts"
 setup_lsp("pyright")
 setup_lsp("html", { filetypes = { "html", "blade.php", "jsx", "tsx" } })
 setup_lsp("intelephense")
-setup_lsp("jsonls")
+setup_lsp("jsonls", {
+	settings = {
+		json = {
+			schemas = require("schemastore").json.schemas(),
+			validate = {
+				enable = true,
+			},
+		},
+	},
+})
