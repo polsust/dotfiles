@@ -23,6 +23,9 @@ telescope.setup({
 		"package-lock.json",
 		"yarn.lock",
 		"vendor",
+		"dist",
+		"yarn.lock",
+		"package-lock.json",
 	},
 	pickers = {
 		find_files = {

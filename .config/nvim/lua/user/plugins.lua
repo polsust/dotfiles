@@ -83,7 +83,7 @@ return packer.startup(function(use)
 	use({ "hrsh7th/cmp-nvim-lsp" })
 	use({ "hrsh7th/cmp-nvim-lua" })
 	use({ "hrsh7th/cmp-nvim-lsp-signature-help" }) -- vscode-like info about current param on a function
-  use({ "lukas-reineke/cmp-under-comparator" }) -- sorting
+	use({ "lukas-reineke/cmp-under-comparator" }) -- sorting
 
 	-- snippets
 	use({ "L3MON4D3/LuaSnip" }) --snippet engine
@@ -105,6 +105,7 @@ return packer.startup(function(use)
 	use({ "JoosepAlviste/nvim-ts-context-commentstring" })
 	use({ "p00f/nvim-ts-rainbow" })
 	use({ "windwp/nvim-ts-autotag" })
+	use({ "nvim-treesitter/nvim-treesitter-context" })
 
 	-- Git
 	use({ "lewis6991/gitsigns.nvim" })

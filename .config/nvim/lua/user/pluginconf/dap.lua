@@ -12,4 +12,3 @@ local dap_install_status_ok, dap_install = pcall(require, "dap-install")
 if not dap_install_status_ok then
   return
 end
-nd

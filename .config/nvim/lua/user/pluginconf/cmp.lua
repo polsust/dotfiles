@@ -20,7 +20,7 @@ local kind_icons = {
 	Class = "ﴯ",
 	Interface = "",
 	Module = "",
-	Property = "ﰠ",
+	Property = "",
 	Unit = "",
 	Value = "",
 	Enum = "",
@@ -142,7 +142,7 @@ cmp.setup({
 		{ name = "luasnip" },
 		{ name = "path" },
 		{ name = "buffer" },
-    { name = "nvim_lsp_signature_help" },
+		{ name = "nvim_lsp_signature_help" },
 	}),
 })
 
