@@ -59,3 +59,14 @@ vim.api.nvim_create_autocmd({ "InsertLeave" }, {
 	end,
 })
 
+-- -- special files lsp
+-- vim.api.nvim_create_autocmd("LspAttach", {
+-- 	callback = function()
+-- 		local file_name = vim.api.nvim_buf_get_name(0)
+-- 		if not ifle_name:find("style.js") then
+-- 			return
+-- 		end
+-- 		local clients = vim.lsp.get_active_clients({ buffer = 0 })
+-- 		-- do something ..
+-- 	end,
+-- })

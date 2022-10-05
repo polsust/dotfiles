@@ -114,7 +114,7 @@ setup_lsp("sumneko_lua", {
 setup_lsp("tsserver")
 setup_lsp("cssls", { filetypes = { "css", "sass", "scss", "style.js", "style.ts" } })
 setup_lsp("pyright")
-setup_lsp("html", { filetypes = { "html", "blade.php", "jsx", "tsx" } })
+setup_lsp("html", { filetypes = { "html", "blade.php", "javascriptreact", "typescriptreact" } })
 setup_lsp("intelephense")
 setup_lsp("jsonls", {
 	settings = {
