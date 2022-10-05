@@ -23,7 +23,7 @@ nvim_tree.setup({
 		icons = {
 			glyphs = {
 				git = {
-					unstaged = "✗",
+					unstaged = "",
 					staged = "✓",
 					unmerged = "",
 					renamed = "➜",
