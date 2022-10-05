@@ -8,7 +8,7 @@
       "",
       "}",
       "",
-      "export default function ${TM_FILENAME_BASE}({}: DashboardProps) {",
+      "export default function ${TM_FILENAME_BASE}({}: ${TM_FILENAME_BASE}Props) {",
       "  return (",
       "    <div>",
       "      $1",
