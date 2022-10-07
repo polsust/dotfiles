@@ -5,5 +5,5 @@ require("luasnip/loaders/from_vscode").lazy_load({ paths = { "~/.config/nvim/lua
 
 luasnip.filetype_extend("javascript", { "javascriptreact" })
 
-luasnip.filetype_extend("typescriptreact", { "javascript" })
+luasnip.filetype_extend("typescriptreact", { "javascript", "javascriptreact" })
 luasnip.filetype_extend("typescript", { "javascript" })

@@ -119,6 +119,7 @@ return packer.startup(function(use)
 	use({ "gpanders/editorconfig.nvim" })
 	use({ "jwalton512/vim-blade" })
 	use({ "b0o/SchemaStore.nvim" })
+	use({ "filipdutescu/renamer.nvim" })
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

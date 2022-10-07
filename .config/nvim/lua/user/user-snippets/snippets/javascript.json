@@ -1,0 +1,11 @@
+{
+  "styledComponentWrapper": {
+    "prefix": "scw",
+    "body": [
+      "import styled from \"styled-components\";",
+      "",
+      "export const ${TM_FILENAME/^[^.]*//g}Wrapper = styled.div`",
+      "`"
+    ]
+  }
+}

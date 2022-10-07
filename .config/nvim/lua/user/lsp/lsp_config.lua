@@ -55,7 +55,7 @@ vim.keymap.set("n", "<Leader>lj", vim.diagnostic.goto_next, opts)
 vim.keymap.set("n", "<Leader>lq", vim.diagnostic.setloclist, opts)
 
 local on_attach = function(client, bufnr)
-	if client.name == "sumneko_lua" or client.name == "tsserver" then
+	if client.name == "sumneko_lua" or client.name == "tsserver" or client.name == "html" then
 		client.resolved_capabilities.document_formatting = false
 		client.resolved_capabilities.rsl = false
 		client.resolved_capabilities.include_text = false
@@ -77,7 +77,7 @@ local on_attach = function(client, bufnr)
 	-- vim.keymap.set("n", "<Leader>wl", function()
 	-- 	print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
 	-- end, bufopts)
-	vim.keymap.set("n", "<Leader>lr", "<cmd>lua require('cosmic-ui').rename()<CR>", bufopts)
+	vim.keymap.set("n", "<Leader>lr", "<cmd>lua require('renamer').rename()<CR>", bufopts)
 	vim.keymap.set("n", "<Leader>la", "<cmd>lua require('cosmic-ui').code_actions()<CR>", bufopts)
 	vim.keymap.set("v", "<Leader>la", "<cmd>lua require('cosmic-ui').range_code_actions()<cr>", bufopts)
 	vim.keymap.set("n", "<Leader>ls", "<cmd>Telescope treesitter<CR>", bufopts)
@@ -114,7 +114,7 @@ setup_lsp("sumneko_lua", {
 setup_lsp("tsserver")
 setup_lsp("cssls", { filetypes = { "css", "sass", "scss", "style.js", "style.ts" } })
 setup_lsp("pyright")
-setup_lsp("html", { filetypes = { "html", "blade.php", "javascriptreact", "typescriptreact" } })
+setup_lsp("html", { filetypes = { "html", "blade.php" } })
 setup_lsp("intelephense")
 setup_lsp("jsonls", {
 	settings = {
