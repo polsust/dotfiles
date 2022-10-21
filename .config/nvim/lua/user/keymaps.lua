@@ -107,15 +107,19 @@ keymap("n", "<leader>du", "<cmd>lua require'dapui'.toggle()<cr>", opts)
 keymap("n", "<leader>dt", "<cmd>lua require'dap'.terminate()<cr>", opts)
 
 -- Aerial
-keymap("n", "<leader>a", "<cmd>AerialToggle<CR>")
+keymap("n", "<leader>a", "<cmd>AerialToggle<CR>", opts)
 
 -- Terminal
-local termCmd = "ToggleTerm direction=float"
-keymap("n", "<C-\\>", "<cmd>" .. termCmd .. "<CR>")
-keymap("t", "<C-\\>", "<cmd>" .. termCmd .. "<CR>")
+local termCmd = "ToggleTerm direction=horizontal size=30"
+keymap("n", "<C-\\>", "<cmd>" .. termCmd .. "<CR>", opts)
+keymap("t", "<C-\\>", "<cmd>" .. termCmd .. "<CR>", opts)
+
+-- Lazygit
+keymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
+
 -- Harpoon
-keymap("n", "<Leader>ha", "<cmd>lua require('harpoon.mark').add_file()<CR>")
-keymap("n", "<Leader>hh", "<cmd>lua require('harpoon.ui').toggle_quick_menu()<CR>")
+keymap("n", "<Leader>ha", "<cmd>lua require('harpoon.mark').add_file()<CR>", opts)
+keymap("n", "<Leader>hh", "<cmd>lua require('harpoon.ui').toggle_quick_menu()<CR>", opts)
 -- keymap("n", "<Leader>hl", "<cmd>lua require('harpoon.ui').nav_next()<CR>")
 -- keymap("n", "<Leader>hh", "<cmd>lua require('harpoon.ui').nav_prev()<CR>")
 
@@ -124,7 +128,7 @@ keymap("n", "<Leader>hh", "<cmd>lua require('harpoon.ui').toggle_quick_menu()<CR
 -- keymap("n", "<Leader>h3", "<cmd>lua require('harpoon.ui').nav_file(3)<CR>")
 -- keymap("n", "<Leader>h4", "<cmd>lua require('harpoon.ui').nav_file(4)<CR>")
 
-keymap("n", "<a-1>", "<cmd>lua require('harpoon.ui').nav_file(1)<CR>")
-keymap("n", "<a-2>", "<cmd>lua require('harpoon.ui').nav_file(2)<CR>")
-keymap("n", "<a-3>", "<cmd>lua require('harpoon.ui').nav_file(3)<CR>")
-keymap("n", "<a-4>", "<cmd>lua require('harpoon.ui').nav_file(4)<CR>")
+keymap("n", "<a-1>", "<cmd>lua require('harpoon.ui').nav_file(1)<CR>", opts)
+keymap("n", "<a-2>", "<cmd>lua require('harpoon.ui').nav_file(2)<CR>", opts)
+keymap("n", "<a-3>", "<cmd>lua require('harpoon.ui').nav_file(3)<CR>", opts)
+keymap("n", "<a-4>", "<cmd>lua require('harpoon.ui').nav_file(4)<CR>", opts)

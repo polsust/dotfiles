@@ -120,6 +120,8 @@ return packer.startup(function(use)
 	use({ "jwalton512/vim-blade" })
 	use({ "b0o/SchemaStore.nvim" })
 	use({ "filipdutescu/renamer.nvim" })
+	use({ "stevearc/dressing.nvim" })
+	use({ "olimorris/persisted.nvim" })
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

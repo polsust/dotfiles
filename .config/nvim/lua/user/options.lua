@@ -13,7 +13,7 @@ local options = {
 	showtabline = 2, -- always show tabs
 	smartcase = true, -- smart case
 	smartindent = true, -- make indenting smarter again
-	-- autoindent = true,
+	autoindent = true,
 	splitbelow = true, -- force all horizontal splits to go below current window
 	splitright = true, -- force all vertical splits to go to the right of current window
 	swapfile = false, -- creates a swapfile
@@ -33,7 +33,7 @@ local options = {
 	wrap = false, -- display lines as one long line
 	scrolloff = 8, -- is one of my fav
 	sidescrolloff = 8,
-	guifont = "mononoki", -- the font used in graphical neovim applications
+	guifont = "mononoki Nerd Font:h11", -- the font used in graphical neovim applications
 	spelllang = "fr-FR",
 
 	foldmethod = "indent",
@@ -119,6 +119,10 @@ vim.g.at_custom_alternates = {
 	["=="] = "!=",
 	[">="] = "<=",
 }
+
+vim.cmd([[
+  let g:neovide_scale_factor = 0.5
+]])
 
 -- vim.cmd "set whichwrap+=<,>,[,],h,l"
 -- vim.cmd([[set iskeyword+=-]]) -- count "asdasd-asdasd-ad" as one word
