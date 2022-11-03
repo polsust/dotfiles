@@ -75,7 +75,7 @@ binds_launchers = [
     Key(
         [mod],
         'n',
-        lazy.spawn(spawn_in_terminal(apps['code_editor'])),
+        lazy.spawn(apps['code_editor']),
         desc='Launch code editor',
     ),
 ]

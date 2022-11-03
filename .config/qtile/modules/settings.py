@@ -6,7 +6,7 @@ apps = {
     'gui_file_manager': 'pcmanfm',
     'tui_file_manager': 'ranger',
     'web_browser': 'firefox',
-    'code_editor': 'nvim',
+    'code_editor': 'neovide',
     'bluetooth_manager': 'rofi-bluetooth',
     'calculator': 'rofi -show calc',
 }

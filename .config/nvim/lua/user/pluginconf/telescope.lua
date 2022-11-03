@@ -34,3 +34,4 @@ telescope.setup({
 	},
 })
 -- telescope.load_extension("aerial")
+telescope.load_extension("persisted")
