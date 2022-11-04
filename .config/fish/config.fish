@@ -97,6 +97,7 @@ if status is-interactive
     alias rmdir trash-put
     alias r ranger
     alias z zathura
+    alias lg lazygit
 
     ### END ALIASES ###
 
