@@ -132,3 +132,6 @@ keymap("n", "<a-1>", "<cmd>lua require('harpoon.ui').nav_file(1)<CR>", opts)
 keymap("n", "<a-2>", "<cmd>lua require('harpoon.ui').nav_file(2)<CR>", opts)
 keymap("n", "<a-3>", "<cmd>lua require('harpoon.ui').nav_file(3)<CR>", opts)
 keymap("n", "<a-4>", "<cmd>lua require('harpoon.ui').nav_file(4)<CR>", opts)
+
+-- spectre
+keymap("n", "<leader>fr", "<cmd>lua require('spectre').open()<CR>", opts)

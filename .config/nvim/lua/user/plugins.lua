@@ -122,6 +122,7 @@ return packer.startup(function(use)
 	use({ "filipdutescu/renamer.nvim" })
 	use({ "stevearc/dressing.nvim" })
 	use({ "olimorris/persisted.nvim" })
+	use({ "nvim-pack/nvim-spectre" })
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
