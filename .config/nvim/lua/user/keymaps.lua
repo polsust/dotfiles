@@ -56,7 +56,6 @@ keymap("n", "<C-q>", "<cmd>q<CR>")
 keymap("n", "<C-S>", "<cmd>w<CR>")
 keymap("i", "<C-q>", "<cmd>q<CR>")
 keymap("i", "<C-S>", "<cmd>w<CR>")
-keymap("n", "<C-s>", "<cmd>lua vim.lsp.buf.formatting()<CR> | <cmd> w<CR>", opts)
 
 -- Move text
 keymap("n", "<A-k>", ":m .-2<CR>==", opts)

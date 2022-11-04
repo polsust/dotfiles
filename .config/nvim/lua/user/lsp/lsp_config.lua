@@ -56,11 +56,8 @@ vim.keymap.set("n", "<Leader>lq", vim.diagnostic.setloclist, opts)
 
 local on_attach = function(client, bufnr)
 	if client.name == "sumneko_lua" or client.name == "tsserver" or client.name == "html" then
-		client.resolved_capabilities.document_formatting = false
-		client.resolved_capabilities.rsl = false
-		client.resolved_capabilities.include_text = false
+		client.server_capabilities.document_formatting = false
 	end
-	require("aerial").on_attach(client, bufnr)
 
 	-- Mappings.
 	-- See `:help vim.lsp.*` for documentation on any of the below functions
@@ -90,7 +87,7 @@ local lsp_flags = {
 	debounce_text_changes = 150,
 }
 
-local capabilities = cmp_nvim_lsp.update_capabilities(vim.lsp.protocol.make_client_capabilities())
+local capabilities = cmp_nvim_lsp.default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 local function setup_lsp(server_name, extraopts)
 	extraopts = extraopts or {}
