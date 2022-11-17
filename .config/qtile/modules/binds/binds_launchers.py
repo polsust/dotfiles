@@ -78,4 +78,10 @@ binds_launchers = [
         lazy.spawn(apps['code_editor']),
         desc='Launch code editor',
     ),
+    Key(
+        [mod],
+        'y',
+        lazy.spawn('ytplay'),
+        desc='Launch youtube videos search bar',
+    ),
 ]
