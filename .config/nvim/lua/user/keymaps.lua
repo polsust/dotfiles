@@ -41,6 +41,9 @@ keymap("n", "<Leader>c", "<cmd>Bdelete!<CR>", opts)
 -- Better paste
 keymap("v", "p", '"_dP', opts)
 
+-- Select all
+-- keymap("n", "<C-a>", "ggVG", opts)
+
 -- Insert --
 -- Press jk fast to enter
 -- keymap("i", "jk", "<ESC>", opts)
@@ -77,12 +80,12 @@ keymap("n", "<leader>ff", "<cmd>Telescope find_files<CR>", opts)
 keymap("n", "<leader>fw", "<cmd>Telescope live_grep<CR>", opts)
 keymap("n", "<leader>fb", "<cmd>Telescope buffers<CR>", opts)
 keymap("n", "<leader>fh", "<cmd>Telescope help_tags<CR>", opts)
+keymap("n", "<leader>fg", "<cmd>Telescope git_status<CR>", opts)
 
 -- Git
 -- keymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
 keymap("n", "<leader>gb", "<cmd>Telescope git_branches<CR>", opts)
 keymap("n", "<leader>gc", "<cmd>Telescope git_bcommits<CR>", opts)
-keymap("n", "<leader>gs", "<cmd>Telescope git_status<CR>", opts)
 keymap("n", "<leader>gj", "<cmd>Gitsigns next_hunk<CR>", opts)
 keymap("n", "<leader>gk", "<cmd>Gitsigns prev_hunk<CR>", opts)
 keymap("n", "<leader>gh", "<cmd>Gitsigns reset_hunk<CR>", opts)
@@ -109,7 +112,7 @@ keymap("n", "<leader>dt", "<cmd>lua require'dap'.terminate()<cr>", opts)
 keymap("n", "<leader>a", "<cmd>AerialToggle<CR>", opts)
 
 -- Terminal
-local termCmd = "ToggleTerm direction=horizontal size=30"
+local termCmd = "ToggleTerm direction=horizontal size=45"
 keymap("n", "<C-\\>", "<cmd>" .. termCmd .. "<CR>", opts)
 keymap("t", "<C-\\>", "<cmd>" .. termCmd .. "<CR>", opts)
 
@@ -121,11 +124,6 @@ keymap("n", "<Leader>ha", "<cmd>lua require('harpoon.mark').add_file()<CR>", opt
 keymap("n", "<Leader>hh", "<cmd>lua require('harpoon.ui').toggle_quick_menu()<CR>", opts)
 -- keymap("n", "<Leader>hl", "<cmd>lua require('harpoon.ui').nav_next()<CR>")
 -- keymap("n", "<Leader>hh", "<cmd>lua require('harpoon.ui').nav_prev()<CR>")
-
--- keymap("n", "<Leader>h1", "<cmd>lua require('harpoon.ui').nav_file(1)<CR>")
--- keymap("n", "<Leader>h2", "<cmd>lua require('harpoon.ui').nav_file(2)<CR>")
--- keymap("n", "<Leader>h3", "<cmd>lua require('harpoon.ui').nav_file(3)<CR>")
--- keymap("n", "<Leader>h4", "<cmd>lua require('harpoon.ui').nav_file(4)<CR>")
 
 keymap("n", "<a-1>", "<cmd>lua require('harpoon.ui').nav_file(1)<CR>", opts)
 keymap("n", "<a-2>", "<cmd>lua require('harpoon.ui').nav_file(2)<CR>", opts)
