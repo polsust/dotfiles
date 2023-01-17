@@ -7,7 +7,6 @@ local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
 local format_on_save = true
 
-
 local f = null_ls.builtins.formatting
 local d = null_ls.builtins.diagnostics
 local a = null_ls.builtins.code_actions
@@ -19,9 +18,9 @@ null_ls.setup({
     f.blue,
 
     ---- webdev ----
-    d.eslint,
-    a.eslint,
-    f.prettier.with({
+    d.eslint_d,
+    a.eslint_d,
+    f.prettierd.with({
       disabled_filetypes = { "json" }, -- its kinda bad, jsonls does it better
     }),
     d.stylelint,
@@ -45,7 +44,6 @@ null_ls.setup({
   on_attach = function(client, bufnr)
     if format_on_save == true then
       if client.supports_method("textDocument/formatting") then
-
         vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
         vim.api.nvim_create_autocmd("BufWritePre", {
           group = augroup,
