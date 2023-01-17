@@ -57,6 +57,9 @@ if status is-interactive
     export EDITOR=nvim
     export SUDO_EDITOR=nvim
 
+    export ANDROID_SDK_ROOT="$HOME/Library/Android/Sdk"
+    export ANDROID_HOME="$HOME/Android/Sdk"
+
     # Locale
     # solve "Failed to set locale" https://www.linuxquestions.org/questions/showthread.php?s=340f6c86d1b4b6c0cf2275b109c261fa&p=6159694#post6159694
     export LC_ALL="en_US.UTF-8"
@@ -67,6 +70,9 @@ if status is-interactive
     export PATH="$HOME/.config/composer/vendor/bin/:$PATH"
     export PATH="$HOME/.cargo/bin/:$PATH"
     export PATH="$HOME/.local/bin/:$PATH"
+    export PATH="$PATH:$ANDROID_SDK_ROOT/emulator"
+    export PATH="$PATH:$ANDROID_SDK_ROOT/platform-tools"
+
 
     ### ALIASES ####
     alias f editFinder
