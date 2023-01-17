@@ -5,3 +5,4 @@ packer_compiled
 .config/fish/fish_variables
 .config/nvim/plugin/packer_compiled.lua
 .config/fish/fish_variables
+.config/mpv/watch_later
