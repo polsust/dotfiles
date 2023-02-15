@@ -11,8 +11,6 @@ setxkbmap -option ctrl:nocaps &
 
 unclutter -idle 5 &
 
-honeygain &
-
 # Daemons
 
 clipmenud &
@@ -24,5 +22,7 @@ dunst &
 nm-applet &
 
 firefox &
+
+"$HOME"/.scripts/pulse-volume-watcher.py | xob &
 
 exec qtile start
