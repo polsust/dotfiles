@@ -58,9 +58,9 @@ mason_lspconfig.setup_handlers({
     setup_lsp(server_name)
   end,
 
-  ["sumneko_lua"] = function()
-    setup_lsp("sumneko_lua", {
-      settings = require("user.lsp.settings.sumneko_lua"),
+  ["lua_ls"] = function()
+    setup_lsp("lua_ls", {
+      settings = require("user.lsp.settings.lua_ls"),
     })
   end,
 
