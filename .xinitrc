@@ -15,6 +15,7 @@ honeygain &
 
 # Daemons
 
+systemctl --user import-environment DISPLAY # clipmenud
 clipmenud &
 
 dunst &
