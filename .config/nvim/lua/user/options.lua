@@ -121,7 +121,7 @@ vim.g.at_custom_alternates = {
 }
 
 vim.cmd([[
-  let g:neovide_scale_factor = 0.5
+  let g:neovide_scale_factor = 1
 ]])
 
 -- vim.cmd "set whichwrap+=<,>,[,],h,l"
