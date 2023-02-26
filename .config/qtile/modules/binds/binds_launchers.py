@@ -76,6 +76,8 @@ binds_launchers = [
         [mod],
         'n',
         lazy.spawn(apps['code_editor']),
+        lazy.spawn('xdotool key Super_L+f'),
+        lazy.spawn('xdotool key Super_L+f'),
         desc='Launch code editor',
     ),
     Key(
