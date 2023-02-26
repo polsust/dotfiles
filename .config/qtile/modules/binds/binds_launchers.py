@@ -84,4 +84,10 @@ binds_launchers = [
         lazy.spawn('ytplay'),
         desc='Launch youtube videos search bar',
     ),
+    Key(
+        [mod],
+        'o',
+        lazy.spawn('obsidian'),
+        desc='Launch obsidian',
+    ),
 ]
