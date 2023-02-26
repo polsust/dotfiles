@@ -13,6 +13,7 @@ unclutter -idle 5 &
 
 # Daemons
 
+systemctl --user import-environment DISPLAY # clipmenud
 clipmenud &
 
 dunst &
