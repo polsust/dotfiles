@@ -1,0 +1,9 @@
+{
+  "echoJson": {
+    "prefix": "ej",
+    "body": [
+      "echo (json_encode($1));",
+      "die();"
+    ]
+  }
+}
