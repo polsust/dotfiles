@@ -7,6 +7,9 @@ local opts = { silent = true }
 keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 
+keymap("n", "<A-CR>", "A;<esc>")
+keymap("i", "<A-CR>", "<esc>A;")
+
 -- Modes
 --   normal_mode = "n",
 --   insert_mode = "i",
@@ -89,8 +92,10 @@ keymap("n", "<leader>gc", "<cmd>Telescope git_bcommits<CR>", opts)
 keymap("n", "<leader>gj", "<cmd>Gitsigns next_hunk<CR>", opts)
 keymap("n", "<leader>gk", "<cmd>Gitsigns prev_hunk<CR>", opts)
 keymap("n", "<leader>gh", "<cmd>Gitsigns reset_hunk<CR>", opts)
+keymap("n", "<leader>gp", "<cmd>Gitsigns preview_hunk_inline<CR>", opts)
 keymap("n", "<leader>gd", "<cmd>Gitsigns diffthis<CR>", opts)
 keymap("n", "<leader>gl", "<cmd>Gitsigns blame_line<CR>", opts)
+keymap("n", "<leader>gr", "<cmd>Gitsigns refresh<CR>", opts)
 
 -- LSP
 keymap("n", "<leader>li", "<cmd>LspInfo<cr>", opts)
