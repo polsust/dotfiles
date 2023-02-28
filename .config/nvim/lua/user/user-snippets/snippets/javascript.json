@@ -20,5 +20,14 @@
       "useEffect(() => console.log(${1:example}), [${1:example}])"
     ],
     "description": "LogEffect"
+  },
+  "AsynchronousAnonymousSelfCallingFunction": {
+    "prefix": "aascf",
+    "body": [
+    "(async () => {",
+    "  ${1}",
+    "})()"
+    ],
+    "description": "LogEffect"
   }
 }
