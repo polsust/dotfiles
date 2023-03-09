@@ -18,6 +18,7 @@ keymap("i", "<A-CR>", "<esc>A;")
 --   term_mode = "t",
 --   command_mode = "c",
 
+keymap("n", "<A-CR>", "A;<esc>", opts)
 -- Normal --
 -- Better splits navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
