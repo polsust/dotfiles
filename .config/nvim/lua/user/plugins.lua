@@ -133,6 +133,7 @@ return packer.startup(function(use)
   use({ "elkowar/yuck.vim" })
 
   use({ "phaazon/hop.nvim" })
+  use({ "ziontee113/color-picker.nvim" })
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
