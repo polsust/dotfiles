@@ -13,6 +13,7 @@ local on_attach = function(bufnr)
 
   vim.keymap.set("n", "h", api.node.navigate.parent_close, opts("Close Directory"))
   vim.keymap.set("n", "l", api.node.open.edit, opts("Open"))
+  vim.keymap.set("n", "<CR>", api.node.open.edit, opts("Open"))
 
   vim.keymap.set("n", "<leader>gk", api.node.navigate.git.prev, opts("Prev Git"))
   vim.keymap.set("n", "<leader>gj", api.node.navigate.git.next, opts("Next Git"))
