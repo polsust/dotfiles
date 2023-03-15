@@ -60,6 +60,11 @@ if status is-interactive
     export ANDROID_SDK_ROOT="$HOME/Library/Android/Sdk"
     export ANDROID_HOME="$HOME/Android/Sdk"
 
+    # Netcore
+    export DOTNET_ROOT="$HOME/.dotnet"
+    export PATH="$PATH:$HOME/.dotnet/tools"
+    export PATH="$PATH:$DOTNET_ROOT"
+
     # Locale
     # solve "Failed to set locale" https://www.linuxquestions.org/questions/showthread.php?s=340f6c86d1b4b6c0cf2275b109c261fa&p=6159694#post6159694
     export LC_ALL="en_US.UTF-8"
