@@ -129,7 +129,6 @@ return packer.startup(function(use)
   use({ "weirongxu/plantuml-previewer.vim" })
   use({ "aklt/plantuml-syntax" })
 
-  use({ "rcarriga/nvim-notify" })
   use({ "elkowar/yuck.vim" })
 
   use({ "phaazon/hop.nvim" })
