@@ -18,4 +18,5 @@ binds_system = [
     Key([], 'XF86AudioPrev', lazy.spawn('playerctl previous')),
     #
     Key([mod, alt], 'l', lazy.spawn('betterlockscreen -l')),
+    Key([mod, alt], 'b', lazy.spawn('bluetoothctl connect 2C:FD:B3:F5:85:71')),
 ]
