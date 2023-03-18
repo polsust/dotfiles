@@ -57,23 +57,14 @@ mason_lspconfig.setup_handlers({
   function(server_name)
     setup_lsp(server_name)
   end,
-
   ["lua_ls"] = function()
     setup_lsp("lua_ls", {
       settings = require("user.lsp.settings.lua_ls"),
     })
   end,
-
   ["jsonls"] = function()
     setup_lsp("jsonls", {
-      settings = {
-        json = {
-          schemas = require("schemastore").json.schemas(),
-          validate = {
-            enable = true,
-          },
-        },
-      },
+      settings = require("user.lsp.settings.jsonls"),
     })
   end,
 })
