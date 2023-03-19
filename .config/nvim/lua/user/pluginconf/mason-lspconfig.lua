@@ -34,7 +34,7 @@ local on_attach = function(client, bufnr)
   vim.keymap.set("n", "<Leader>lr", "<cmd>lua require('renamer').rename()<CR>", bufopts)
   vim.keymap.set("n", "<Leader>la", "<cmd>lua require('cosmic-ui').code_actions()<CR>", bufopts)
   vim.keymap.set("v", "<Leader>la", "<cmd>lua require('cosmic-ui').range_code_actions()<cr>", bufopts)
-  vim.keymap.set("n", "<Leader>ls", "<cmd>Telescope treesitter<CR>", bufopts)
+  vim.keymap.set("n", "<Leader>ls", "<cmd>Telescope lsp_document_symbols<CR>", bufopts)
   vim.keymap.set("n", "<Leader>ld", "<cmd>Telescope diagnostics<CR>", bufopts)
   vim.keymap.set("n", "<Leader>lf", vim.lsp.buf.formatting, bufopts)
 end
