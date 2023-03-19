@@ -138,3 +138,6 @@ keymap("n", "<a-4>", "<cmd>lua require('harpoon.ui').nav_file(4)<CR>", opts)
 
 -- spectre
 keymap("n", "<leader>fr", "<cmd>lua require('spectre').open()<CR>", opts)
+
+-- packer
+keymap("n", "<leader>ps", "<cmd>PackerSync<CR>", opts)
