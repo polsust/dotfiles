@@ -12,7 +12,7 @@ require("user.pluginconf.project")
 require("user.pluginconf.impatient")
 require("user.pluginconf.illuminate")
 require("user.pluginconf.indentline")
-require("user.pluginconf.alpha")
+-- require("user.pluginconf.alpha")
 require("user.pluginconf.null-ls")
 -- mason order matters
 require("user.pluginconf.mason")
