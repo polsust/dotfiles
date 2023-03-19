@@ -95,3 +95,12 @@ vim.api.nvim_create_autocmd({ "TextChanged", "InsertLeave" }, {
     end
   end,
 })
+
+-- sessions
+vim.api.nvim_create_autocmd({ "BufWritePost", "UILeave" }, {
+  callback = function()
+    if vim.bo.filetype ~= "git" and not vim.bo.filetype ~= "gitcommit" then
+      require("session_manager").autosave_session()
+    end
+  end,
+})
