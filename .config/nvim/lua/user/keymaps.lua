@@ -41,6 +41,18 @@ keymap("n", "<Esc>", "<cmd>nohlsearch<CR>", opts)
 
 -- Close buffers
 keymap("n", "<Leader>c", "<cmd>Bdelete!<CR>", opts)
+keymap("n", "<Leader>C", "<cmd>BufferLineGroupClose ungrouped<CR>", opts)
+
+keymap("n", "<Leader>1", "<cmd>BufferLineGoToBuffer 1<CR>", opts)
+keymap("n", "<Leader>2", "<cmd>BufferLineGoToBuffer 2<CR>", opts)
+keymap("n", "<Leader>3", "<cmd>BufferLineGoToBuffer 3<CR>", opts)
+keymap("n", "<Leader>4", "<cmd>BufferLineGoToBuffer 4<CR>", opts)
+keymap("n", "<Leader>5", "<cmd>BufferLineGoToBuffer 5<CR>", opts)
+keymap("n", "<Leader>6", "<cmd>BufferLineGoToBuffer 6<CR>", opts)
+keymap("n", "<Leader>7", "<cmd>BufferLineGoToBuffer 7<CR>", opts)
+keymap("n", "<Leader>8", "<cmd>BufferLineGoToBuffer 8<CR>", opts)
+keymap("n", "<Leader>9", "<cmd>BufferLineGoToBuffer 9<CR>", opts)
+keymap("n", "<Leader>$", "<cmd>BufferLineGoToBuffer -1<CR>", opts)
 
 -- Better paste
 keymap("v", "p", '"_dP', opts)
