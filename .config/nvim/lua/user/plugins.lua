@@ -60,8 +60,6 @@ return packer.startup(function(use)
   use({ "lewis6991/impatient.nvim" })
   use({ "lukas-reineke/indent-blankline.nvim" })
   use({ "goolord/alpha-nvim" })
-  use({ "nullishamy/autosave.nvim" })
-  -- use({ "PolSust/auto-save.nvim", branch = "allow_noautocmd_autosaving" })
   use({
     "CosmicNvim/cosmic-ui",
     requires = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },

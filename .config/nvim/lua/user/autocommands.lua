@@ -86,3 +86,12 @@ vim.api.nvim_create_autocmd({ "VimEnter" }, {
     require("nvim-tree.api").tree.open()
   end,
 })
+
+-- autosave
+vim.api.nvim_create_autocmd({ "TextChanged", "InsertLeave" }, {
+  callback = function(data)
+    if vim.fn.getbufvar(data.buf, "&modifiable") == 1 and data.file ~= "" then
+      vim.cmd([[ silent write ]])
+    end
+  end,
+})

@@ -18,7 +18,6 @@ require("user.pluginconf.null-ls")
 require("user.pluginconf.mason")
 require("user.pluginconf.mason-lspconfig")
 -- end mason
-require("user.pluginconf.auto-save")
 require("user.pluginconf.cosmic-ui")
 require("user.pluginconf.aerial")
 require("user.pluginconf.editorconfig")
