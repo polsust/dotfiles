@@ -35,14 +35,6 @@ keymap("n", "<C-Right>", "<cmd>vertical resize +2<CR>", opts)
 -- Navigate buffers
 keymap("n", "<S-l>", "<cmd>bnext<CR>", opts)
 keymap("n", "<S-h>", "<cmd>bprevious<CR>", opts)
-
--- Clear highlights
-keymap("n", "<Esc>", "<cmd>nohlsearch<CR>", opts)
-
--- Close buffers
-keymap("n", "<Leader>c", "<cmd>Bdelete!<CR>", opts)
-keymap("n", "<Leader>C", "<cmd>BufferLineGroupClose ungrouped<CR><cmd>Bdelete!<CR>", opts)
-
 keymap("n", "<Leader>1", "<cmd>BufferLineGoToBuffer 1<CR>", opts)
 keymap("n", "<Leader>2", "<cmd>BufferLineGoToBuffer 2<CR>", opts)
 keymap("n", "<Leader>3", "<cmd>BufferLineGoToBuffer 3<CR>", opts)
@@ -53,6 +45,14 @@ keymap("n", "<Leader>7", "<cmd>BufferLineGoToBuffer 7<CR>", opts)
 keymap("n", "<Leader>8", "<cmd>BufferLineGoToBuffer 8<CR>", opts)
 keymap("n", "<Leader>9", "<cmd>BufferLineGoToBuffer 9<CR>", opts)
 keymap("n", "<Leader>$", "<cmd>BufferLineGoToBuffer -1<CR>", opts)
+
+
+-- Clear highlights
+keymap("n", "<Esc>", "<cmd>nohlsearch<CR>", opts)
+
+-- Close buffers
+keymap("n", "<Leader>c", "<cmd>Bdelete!<CR>", opts)
+keymap("n", "<Leader>C", "<cmd>BufferLineGroupClose ungrouped<CR><cmd>Bdelete!<CR>", opts)
 
 -- Better paste
 keymap("v", "p", '"_dP', opts)
