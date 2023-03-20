@@ -90,7 +90,12 @@ vim.api.nvim_create_autocmd({ "VimEnter" }, {
 -- autosave
 vim.api.nvim_create_autocmd({ "TextChanged", "InsertLeave" }, {
   callback = function(data)
-    if vim.fn.getbufvar(data.buf, "&modifiable") == 1 and data.file ~= "" then
+    -- this will affect also any file which it's path contains spectre
+    if string.find(data.file, "spectre") or data.file == "" then
+      return
+    end
+
+    if vim.fn.getbufvar(data.buf, "&modifiable") == 1 then
       vim.cmd([[ silent write ]])
     end
   end,
