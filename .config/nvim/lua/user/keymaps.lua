@@ -41,7 +41,7 @@ keymap("n", "<Esc>", "<cmd>nohlsearch<CR>", opts)
 
 -- Close buffers
 keymap("n", "<Leader>c", "<cmd>Bdelete!<CR>", opts)
-keymap("n", "<Leader>C", "<cmd>BufferLineGroupClose ungrouped<CR>", opts)
+keymap("n", "<Leader>C", "<cmd>BufferLineGroupClose ungrouped<CR><cmd>Bdelete!<CR>", opts)
 
 keymap("n", "<Leader>1", "<cmd>BufferLineGoToBuffer 1<CR>", opts)
 keymap("n", "<Leader>2", "<cmd>BufferLineGoToBuffer 2<CR>", opts)
