@@ -46,6 +46,11 @@ keymap("n", "<Leader>8", "<cmd>BufferLineGoToBuffer 8<CR>", opts)
 keymap("n", "<Leader>9", "<cmd>BufferLineGoToBuffer 9<CR>", opts)
 keymap("n", "<Leader>$", "<cmd>BufferLineGoToBuffer -1<CR>", opts)
 
+-- Tabs
+keymap("n", "<Leader>tn", "<cmd>tabnew<CR>", opts)
+keymap("n", "<Leader>tc", "<cmd>tabclose<CR>", opts)
+keymap("n", "<Leader>L", "<cmd>tabn<CR>", opts)
+keymap("n", "<Leader>H", "<cmd>tabp<CR>", opts)
 
 -- Clear highlights
 keymap("n", "<Esc>", "<cmd>nohlsearch<CR>", opts)

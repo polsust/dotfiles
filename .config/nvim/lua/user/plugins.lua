@@ -132,6 +132,7 @@ return packer.startup(function(use)
   use({ "phaazon/hop.nvim" })
   use({ "ziontee113/color-picker.nvim" })
   use({ "Shatur/neovim-session-manager" })
+  use({ "tiagovla/scope.nvim" })
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
