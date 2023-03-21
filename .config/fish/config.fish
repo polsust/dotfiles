@@ -60,6 +60,8 @@ if status is-interactive
     export ANDROID_SDK_ROOT="$HOME/Library/Android/Sdk"
     export ANDROID_HOME="$HOME/Android/Sdk"
 
+    export OPENAI_API_KEY="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"
+
     # Netcore
     export DOTNET_ROOT="$HOME/.dotnet"
     export PATH="$PATH:$HOME/.dotnet/tools"
