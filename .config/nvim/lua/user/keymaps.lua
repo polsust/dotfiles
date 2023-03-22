@@ -16,9 +16,12 @@ vim.g.mapleader = " "
 --   command_mode = "c",
 
 keymap("n", "<A-CR>", "A;<esc>", opts)
-keymap("i", "<A-CR>", "<esc>A;",opts)
+keymap("i", "<A-CR>", "<esc>A;", opts)
 
--- Normal --
+-- Navigate visual lines
+keymap("n", "k", "gk", opts)
+keymap("n", "j", "gj", opts)
+
 -- Better splits navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
