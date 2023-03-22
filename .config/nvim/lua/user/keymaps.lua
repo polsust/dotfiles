@@ -7,9 +7,6 @@ local opts = { silent = true }
 keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 
-keymap("n", "<A-CR>", "A;<esc>")
-keymap("i", "<A-CR>", "<esc>A;")
-
 -- Modes
 --   normal_mode = "n",
 --   insert_mode = "i",
@@ -19,6 +16,8 @@ keymap("i", "<A-CR>", "<esc>A;")
 --   command_mode = "c",
 
 keymap("n", "<A-CR>", "A;<esc>", opts)
+keymap("i", "<A-CR>", "<esc>A;",opts)
+
 -- Normal --
 -- Better splits navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
