@@ -4,7 +4,7 @@
     "body": [
       "import styled from \"styled-components\";",
       "",
-      "export const ${TM_FILENAME/^[^.]*//g}Wrapper = styled.div`",
+      "export const ${TM_FILENAME}Wrapper = styled.div`",
       "`"
     ]
   },
