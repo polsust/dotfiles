@@ -18,8 +18,24 @@ null_ls.setup({
     f.blue,
 
     ---- webdev ----
-    d.eslint_d,
+    d.eslint_d.with({
+      extra_args = function(params)
+        local files = Ls(params.root)
+
+        local conf = false
+        for _, file in pairs(files) do
+          if string.find(file, ".eslintrc.*") then
+            conf = true
+          end
+        end
+
+        if not conf then
+          return { "-c" }
+        end
+      end,
+    }),
     a.eslint_d,
+
     f.prettierd.with({
       disabled_filetypes = { "json" }, -- its kinda bad, jsonls does it better
     }),
@@ -39,7 +55,6 @@ null_ls.setup({
     f.shellharden,
     d.shellcheck,
   },
-
   -- Format on save
   on_attach = function(client, bufnr)
     if format_on_save == true then
