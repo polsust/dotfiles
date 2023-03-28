@@ -21,6 +21,7 @@ null_ls.setup({
     d.eslint_d.with({
       extra_args = function(params)
         local files = Ls(params.root)
+        -- TODO: make this recursive
 
         local conf = false
         for _, file in pairs(files) do
@@ -30,7 +31,7 @@ null_ls.setup({
         end
 
         if not conf then
-          return { "-c" }
+          -- return { "-c" }
         end
       end,
     }),
