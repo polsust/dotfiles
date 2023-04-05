@@ -116,6 +116,8 @@ keymap("n", "<leader>gp", "<cmd>Gitsigns preview_hunk_inline<CR>", opts)
 keymap("n", "<leader>gd", "<cmd>Gitsigns diffthis<CR>", opts)
 keymap("n", "<leader>gl", "<cmd>Gitsigns blame_line<CR>", opts)
 keymap("n", "<leader>gr", "<cmd>Gitsigns refresh<CR>", opts)
+keymap("n", "<leader>gs", "<cmd>Gitsigns stage_hunk<CR>", opts)
+keymap("n", "<leader>gu", "<cmd>Gitsigns undo_stage_hunk<CR>", opts)
 
 -- LSP
 keymap("n", "<leader>li", "<cmd>LspInfo<cr>", opts)
