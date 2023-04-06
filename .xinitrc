@@ -22,6 +22,8 @@ dunst &
 
 nm-applet &
 
+megasync &
+
 firefox &
 
 "$HOME"/.scripts/pulse-volume-watcher.py | xob &
