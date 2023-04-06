@@ -14,7 +14,7 @@ local a = null_ls.builtins.code_actions
 null_ls.setup({
   sources = {
     ---- pyhton ----
-    d.flake8,
+    d.mypy,
     f.blue,
 
     ---- webdev ----
