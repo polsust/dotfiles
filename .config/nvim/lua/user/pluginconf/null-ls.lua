@@ -18,24 +18,27 @@ null_ls.setup({
     f.blue,
 
     ---- webdev ----
-    d.eslint_d.with({
-      extra_args = function(params)
-        local files = Ls(params.root)
-        -- TODO: make this recursive
+    -- d.eslint_d.with({
+    --   extra_args = function(params)
+    --     local files = Ls(params.root)
+    --     -- TODO: make this recursive
+    --
+    --     local conf = false
+    --     for _, file in pairs(files) do
+    --       if string.find(file, ".eslintrc.*") then
+    --         conf = true
+    --       end
+    --     end
+    --
+    --     if not conf then
+    --       -- return { "-c" }
+    --     end
+    --   end,
+    -- }),
+    -- a.eslint_d,
 
-        local conf = false
-        for _, file in pairs(files) do
-          if string.find(file, ".eslintrc.*") then
-            conf = true
-          end
-        end
-
-        if not conf then
-          -- return { "-c" }
-        end
-      end,
-    }),
-    a.eslint_d,
+    d.eslint,
+    a.eslint,
 
     f.prettierd.with({
       disabled_filetypes = { "json" }, -- its kinda bad, jsonls does it better
