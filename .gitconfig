@@ -19,3 +19,5 @@
 
 [merge]
 	tool = nvim -f -c \"Gdiff\" \"$MERGED\" 
+[pull]
+	rebase = false
