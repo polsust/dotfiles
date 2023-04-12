@@ -4,3 +4,4 @@
 
 # not sure if xmonad needs this
 #xmonad --restart
+qtile cmd-obj -o cmd -f restart
