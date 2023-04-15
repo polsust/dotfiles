@@ -40,9 +40,7 @@ null_ls.setup({
     d.eslint,
     a.eslint,
 
-    f.prettierd.with({
-      disabled_filetypes = { "json" }, -- its kinda bad, jsonls does it better
-    }),
+    f.prettierd,
     d.stylelint,
 
     ---- lua ----
