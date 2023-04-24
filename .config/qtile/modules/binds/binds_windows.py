@@ -54,7 +54,7 @@ binds_windows = [
     ),
     Key([mod, 'control'], 'k', lazy.layout.grow_up(), desc='Grow window up'),
     Key(
-        [mod, 'shift'],
+        [mod, 'control'],
         'n',
         lazy.layout.normalize(),
         desc='Reset all window sizes',
