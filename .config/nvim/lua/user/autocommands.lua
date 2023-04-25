@@ -101,17 +101,6 @@ vim.api.nvim_create_autocmd({ "TextChanged", "InsertLeave" }, {
   end,
 })
 
--- sessions
-vim.api.nvim_create_autocmd({ "BufWritePost", "UILeave" }, {
-  callback = function()
-    if vim.bo.filetype ~= "git" and not vim.bo.filetype ~= "gitcommit" then
-      require("session_manager").autosave_session()
-      -- reopen nvim-tree TODO: Avoid it being closed in the first place
-      require("nvim-tree.api").tree.toggle(false, true)
-    end
-  end,
-})
-
 vim.api.nvim_create_autocmd({ "User" }, {
   pattern = "SessionLoadPost",
   desc = "open nvim tree",
