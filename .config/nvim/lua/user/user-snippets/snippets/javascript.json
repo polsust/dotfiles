@@ -17,7 +17,7 @@
   "LogEffect": {
     "prefix": "ceff",
     "body": [
-      "useEffect(() => console.log(${1:example}), [${1:example}])"
+      "useEffect(() => {console.log(${1:example})}, [${1:example}])"
     ],
     "description": "LogEffect"
   },
