@@ -136,6 +136,8 @@ return packer.startup(function(use)
   -- use({ "github/copilot.vim" })
   use({ "jackMort/ChatGPT.nvim" })
 
+  use({ "toppair/peek.nvim", run = "deno task --quiet build:fast" })
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
