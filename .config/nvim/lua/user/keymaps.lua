@@ -122,7 +122,7 @@ keymap("n", "<leader>gu", "<cmd>Gitsigns undo_stage_hunk<CR>", opts)
 -- LSP
 keymap("n", "<leader>li", "<cmd>LspInfo<cr>", opts)
 keymap("n", "<leader>lI", "<cmd>Mason<cr>", opts)
-keymap("n", "<leader>lf", "<cmd>lua vim.lsp.buf.formatting()<cr>", opts)
+keymap("n", "<leader>lf", "<cmd>lua vim.lsp.buf.format()<cr>", opts)
 
 -- DAP
 keymap("n", "<leader>db", "<cmd>lua require'dap'.toggle_breakpoint()<cr>", opts)
