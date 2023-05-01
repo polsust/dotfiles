@@ -43,6 +43,8 @@ null_ls.setup({
     f.prettierd,
     d.stylelint,
 
+    f.rustywind,
+
     ---- lua ----
     -- d.selene,
     f.stylua,
