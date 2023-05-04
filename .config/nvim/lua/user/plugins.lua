@@ -135,6 +135,7 @@ return packer.startup(function(use)
   use({ "tiagovla/scope.nvim" })
   -- use({ "github/copilot.vim" })
   use({ "jackMort/ChatGPT.nvim" })
+  use({ "Exafunction/codeium.vim" })
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
