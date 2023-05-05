@@ -137,6 +137,7 @@ return packer.startup(function(use)
   use({ "jackMort/ChatGPT.nvim" })
 
   use({ "toppair/peek.nvim", run = "deno task --quiet build:fast" })
+  use({ "jay-babu/mason-null-ls.nvim" })
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
