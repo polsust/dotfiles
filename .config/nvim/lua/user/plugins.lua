@@ -135,6 +135,7 @@ return packer.startup(function(use)
   use({ "tiagovla/scope.nvim" })
   -- use({ "github/copilot.vim" })
   use({ "jackMort/ChatGPT.nvim" })
+  use({ "Exafunction/codeium.vim" })
 
   use({ "toppair/peek.nvim", run = "deno task --quiet build:fast" })
   use({ "jay-babu/mason-null-ls.nvim" })

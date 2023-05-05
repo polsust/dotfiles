@@ -162,3 +162,9 @@ keymap("n", "<leader>fr", "<cmd>lua require('spectre').open()<CR>", opts)
 
 -- packer
 keymap("n", "<leader>ps", "<cmd>PackerSync<CR>", opts)
+
+-- codeium
+keymap('i', '<C-f>', function() return vim.fn['codeium#Accept']() end, { silent = true, expr = true })
+keymap('i', '<C-;>', function() return vim.fn['codeium#CycleCompletions'](1) end, { silent = true, expr = true })
+keymap('i', '<C-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { silent = true, expr = true })
+keymap('i', '<C-x>', function() return vim.fn['codeium#Clear']() end, { silent = true, expr = true })

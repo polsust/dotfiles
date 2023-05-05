@@ -6,3 +6,5 @@ packer_compiled
 .config/nvim/plugin/packer_compiled.lua
 .config/fish/fish_variables
 .config/mpv/watch_later
+
+.config/autorandr/*/
