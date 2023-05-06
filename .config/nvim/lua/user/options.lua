@@ -124,6 +124,8 @@ vim.cmd([[
   let g:neovide_scale_factor = 1
 ]])
 
+vim.g.autosave = true
+
 -- vim.cmd "set whichwrap+=<,>,[,],h,l"
 -- vim.cmd([[set iskeyword+=-]]) -- count "asdasd-asdasd-ad" as one word
 -- vim.cmd([[set formatoptions-=cro]]) -- TODO: this doesn't seem to work

@@ -90,6 +90,10 @@ vim.api.nvim_create_autocmd({ "VimEnter" }, {
 -- autosave
 vim.api.nvim_create_autocmd({ "TextChanged", "InsertLeave" }, {
   callback = function(data)
+    if vim.g.autosave == false then
+      return
+    end
+
     -- this will affect also any file which it's path contains spectre
     if string.find(data.file, "spectre") or data.file == "" then
       return
