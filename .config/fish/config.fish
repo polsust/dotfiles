@@ -96,6 +96,10 @@ if status is-interactive
     #     command mv $argv "~/.dotfiles/$insideHomeFilePath"
     # end
 
+    # paru 
+    alias i "paru -S"
+    alias u "paru -R"
+
     # dnf
     alias dnfi "sudo dnf install"
     alias dnfr "sudo dnf remove"
