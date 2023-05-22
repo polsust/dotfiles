@@ -2,30 +2,32 @@ from libqtile import layout
 from libqtile.config import Match
 from modules.colors import colors
 
+default_opts = dict(
+    border_normal=colors['light'],
+    border_focus=colors['lighter'],
+    border_focus_stack=colors['special']['light'],
+    border_normal_stack=colors['special']['dark'],
+    border_width=4,
+    insert_position=1,
+    margin=5,
+    wrap_focus_columns=False,
+    wrap_focus_rows=False,
+    wrap_focus_stacks=True,
+)
+
 layouts = [
-    layout.Columns(
-        border_normal=colors['light'],
-        border_focus=colors['lighter'],
-        border_focus_stack=colors['special']['light'],
-        border_normal_stack=colors['special']['dark'],
-        border_width=4,
-        insert_position=1,
-        margin=5,
-        wrap_focus_columns=False,
-        wrap_focus_rows=False,
-        wrap_focus_stacks=True,
-    ),
-    layout.Max(),
+    layout.Columns(**default_opts),
+    layout.Max(**default_opts),
     # layout.Stack(num_stacks=2),
-    # layout.Bsp(),
-    # layout.Matrix(),
-    # layout.MonadTall(),
-    # layout.MonadWide(),
-    # layout.RatioTile(),
-    # layout.Tile(),
-    # layout.TreeTab(),
-    # layout.Zoomy(),
-    # layout.VerticalTile(),
+    layout.Bsp(**default_opts),
+    # layout.Matrix(**default_opts),
+    # layout.MonadTall(**default_opts),
+    # layout.MonadWide(**default_opts),
+    # layout.RatioTile(**default_opts),
+    # layout.Tile(**default_opts),
+    # layout.TreeTab(**default_opts),
+    # layout.Zoomy(**default_opts),
+    # layout.VerticalTile(**default_opts),
 ]
 floating_layout = layout.Floating(
     border_normal=colors['light'],
