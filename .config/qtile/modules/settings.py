@@ -7,7 +7,7 @@ apps = {
     'tui_file_manager': 'ranger',
     'web_browser': 'firefox',
     'code_editor': 'nvim',
-    'bluetooth_manager': 'rofi-bluetooth',
+    'bluetooth_manager': 'bluetuith',
     'calculator': 'rofi -show calc',
 }
 
