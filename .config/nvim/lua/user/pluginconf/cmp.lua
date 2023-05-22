@@ -143,13 +143,13 @@ cmp.setup({
   }),
 })
 
--- Set configuration for specific filetype.
--- DOESN'T IMPLEMENT GLOBAL SOURCES
-cmp.setup.filetype("lua", {
-  sources = cmp.config.sources({
-    { name = "nvim_lua" },
-  }),
-})
+-- -- Set configuration for specific filetype.
+-- -- DOESN'T IMPLEMENT GLOBAL SOURCES
+-- cmp.setup.filetype("lua", {
+--   sources = cmp.config.sources({
+--     { name = "nvim_lua" },
+--   }),
+-- })
 
 -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
 cmp.setup.cmdline("/", {
