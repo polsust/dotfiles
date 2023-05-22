@@ -37,6 +37,7 @@ floating_layout = layout.Floating(
         Match(title='pinentry'),  # GPG key password entry
         #
         Match(wm_class='megasync'),
+        Match(wm_class='bluetuith'),
         Match(wm_class='pulsemixer'),
         Match(wm_class='blueman-manager'),
         Match(title='NoiseTorch'),
