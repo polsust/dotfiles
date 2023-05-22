@@ -37,8 +37,6 @@ for _, ignore_pattern in ipairs(ignore_patterns) do
   table.insert(find_command, "!" .. ignore_pattern .. "")
 end
 
-print(vim.inspect(find_command))
-
 telescope.setup({
   defaults = {
     -- Default configuration for telescope goes here:
