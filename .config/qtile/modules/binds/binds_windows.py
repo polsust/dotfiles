@@ -73,6 +73,7 @@ binds_windows = [
     Key([mod], 'q', lazy.window.kill(), desc='Kill focused window'),
     Key([alt], 'Tab', lazy.screen.toggle_group(), desc='Toggle group'),
     Key([mod], 'Tab', lazy.next_layout(), desc='Toggle between layouts'),
+    Key(['shift'], 'Tab', lazy.prev_layout(), desc='Toggle between layouts'),
     #
     Key([mod], "s", lazy.to_screen(1)),
     Key([mod], "a", lazy.to_screen(0)),
