@@ -27,6 +27,7 @@ screens = [
                 widget.CurrentLayoutIcon(
                     scale=0.6,
                 ),
+                widget.CurrentLayout(),
                 widget.WindowName(
                     format='{name}',
                     empty_group_string='Desktop',
