@@ -5,7 +5,7 @@ from modules.colors import colors
 
 widget_defaults = dict(
     font='Mononoki',
-    fontsize=16,
+    fontsize=18,
     padding=10,
     border=colors['light'],
     border_width=10,
@@ -13,6 +13,10 @@ widget_defaults = dict(
     background=colors['dark'],
 )
 extension_defaults = widget_defaults.copy()
+
+opening_sep = widget.TextBox(fmt='[ ')
+
+closing_sep = widget.TextBox(fmt=' ]')
 
 screens = [
     Screen(
@@ -44,11 +48,9 @@ screens = [
                 widget.WindowName(
                     format='{name}',
                     empty_group_string='Desktop',
-                    fontsize=13,
                 ),
                 widget.Spacer(length=bar.STRETCH),
                 widget.Clock(
-                    fontsize=20,
                     format='[ %d-%m-%Y %A',
                 ),
                 widget.TextBox(
@@ -57,36 +59,36 @@ screens = [
                     fontsize=30,
                 ),
                 widget.Clock(
-                    fontsize=20,
                     format='] [ %H:%M 󰥔 ]',
                 ),
                 widget.Spacer(length=bar.STRETCH),
-                widget.Sep(padding=20, linewidth=2),
+                opening_sep,
                 widget.Systray(
-                    fontsize=2,
+                    icon_size=20,
                 ),
-                widget.Sep(padding=20, linewidth=2),
+                closing_sep,
+                opening_sep,
                 widget.Memory(
                     format='{MemUsed: .0f}{mm}',
-                    fontsize=13,
                     update_interval=5,
                 ),
-                widget.Sep(padding=20, linewidth=2),
+                closing_sep,
+                opening_sep,
                 widget.Battery(
                     format='{percent:1.0%}',
-                    fontsize=13,
                 ),
                 widget.BatteryIcon(
                     theme_path='~/.config/qtile/assets/battery/',
-                    scale=1,
+                    scale=0.9,
                 ),
-                widget.Sep(padding=20, linewidth=2),
+                closing_sep,
+                opening_sep,
                 widget.Volume(),
                 widget.Volume(
                     theme_path='~/.config/qtile/assets/volume/',
-                    padding=0
+                    padding=0,
                 ),
-                widget.Sep(padding=20, linewidth=2),
+                closing_sep,
             ],
             30,
             border_color='#282738',
