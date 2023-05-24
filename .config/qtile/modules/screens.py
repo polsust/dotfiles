@@ -41,12 +41,14 @@ screens = [
                         'light'
                     ],  # Urgent group font color
                 ),
+                opening_sep,
                 widget.CurrentLayoutIcon(
-                    scale=0.6,
+                    scale=0.5,
                 ),
                 widget.CurrentLayout(),
+                closing_sep,
                 widget.WindowName(
-                    format='{name}',
+                    format='[ {name} ]',
                     empty_group_string='Desktop',
                 ),
                 widget.Spacer(length=bar.STRETCH),
