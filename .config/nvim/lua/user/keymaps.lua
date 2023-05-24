@@ -105,6 +105,7 @@ keymap("n", "<leader>fw", "<cmd>Telescope current_buffer_fuzzy_find<CR>", opts)
 keymap("n", "<leader>fb", "<cmd>Telescope buffers<CR>", opts)
 keymap("n", "<leader>fh", "<cmd>Telescope help_tags<CR>", opts)
 keymap("n", "<leader>fg", "<cmd>Telescope git_status<CR>", opts)
+keymap("n", "<leader>fd", "<cmd>Telescope diagnostics<CR>", opts)
 
 -- Git
 -- keymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
