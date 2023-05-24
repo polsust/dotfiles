@@ -19,10 +19,23 @@ screens = [
         top=bar.Bar(
             [
                 widget.GroupBox(
-                    borderwidth=3,
-                    highlight_method='block',
-                    rounded=True,
+                    highlight_method='text',
+                    fmt='[ {} ]',
                     disable_drag=True,
+                    padding=0,
+                    margin=0,
+                    active=colors['light'],  # Active group font colour
+                    hide_unused=True,  # Hide groups that have no windows and that are not displayed on any screen.
+                    # other_current_screen_border=colors['darker'], #Border or line colour for group on other screen when focused.
+                    # other_screen_border=colors['darker'], #Border or line colour for group on other screen when unfocused.
+                    this_current_screen_border=colors[
+                        'lighter'
+                    ],  # Border or line colour for group on this screen when focused.
+                    # this_screen_border=colors['lighter'], #Border or line colour for group on this screen when unfocused.
+                    urgent_alert_method='text',
+                    urgent_text=colors['special'][
+                        'light'
+                    ],  # Urgent group font color
                 ),
                 widget.CurrentLayoutIcon(
                     scale=0.6,
