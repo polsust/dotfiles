@@ -22,14 +22,15 @@ screens = [
     Screen(
         top=bar.Bar(
             [
+                opening_sep,
                 widget.GroupBox(
                     highlight_method='text',
-                    fmt='[ {} ]',
+                    fmt='[{}]',
                     disable_drag=True,
                     padding=0,
                     margin_y=3,
                     active=colors['light'],  # Active group font colour
-                    hide_unused=True,  # Hide groups that have no windows and that are not displayed on any screen.
+                    hide_unused=False,  # Hide groups that have no windows and that are not displayed on any screen.
                     # other_current_screen_border=colors['darker'], #Border or line colour for group on other screen when focused.
                     # other_screen_border=colors['darker'], #Border or line colour for group on other screen when unfocused.
                     this_current_screen_border=colors[
@@ -41,6 +42,7 @@ screens = [
                         'light'
                     ],  # Urgent group font color
                 ),
+                closing_sep,
                 opening_sep,
                 widget.CurrentLayoutIcon(
                     scale=0.5,
