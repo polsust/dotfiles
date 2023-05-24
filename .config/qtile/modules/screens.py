@@ -35,21 +35,16 @@ screens = [
                 widget.Spacer(length=bar.STRETCH),
                 widget.Clock(
                     fontsize=20,
-                    format='[ %d-%m-%Y',
+                    format='[ %d-%m-%Y %A',
                 ),
                 widget.TextBox(
-                    padding=5,
+                    padding=0,
                     fmt='',
                     fontsize=30,
                 ),
-                widget.TextBox(
-                    padding=5,
-                    fmt='][',
-                    fontsize=20,
-                ),
                 widget.Clock(
                     fontsize=20,
-                    format='%A %R 󰥔 ]',
+                    format='] [ %H:%M 󰥔 ]',
                 ),
                 widget.Spacer(length=bar.STRETCH),
                 widget.Sep(padding=20, linewidth=2),
