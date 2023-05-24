@@ -47,10 +47,10 @@ screens = [
                 ),
                 widget.CurrentLayout(),
                 closing_sep,
-                widget.WindowName(
-                    format='[ {name} ]',
-                    empty_group_string='Desktop',
-                ),
+                # widget.WindowName(
+                #     format='[ {name} ]',
+                #     empty_group_string='Desktop',
+                # ),
                 widget.Spacer(length=bar.STRETCH),
                 widget.Clock(
                     format='[ %d-%m-%Y %A',
