@@ -6,7 +6,7 @@ from modules.colors import colors
 widget_defaults = dict(
     font='Mononoki',
     fontsize=18,
-    padding=10,
+    padding=8,
     border=colors['light'],
     border_width=10,
     foreground=colors['lighter'],
@@ -14,9 +14,9 @@ widget_defaults = dict(
 )
 extension_defaults = widget_defaults.copy()
 
-opening_sep = widget.TextBox(fmt='[ ')
+opening_sep = widget.TextBox(fmt='[')
 
-closing_sep = widget.TextBox(fmt=' ]')
+closing_sep = widget.TextBox(fmt=']')
 
 screens = [
     Screen(
@@ -91,9 +91,9 @@ screens = [
                 closing_sep,
             ],
             30,
-            border_color='#282738',
-            border_width=[0, 0, 0, 0],
-            margin=[15, 60, 6, 60],
+            border_color=colors['lighter'],
+            border_width=2,
+            margin=10,
         ),
     ),
 ]
