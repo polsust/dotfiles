@@ -161,7 +161,7 @@ keymap("n", "<a-4>", "<cmd>lua require('harpoon.ui').nav_file(4)<CR>", opts)
 keymap("n", "<leader>fr", "<cmd>lua require('spectre').open()<CR>", opts)
 
 -- packer
-keymap("n", "<leader>ps", "<cmd>PackerSync<CR>", opts)
+keymap("n", "<leader>ps", "<cmd>Lazy sync<CR>", opts)
 
 -- codeium
 keymap('i', '<C-f>', function() return vim.fn['codeium#Accept']() end, { silent = true, expr = true })
