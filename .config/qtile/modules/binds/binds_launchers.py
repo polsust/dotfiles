@@ -19,6 +19,12 @@ binds_launchers = [
     ),
     Key(
         [mod],
+        'period',
+        lazy.spawn('rofimoji'),
+        desc='Launch rofi emoji picker',
+    ),
+    Key(
+        [mod],
         'c',
         lazy.spawn(apps['calculator']),
         desc='Launch calculator',
