@@ -1,16 +1,16 @@
 from libqtile import bar, widget
 from libqtile.lazy import lazy
 from libqtile.config import Screen
-from modules.colors import colors
+from modules.colors import Colors
 
 widget_defaults = dict(
     font='Mononoki',
     fontsize=18,
     padding=8,
-    border=colors['light'],
+    border=Colors.light,
     border_width=10,
-    foreground=colors['lighter'],
-    background=colors['dark'],
+    foreground=Colors.lighter,
+    background=Colors.dark,
 )
 extension_defaults = widget_defaults.copy()
 
@@ -29,18 +29,14 @@ screens = [
                     disable_drag=True,
                     padding=0,
                     margin_y=3,
-                    active=colors['light'],  # Active group font colour
+                    active=Colors.light,  # Active group font colour
                     hide_unused=False,  # Hide groups that have no windows and that are not displayed on any screen.
                     # other_current_screen_border=colors['darker'], #Border or line colour for group on other screen when focused.
                     # other_screen_border=colors['darker'], #Border or line colour for group on other screen when unfocused.
-                    this_current_screen_border=colors[
-                        'lighter'
-                    ],  # Border or line colour for group on this screen when focused.
+                    this_current_screen_border=Colors.lighter,  # Border or line colour for group on this screen when focused.
                     # this_screen_border=colors['lighter'], #Border or line colour for group on this screen when unfocused.
                     urgent_alert_method='text',
-                    urgent_text=colors['special'][
-                        'light'
-                    ],  # Urgent group font color
+                    urgent_text=Colors.special.light,  # Urgent group font color
                 ),
                 closing_sep,
                 opening_sep,
@@ -95,7 +91,7 @@ screens = [
                 closing_sep,
             ],
             30,
-            border_color=colors['lighter'],
+            border_color=Colors.lighter,
             border_width=2,
             margin=10,
         ),

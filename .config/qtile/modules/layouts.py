@@ -1,12 +1,12 @@
 from libqtile import layout
 from libqtile.config import Match
-from modules.colors import colors
+from modules.colors import Colors
 
 default_opts = dict(
-    border_normal=colors['light'],
-    border_focus=colors['lighter'],
-    border_focus_stack=colors['special']['light'],
-    border_normal_stack=colors['special']['dark'],
+    border_normal=Colors.light,
+    border_focus=Colors.lighter,
+    border_focus_stack=Colors.special.light,
+    border_normal_stack=Colors.special.dark,
     border_width=4,
     insert_position=1,
     margin=5,
@@ -30,8 +30,8 @@ layouts = [
     # layout.VerticalTile(**default_opts),
 ]
 floating_layout = layout.Floating(
-    border_normal=colors['light'],
-    border_focus=colors['lighter'],
+    border_normal=Colors.light,
+    border_focus=Colors.lighter,
     float_rules=[
         # Run the utility of `xprop` to see the wm class and name of an X client.
         *layout.Floating.default_float_rules,
