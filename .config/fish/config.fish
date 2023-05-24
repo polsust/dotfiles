@@ -82,7 +82,7 @@ if status is-interactive
 
 
     ### ALIASES ####
-    alias f editFinder
+    alias c "$EDITOR (conf)"
     alias .2 "cd ../.."
     alias ll "ls -lt"
     alias ls "lsd --color=auto"
