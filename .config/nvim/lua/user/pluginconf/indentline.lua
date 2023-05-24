@@ -1,6 +1,11 @@
 local status_ok, indent_blankline = pcall(require, "indent_blankline")
 if not status_ok then
-	return
+  return
 end
 
-indent_blankline.setup()
+vim.opt.list = true
+vim.opt.listchars:append("eol:↴")
+
+indent_blankline.setup({
+  show_end_of_line = true,
+})
