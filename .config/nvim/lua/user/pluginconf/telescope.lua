@@ -52,6 +52,9 @@ telescope.setup({
     find_files = {
       find_command = find_command,
     },
+    current_buffer_fuzzy_find = {
+      sorting_strategy = "ascending",
+    },
   },
 })
 
