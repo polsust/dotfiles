@@ -5,7 +5,7 @@ from modules.colors import Colors
 
 widget_defaults = dict(
     font='Mononoki',
-    fontsize=18,
+    fontsize=15,
     padding=8,
     border=Colors.light,
     border_width=10,
@@ -65,6 +65,19 @@ screens = [
                 opening_sep,
                 widget.Systray(
                     icon_size=20,
+                ),
+                closing_sep,
+                opening_sep,
+                # widget.Bluetooth(
+                #     fmt="{}",
+                #     hci="/dev_28:6F:40:A1:1D:8D",
+                # ),
+                widget.CheckUpdates(
+                    colour_have_updates=Colors.lighter,
+                    colour_no_updates=Colors.lighter,
+                    display_format='{updates}',
+                    fmt='{} 󰚰',
+                    no_update_string='No updates',
                 ),
                 closing_sep,
                 opening_sep,
