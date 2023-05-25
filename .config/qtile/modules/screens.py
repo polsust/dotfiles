@@ -69,7 +69,7 @@ screens = [
                 closing_sep,
                 opening_sep,
                 widget.Wlan(
-                    disconnected_message="󰖪  No signal",
+                    disconnected_message='󰖪  No signal',
                     format='󰖩 {essid} {percent:2.0%}',
                     interface='wlan0',
                     update_interval=5,
