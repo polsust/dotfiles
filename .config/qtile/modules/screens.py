@@ -68,8 +68,10 @@ screens = [
                 ),
                 closing_sep,
                 opening_sep,
-                widget.Memory(
-                    format='{MemUsed: .0f}{mm}',
+                widget.Wlan(
+                    disconnected_message="󰖪  No signal",
+                    format='󰖩 {essid} {percent:2.0%}',
+                    interface='wlan0',
                     update_interval=5,
                 ),
                 closing_sep,
