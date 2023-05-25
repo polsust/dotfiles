@@ -75,7 +75,7 @@ screens = [
                     colour_no_updates=Colors.lighter,
                     display_format='{updates}',
                     fmt='󰚰  {}',
-                    no_update_string='No updates',
+                    no_update_string='0',
                 ),
                 closing_sep,
                 opening_sep,
