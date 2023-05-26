@@ -76,6 +76,7 @@ screens = [
                     display_format='{updates}',
                     fmt='󰚰  {}',
                     no_update_string='0',
+                    custom_command="paru -Qu"
                 ),
                 closing_sep,
                 opening_sep,
