@@ -73,6 +73,7 @@ nvim_tree.setup({
   sort_by = "name",
   view = {
     side = "left",
+    relativenumber = true,
   },
   renderer = {
     highlight_git = true,
