@@ -6,8 +6,10 @@ end
 configs.setup({
   ensure_installed = {
     "javascript",
+    "jsdoc",
     "typescript",
     "php",
+    "phpdoc",
     "lua",
     "python",
     "html",
