@@ -170,3 +170,7 @@ keymap('i', '<C-f>', function() return vim.fn['codeium#Accept']() end, { silent 
 keymap('i', '<C-;>', function() return vim.fn['codeium#CycleCompletions'](1) end, { silent = true, expr = true })
 keymap('i', '<C-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { silent = true, expr = true })
 keymap('i', '<C-x>', function() return vim.fn['codeium#Clear']() end, { silent = true, expr = true })
+
+-- markdown
+-- toggle checked / create checkbox if it doesn't exist
+keymap("n", "<C-l>", "<cmd>lua require('markdown-togglecheck').toggle()<CR>", opts)
