@@ -49,6 +49,10 @@ screens = [
                 #     format='[ {name} ]',
                 #     empty_group_string='Desktop',
                 # ),
+                widget.KeyboardLayout(
+                    configured_keyboards=['us', 'es'],
+                    fmt='[ 󰌌 {} ]',
+                ),
                 widget.Spacer(length=bar.STRETCH),
                 opening_sep,
                 widget.TextBox(
