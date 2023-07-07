@@ -53,7 +53,7 @@ screens = [
                 opening_sep,
                 widget.TextBox(
                     padding=0,
-                    fmt='',
+                    fmt=' ',
                     fontsize=21,
                 ),
                 widget.Clock(
