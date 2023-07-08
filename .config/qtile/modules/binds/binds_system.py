@@ -19,4 +19,15 @@ binds_system = [
     #
     Key([mod, alt], 'l', lazy.spawn('betterlockscreen -l')),
     Key([mod, alt], 'b', lazy.spawn('bluetoothctl connect 2C:FD:B3:F5:85:71')),
+    #
+    Key(
+        [mod, 'shift'],
+        'e',
+        lazy.spawn('setxkbmap es'),
+    ),
+    Key(
+        [mod, 'shift'],
+        'u',
+        lazy.spawn('setxkbmap us'),
+    ),
 ]
