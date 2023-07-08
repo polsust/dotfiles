@@ -173,4 +173,4 @@ keymap('i', '<C-x>', function() return vim.fn['codeium#Clear']() end, { silent =
 
 -- markdown
 -- toggle checked / create checkbox if it doesn't exist
-keymap("n", "<C-l>", "<cmd>lua require('markdown-togglecheck').toggle()<CR>", opts)
+keymap("n", "<C-m>", "<cmd>lua require('markdown-togglecheck').toggle()<CR>", opts)
