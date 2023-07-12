@@ -99,6 +99,7 @@ if status is-interactive
     # paru 
     alias I "paru -S"
     alias R "paru -R"
+    alias U "paru -Syu"
 
     # dnf
     alias dnfi "sudo dnf install"
