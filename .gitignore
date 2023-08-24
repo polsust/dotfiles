@@ -12,3 +12,5 @@ packer_compiled
 .config/mpv/watch_later
 
 .config/autorandr/*/
+
+alacritty.yml.*
