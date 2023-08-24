@@ -15,3 +15,5 @@ packer_compiled
 .config/autorandr/*/
 
 alacritty.yml.*
+
+.config/lazygit/state.yml
