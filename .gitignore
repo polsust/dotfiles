@@ -3,8 +3,17 @@ __pycache__
 packer_compiled
 
 .config/fish/fish_variables
-.config/nvim/plugin/packer_compiled.lua
 .config/fish/fish_variables
+.config/fish/functions/*
+.config/fish/completions/*
+.config/fish/conf.d/*
+.config/fish/fish_plugins
+
+.config/nvim/plugin/packer_compiled.lua
 .config/mpv/watch_later
 
 .config/autorandr/*/
+
+alacritty.yml.*
+
+.config/lazygit/state.yml

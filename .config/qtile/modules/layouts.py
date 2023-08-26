@@ -19,7 +19,7 @@ layouts = [
     layout.Columns(**default_opts),
     layout.Max(**default_opts),
     # layout.Stack(num_stacks=2),
-    layout.Bsp(**default_opts),
+    # layout.Bsp(**default_opts),
     # layout.Matrix(**default_opts),
     # layout.MonadTall(**default_opts),
     # layout.MonadWide(**default_opts),

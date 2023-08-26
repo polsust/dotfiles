@@ -124,6 +124,14 @@ local plugins = {
     dependencies = "nvim-treesitter/nvim-treesitter",
     config = true, -- or `opts = {}`
   },
+  {
+    "nfrid/treesitter-utils",
+    ft = { "markdown" },
+  },
+  {
+    "phelipetls/jsonpath.nvim",
+    ft = { "json" },
+  },
 }
 
 require("lazy").setup(plugins)
