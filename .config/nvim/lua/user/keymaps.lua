@@ -15,6 +15,10 @@ vim.g.mapleader = " "
 --   term_mode = "t",
 --   command_mode = "c",
 
+keymap("n", "<A-a>", "ggVG<C-o>", opts)
+keymap("n", "<A-d>", "ggVGd", opts)
+keymap("n", "<A-c>", "ggVGy<C-o>", opts)
+
 keymap("n", "<A-CR>", "A;<esc>", opts)
 keymap("i", "<A-CR>", "<esc>A;", opts)
 
