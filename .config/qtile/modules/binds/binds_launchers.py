@@ -25,6 +25,12 @@ binds_launchers = [
     ),
     Key(
         [mod],
+        'comma',
+        lazy.spawn('rofiGlyphs'),
+        desc='Launch rofi glyph picker',
+    ),
+    Key(
+        [mod],
         'c',
         lazy.spawn(apps['calculator']),
         desc='Launch calculator',

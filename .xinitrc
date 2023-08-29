@@ -18,6 +18,8 @@ clipmenud &
 
 dunst &
 
+rescuetime &
+
 # Applications
 
 nm-applet &

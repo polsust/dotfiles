@@ -83,6 +83,7 @@ if status is-interactive
 
     ### ALIASES ####
     alias c "$EDITOR (conf)"
+    alias n "$EDITOR (notes)"
     alias .2 "cd ../.."
     alias ll "ls -lt"
     alias ls "lsd --color=auto"
@@ -99,6 +100,7 @@ if status is-interactive
     # paru 
     alias I "paru -S"
     alias R "paru -R"
+    alias U "paru -Syu"
 
     # dnf
     alias dnfi "sudo dnf install"

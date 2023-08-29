@@ -37,9 +37,9 @@ configs.setup({
   },
 
   -- PLUGINS
-  rainbow = {
-    enable = true,
-  },
+  -- rainbow = {
+  --   enable = true,
+  -- },
 
   autotag = {
     enable = true,

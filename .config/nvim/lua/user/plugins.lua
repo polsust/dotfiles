@@ -115,11 +115,17 @@ local plugins = {
   { "catppuccin/nvim", name = "catppuccin" },
 
   {
-    "nfrid/treesitter-utils",
+    "nfrid/markdown-togglecheck",
+    dependencies = { "nfrid/treesitter-utils" },
     ft = { "markdown" },
   },
   {
-    "nfrid/markdown-togglecheck",
+    "lukas-reineke/headlines.nvim",
+    dependencies = "nvim-treesitter/nvim-treesitter",
+    config = true, -- or `opts = {}`
+  },
+  {
+    "nfrid/treesitter-utils",
     ft = { "markdown" },
   },
   {
