@@ -3,4 +3,10 @@ if not status_ok then
   return
 end
 
-lualine.setup()
+local wtf = require("wtf")
+
+require("lualine").setup({
+  sections = {
+    lualine_x = { wtf.get_status },
+  },
+})
