@@ -20,6 +20,8 @@ dunst &
 
 rescuetime &
 
+batteryAlerts &
+
 # Applications
 
 nm-applet &
