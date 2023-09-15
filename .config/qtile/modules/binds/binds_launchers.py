@@ -104,4 +104,10 @@ binds_launchers = [
         lazy.spawn('obsidian'),
         desc='Launch obsidian',
     ),
+    Key(
+        [mod, 'shift'],
+        'p',
+        lazy.spawn('xdotool key --delay 100 "Super_L+Shift_L+Return" --delay KP_Space p o'),
+        desc='Launch obsidian',
+    ),
 ]
