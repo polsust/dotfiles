@@ -121,7 +121,7 @@ if status is-interactive
     ### END ALIASES ###
 
     # select a random fish
-    set -lx fish_number (random 1 6)
+    set -lx fish_number (random 1 14)
     # print the random fish 
     /bin/cat ~/.config/fish/ascii/fish$fish_number | lolcat
     # Remove greeting
