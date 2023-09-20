@@ -82,8 +82,8 @@ if status is-interactive
 
 
     ### ALIASES ####
-    alias c "$EDITOR (conf)"
-    alias n "$EDITOR (notes)"
+  alias n "$EDITOR (notes)"
+    alias c conf
     alias .2 "cd ../.."
     alias ll "ls -lt"
     alias ls "lsd --color=auto"
