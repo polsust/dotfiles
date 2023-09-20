@@ -82,7 +82,7 @@ if status is-interactive
 
 
     ### ALIASES ####
-  alias n "$EDITOR (notes)"
+    alias n "$EDITOR (notes)"
     alias c conf
     alias .2 "cd ../.."
     alias ll "ls -lt"
