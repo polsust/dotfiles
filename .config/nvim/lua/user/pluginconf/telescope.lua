@@ -19,6 +19,7 @@ local ignore_patterns = {
   "dist",
   "build",
   ".build",
+  ".debris",
 
   -- php
   "vendor",
