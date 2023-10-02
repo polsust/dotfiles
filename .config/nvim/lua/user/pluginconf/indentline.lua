@@ -1,4 +1,4 @@
-local status_ok, indent_blankline = pcall(require, "indent_blankline")
+local status_ok, indent_blankline = pcall(require, "ibl")
 if not status_ok then
   return
 end
@@ -6,8 +6,19 @@ end
 vim.opt.list = true
 vim.opt.listchars:append("eol:↴")
 
+local highlight = {
+  "CursorColumn",
+  "Whitespace",
+}
+
 indent_blankline.setup({
-  show_end_of_line = true,
-  show_current_context = true,
-  show_current_context_start = true,
+
+  -- indent = { highlight = highlight, char = "" },
+  -- whitespace = {
+  --   highlight = highlight,
+  --   remove_blankline_trail = false,
+  -- },
+  scope = { enabled = true,
+  show_start = true,
+  },
 })

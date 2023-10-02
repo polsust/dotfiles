@@ -144,13 +144,8 @@ keymap("n", "<leader>dt", "<cmd>lua require'dap'.terminate()<cr>", opts)
 -- Aerial
 keymap("n", "<leader>a", "<cmd>AerialToggle<CR>", opts)
 
--- Terminal
-local termCmd = "ToggleTerm direction=horizontal size=45"
-keymap("n", "<C-\\>", "<cmd>" .. termCmd .. "<CR>", opts)
-keymap("t", "<C-\\>", "<cmd>" .. termCmd .. "<CR>", opts)
-
 -- Lazygit
-keymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
+keymap("n", "<c-g>", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
 
 -- Harpoon
 keymap("n", "<Leader>ha", "<cmd>lua require('harpoon.mark').add_file()<CR>", opts)
