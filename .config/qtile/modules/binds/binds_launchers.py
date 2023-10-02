@@ -1,6 +1,6 @@
 from libqtile.config import Key
 from libqtile.lazy import lazy
-from modules.settings import mod, apps
+from modules.settings import mod, apps, alt
 from modules.helpers import spawn_in_terminal
 import os.path
 
@@ -88,10 +88,19 @@ binds_launchers = [
     Key(
         [mod],
         'n',
-        lazy.spawn(os.path.expanduser('~/.scripts/run-on-term "nvim ~/notes"')),
+        lazy.spawn(
+            os.path.expanduser('~/.scripts/run-on-term "nvim ~/notes"')
+        ),
         # lazy.spawn('xdotool key Super_L+f'),
         # lazy.spawn('xdotool key Super_L+f'),
         desc='Launch notes',
+    ),
+    Key(
+        [mod],
+        'm',
+        lazy.spawn(os.path.expanduser('~/.scripts/run-on-term dailyNote')),
+        # lazy.spawn('xdotool key Super_L+f'),
+        desc='Launch dailynote',
     ),
     Key(
         [mod],
