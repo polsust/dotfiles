@@ -22,8 +22,8 @@ vim.cmd([[
 
 local plugins = {
   "wbthomason/packer.nvim", -- Have packer manage itself
-  "nvim-lua/plenary.nvim", -- Useful lua functions used by lots of plugins
-  "windwp/nvim-autopairs", -- Autopairs, integrates with both cmp and treesitter
+  "nvim-lua/plenary.nvim",  -- Useful lua functions used by lots of plugins
+  "windwp/nvim-autopairs",  -- Autopairs, integrates with both cmp and treesitter
   "numToStr/Comment.nvim",
   "kyazdani42/nvim-web-devicons",
   "kyazdani42/nvim-tree.lua",
@@ -33,7 +33,10 @@ local plugins = {
   "akinsho/toggleterm.nvim",
   "ahmedkhalf/project.nvim",
   "lewis6991/impatient.nvim",
-  "lukas-reineke/indent-blankline.nvim",
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    main = "ibl",
+  },
   "goolord/alpha-nvim",
 
   "CosmicNvim/cosmic-ui",
@@ -48,24 +51,24 @@ local plugins = {
   "folke/tokyonight.nvim",
   "lunarvim/darkplus.nvim",
   -- cmp plugins
-  "hrsh7th/nvim-cmp",        -- The completion plugin
-  "hrsh7th/cmp-buffer",      -- buffer completions
-  "hrsh7th/cmp-path",        -- path completions
+  "hrsh7th/nvim-cmp",         -- The completion plugin
+  "hrsh7th/cmp-buffer",       -- buffer completions
+  "hrsh7th/cmp-path",         -- path completions
   "saadparwaiz1/cmp_luasnip", -- snippet completions
   "hrsh7th/cmp-nvim-lsp",
   "hrsh7th/cmp-nvim-lua",
   "hrsh7th/cmp-nvim-lsp-signature-help", -- vscode-like info about current param on a function
-  "lukas-reineke/cmp-under-comparator", -- sorting
+  "lukas-reineke/cmp-under-comparator",  -- sorting
 
   -- snippets
-  "L3MON4D3/LuaSnip",            --snippet engine
+  "L3MON4D3/LuaSnip",             --snippet engine
   "rafamadriz/friendly-snippets", -- a bunch of snippets to use
 
   -- LSP
-  "neovim/nvim-lspconfig",            -- enable LSP
-  "williamboman/mason.nvim",          -- language server installer
+  "neovim/nvim-lspconfig",             -- enable LSP
+  "williamboman/mason.nvim",           -- language server installer
   "williamboman/mason-lspconfig.nvim", -- language server installer
-  "jose-elias-alvarez/null-ls.nvim",  -- for formatters and linters
+  "jose-elias-alvarez/null-ls.nvim",   -- for formatters and linters
   "RRethy/vim-illuminate",
   "stevearc/aerial.nvim",
 
@@ -157,6 +160,9 @@ local plugins = {
         desc = "Search diagnostic with Google",
       },
     },
+  },
+  {
+    "tpope/vim-surround",
   },
 }
 
