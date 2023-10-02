@@ -2,6 +2,7 @@ from libqtile.config import Key
 from libqtile.lazy import lazy
 from modules.settings import mod, apps
 from modules.helpers import spawn_in_terminal
+import os.path
 
 binds_launchers = [
     Key([mod], 't', lazy.spawn(apps['terminal']), desc='Launch terminal'),
@@ -69,7 +70,7 @@ binds_launchers = [
     Key(
         [mod],
         'r',
-        lazy.spawn(spawn_in_terminal(apps['tui_file_manager'])),
+        lazy.spawn(os.path.expanduser('~/.scripts/run-on-term ranger')),
         desc='Launch tui file manager',
     ),
     Key(
@@ -87,10 +88,10 @@ binds_launchers = [
     Key(
         [mod],
         'n',
-        lazy.spawn(spawn_in_terminal(apps['code_editor'])),
+        lazy.spawn(os.path.expanduser('~/.scripts/run-on-term "nvim ~/notes"')),
         # lazy.spawn('xdotool key Super_L+f'),
         # lazy.spawn('xdotool key Super_L+f'),
-        desc='Launch code editor',
+        desc='Launch notes',
     ),
     Key(
         [mod],
@@ -102,6 +103,14 @@ binds_launchers = [
         [mod],
         'o',
         lazy.spawn('obsidian'),
+        desc='Launch obsidian',
+    ),
+    Key(
+        [mod, 'shift'],
+        'p',
+        lazy.spawn(
+            'xdotool key --delay 100 "Super_L+Shift_L+Return" --delay KP_Space p o'
+        ),
         desc='Launch obsidian',
     ),
 ]
