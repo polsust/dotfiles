@@ -91,6 +91,7 @@ if status is-interactive
     alias psgrep "ps -e | grep -i"
     alias xclass "xprop | grep CLASS"
     alias e exit
+    alias restart-qtile "qtile cmd-obj -o cmd -f restart"
     # function dotadd
     #     set -l absoluteFilePath "$(pwd)"
     #     set -l insideHomeFilePath (string split "$USER/" -- $absoluteFilePath)[2]
