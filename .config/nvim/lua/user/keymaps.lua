@@ -146,6 +146,7 @@ keymap("n", "<leader>a", "<cmd>AerialToggle<CR>", opts)
 
 -- Lazygit
 keymap("n", "<c-g>", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
+keymap("t", "<c-g>", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
 
 -- Harpoon
 keymap("n", "<Leader>ha", "<cmd>lua require('harpoon.mark').add_file()<CR>", opts)
