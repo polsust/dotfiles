@@ -104,6 +104,7 @@ keymap("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", opts)
 -- Telescope
 -- keymap("n", "<C-t>", "<cmd>Telescope<CR>", opts)
 keymap("n", "<leader>ff", "<cmd>Telescope find_files<CR>", opts)
+keymap("n", "<C-p>", "<cmd>Telescope find_files<CR>", opts)
 keymap("n", "<leader>fW", "<cmd>Telescope live_grep<CR>", opts)
 keymap("n", "<leader>fw", "<cmd>Telescope current_buffer_fuzzy_find<CR>", opts)
 keymap("n", "<leader>fb", "<cmd>Telescope buffers<CR>", opts)
