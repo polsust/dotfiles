@@ -1,3 +1,4 @@
+import os
 from libqtile.config import Key
 from libqtile.lazy import lazy
 from modules.settings import mod, alt
@@ -18,7 +19,11 @@ binds_system = [
     Key([], 'XF86AudioPrev', lazy.spawn('playerctl previous')),
     #
     Key([mod, alt], 'l', lazy.spawn('betterlockscreen -l')),
-    Key([mod, alt], 'b', lazy.spawn('bluetoothctl connect 2C:FD:B3:F5:85:71')),
+    Key(
+        [mod, alt],
+        'b',
+        lazy.spawn(os.path.expanduser('~/.scripts/toggleJabra')),
+    ),
     #
     Key(
         [mod, 'shift'],
