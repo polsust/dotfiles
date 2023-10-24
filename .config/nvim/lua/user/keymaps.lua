@@ -172,6 +172,11 @@ keymap('i', '<C-;>', function() return vim.fn['codeium#CycleCompletions'](1) end
 keymap('i', '<C-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { silent = true, expr = true })
 keymap('i', '<C-x>', function() return vim.fn['codeium#Clear']() end, { silent = true, expr = true })
 
+-- rest
+keymap("n", "<Leader>rr", "<Plug>RestNvim", opts)
+keymap("n", "<Leader>rp", "<Plug>RestNvimPreview", opts)
+keymap("n", "<Leader>rl", "<Plug>RestNvimLast", opts)
+
 -- markdown
 -- toggle checked / create checkbox if it doesn't exist
 keymap("n", "<A-l>", "<cmd>lua require('markdown-togglecheck').toggle()<CR>", opts)
