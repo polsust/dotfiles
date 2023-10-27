@@ -68,7 +68,7 @@ local plugins = {
   "neovim/nvim-lspconfig",            -- enable LSP
   "williamboman/mason.nvim",          -- language server installer
   "williamboman/mason-lspconfig.nvim", -- language server installer
-  "jose-elias-alvarez/null-ls.nvim",  -- for formatters and linters
+  "nvimtools/none-ls.nvim",           -- for formatters and linters
   "RRethy/vim-illuminate",
   "stevearc/aerial.nvim",
 
