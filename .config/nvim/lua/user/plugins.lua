@@ -78,7 +78,7 @@ local plugins = {
   -- Treesitter
   { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
   "JoosepAlviste/nvim-ts-context-commentstring",
-  "p00f/nvim-ts-rainbow",
+  "hiphish/rainbow-delimiters.nvim",
   "windwp/nvim-ts-autotag",
   "nvim-treesitter/nvim-treesitter-context",
 
