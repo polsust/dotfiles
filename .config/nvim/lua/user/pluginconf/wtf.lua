@@ -8,7 +8,7 @@ require("wtf").setup({
   -- Any additional instructions
   -- additional_instructions = "Start the reply with 'OH HAI THERE'",
   -- Default search engine, can be overridden by passing an option to WtfSeatch
-  default_search_engine = "duck_duck_go",
+  search_engine = "duck_duck_go",
 })
 
 vim.g["wtf_hooks"] = {
