@@ -167,6 +167,13 @@ local plugins = {
   {
     "rest-nvim/rest.nvim",
   },
+  {
+    "echasnovski/mini.ai",
+    version = false,
+  },
+  {
+    "nvim-treesitter/nvim-treesitter-textobjects",
+  },
 }
 
 require("lazy").setup(plugins)
