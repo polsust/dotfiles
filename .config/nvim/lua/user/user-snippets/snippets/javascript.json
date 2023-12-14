@@ -24,10 +24,20 @@
   "AsynchronousAnonymousSelfCallingFunction": {
     "prefix": "aascf",
     "body": [
-    "(async () => {",
-    "  ${1}",
-    "})()"
+      "(async () => {",
+      "  ${1}",
+      "})()"
     ],
     "description": "LogEffect"
+  },
+  "useQuery": {
+    "prefix": "useQuerySnippet",
+    "body": [
+      "const { data: $1 } = useQuery({",
+      "  queryKey: [],",
+      "  queryFn: () =>",
+      "});"
+    ],
+    "description": "useQuery"
   }
 }
