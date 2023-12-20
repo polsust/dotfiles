@@ -174,6 +174,14 @@ local plugins = {
   {
     "nvim-treesitter/nvim-treesitter-textobjects",
   },
+  {
+    "folke/noice.nvim",
+    event = "VeryLazy",
+    dependencies = {
+      -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+      "MunifTanjim/nui.nvim",
+    },
+  },
 }
 
 require("lazy").setup(plugins)
