@@ -118,6 +118,7 @@ cmp.setup({
         buffer = "[File]",
 
         nvim_lua = "[Lua]",
+        path = "[Path]",
       })[entry.source.name]
       return vim_item
     end,
