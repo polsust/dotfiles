@@ -98,6 +98,7 @@ screens = [
                 ),
                 widget.Battery(
                     format='{percent:1.0%}',
+                    show_short_text=False,
                 ),
                 closing_sep,
                 opening_sep,
