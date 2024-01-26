@@ -118,6 +118,7 @@ vim.g.at_custom_alternates = {
   ["==="] = "!==",
   ["=="] = "!=",
   [">="] = "<=",
+  ["private"] = "public",
 }
 
 vim.cmd([[
