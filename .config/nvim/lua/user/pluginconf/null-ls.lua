@@ -35,10 +35,10 @@ null_ls.setup({
     --     end
     --   end,
     -- }),
-    -- a.eslint_d,
+    a.eslint_d,
 
-    d.eslint,
-    a.eslint,
+    d.eslint_d,
+    -- a.eslint,
 
     f.prettierd,
     d.stylelint,
