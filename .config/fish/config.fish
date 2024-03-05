@@ -97,6 +97,7 @@ if status is-interactive
     #     set -l insideHomeFilePath (string split "$USER/" -- $absoluteFilePath)[2]
     #     command mv $argv "~/.dotfiles/$insideHomeFilePath"
     # end
+    alias rgf "rg --files | rg"
 
     # paru 
     alias I "paru -S"
