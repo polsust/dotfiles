@@ -79,6 +79,7 @@ if status is-interactive
     export PATH="$HOME/.local/bin/:$PATH"
     export PATH="$PATH:$ANDROID_SDK_ROOT/emulator"
     export PATH="$PATH:$ANDROID_SDK_ROOT/platform-tools"
+    export PATH="$PATH:/opt/nvim-linux64/bin"
 
 
     ### ALIASES ####
