@@ -119,6 +119,9 @@ vim.g.at_custom_alternates = {
   ["=="] = "!=",
   [">="] = "<=",
   ["private"] = "public",
+  ["start"] = "end",
+  ["desc"] = "asc",
+  ["descend"] = "ascend",
 }
 
 vim.cmd([[
