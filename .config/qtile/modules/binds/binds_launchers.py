@@ -50,7 +50,7 @@ binds_launchers = [
     ),
     #
     Key(
-        [mod],
+        [mod, 'shift'],
         'x',
         lazy.spawn('gpick -p'),
         desc='Launch colorpicker',
