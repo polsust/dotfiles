@@ -61,7 +61,7 @@ screens = [
                     fontsize=21,
                 ),
                 widget.Clock(
-                    format='%d-%m-%Y %A ] [ 󰥔  %H:%M ]',
+                    format='%d-%m-%Y %A ] [ 󰥔  %H:%M:%S ]',
                 ),
                 widget.Spacer(length=bar.STRETCH),
                 opening_sep,
