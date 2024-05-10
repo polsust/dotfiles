@@ -166,9 +166,6 @@ local plugins = {
     "tpope/vim-surround",
   },
   {
-    "rest-nvim/rest.nvim",
-  },
-  {
     "echasnovski/mini.ai",
     version = false,
   },
