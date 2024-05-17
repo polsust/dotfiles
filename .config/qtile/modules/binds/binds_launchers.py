@@ -81,6 +81,12 @@ binds_launchers = [
     ),
     Key(
         [mod, 'shift'],
+        'w',
+        lazy.spawn(f"{apps['web_browser']} -new-window https://web.whatsapp.com"),
+        desc='Launch web browser',
+    ),
+    Key(
+        [mod, 'shift'],
         'f',
         lazy.spawn(apps['gui_file_manager']),
         desc='Launch gui file manager',
