@@ -32,8 +32,6 @@ firefox &
 
 flameshot &
 
-dailyNote &
-
 "$HOME"/.scripts/pulse-volume-watcher.py | xob &
 
 exec qtile start
