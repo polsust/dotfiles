@@ -10,9 +10,15 @@ binds_system = [
     Key([], 'XF86MonBrightnessUp', lazy.spawn('brightnessctl set 5%+ -q')),
     Key([], 'XF86MonBrightnessDown', lazy.spawn('brightnessctl set 5%- -q')),
     #
+    Key([mod, 'control'], 'Right', lazy.spawn('brightnessctl set 5%+ -q')),
+    Key([mod, 'control'], 'Left', lazy.spawn('brightnessctl set 5%- -q')),
+    #
     Key([], 'XF86AudioRaiseVolume', lazy.spawn('pamixer -i 5')),
     Key([], 'XF86AudioLowerVolume', lazy.spawn('pamixer -d 5')),
     Key([], 'XF86AudioMute', lazy.spawn('pamixer -t')),
+    #
+    Key([mod, 'control'], 'Up', lazy.spawn('pamixer -i 5')),
+    Key([mod, 'control'], 'Down', lazy.spawn('pamixer -d 5')),
     #
     Key([], 'XF86AudioPlay', lazy.spawn('playerctl play-pause')),
     Key([], 'XF86AudioNext', lazy.spawn('playerctl next')),
