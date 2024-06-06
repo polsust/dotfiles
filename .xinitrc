@@ -13,6 +13,8 @@ unclutter -idle 5 &
 
 # Daemons
 
+snixembed & # compatibility for certain trail apps like iwgtk
+
 systemctl --user import-environment DISPLAY # clipmenud
 clipmenud &
 
@@ -23,6 +25,8 @@ rescuetime &
 batteryAlerts &
 
 # Applications
+
+iwgtk -i &
 
 nm-applet &
 
