@@ -20,6 +20,8 @@ binds_system = [
     Key([mod, 'control'], 'Up', lazy.spawn('pamixer -i 5 --allow-boost')),
     Key([mod, 'control'], 'Down', lazy.spawn('pamixer -d 5 --allow-boost')),
     #
+    Key([mod, 'control'], 'Shift_R', lazy.spawn('pamixer -t')),
+    #
     Key([], 'XF86AudioPlay', lazy.spawn('playerctl play-pause')),
     Key([], 'XF86AudioNext', lazy.spawn('playerctl next')),
     Key([], 'XF86AudioPrev', lazy.spawn('playerctl previous')),
