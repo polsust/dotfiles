@@ -22,7 +22,7 @@ dunst &
 
 rescuetime &
 
-batteryAlerts &
+panorama &
 
 # Applications
 
