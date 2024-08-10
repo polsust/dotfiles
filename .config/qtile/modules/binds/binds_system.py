@@ -34,6 +34,17 @@ binds_system = [
     ),
     #
     Key(
+        [mod, alt],
+        'p',
+        lazy.spawn("poweroff"),
+    ),
+    Key(
+        [mod, alt],
+        'r',
+        lazy.spawn("reboot"),
+    ),
+    #
+    Key(
         [mod, 'shift'],
         'e',
         lazy.spawn('setxkbmap es'),
