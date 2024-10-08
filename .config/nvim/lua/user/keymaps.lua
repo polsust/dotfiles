@@ -38,6 +38,11 @@ keymap("n", "<C-Down>", "<cmd>resize +2<CR>", opts)
 keymap("n", "<C-Left>", "<cmd>vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", "<cmd>vertical resize +2<CR>", opts)
 
+keymap("n", "<C-S-k>", "<cmd>resize -2<CR>", opts)
+keymap("n", "<C-S-j>", "<cmd>resize +2<CR>", opts)
+keymap("n", "<C-S-l>", "<cmd>vertical resize +2<CR>", opts)
+keymap("n", "<C-S-h>", "<cmd>vertical resize -2<CR>", opts)
+
 -- Navigate buffers
 keymap("n", "<S-l>", "<cmd>bnext<CR>", opts)
 keymap("n", "<S-h>", "<cmd>bprevious<CR>", opts)
