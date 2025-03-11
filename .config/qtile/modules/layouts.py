@@ -40,6 +40,7 @@ floating_layout = layout.Floating(
         #
         Match(wm_class='megasync'),
         Match(wm_class='bluetuith'),
+        Match(wm_class='bluetui'),
         Match(wm_class='pulsemixer'),
         Match(wm_class='blueman-manager'),
         Match(title='NoiseTorch'),
