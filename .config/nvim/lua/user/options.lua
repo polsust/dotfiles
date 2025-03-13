@@ -122,6 +122,7 @@ vim.g.at_custom_alternates = {
   ["start"] = "end",
   ["desc"] = "asc",
   ["descend"] = "ascend",
+  ["active"] = "inactive",
 }
 
 vim.cmd([[
