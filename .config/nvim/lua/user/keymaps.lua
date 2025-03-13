@@ -172,10 +172,18 @@ keymap("n", "<leader>fr", "<cmd>lua require('spectre').open()<CR>", opts)
 keymap("n", "<leader>ps", "<cmd>Lazy sync<CR>", opts)
 
 -- codeium
--- keymap('i', '<C-f>', function() return vim.fn['codeium#Accept']() end, { silent = true, expr = true })
--- keymap('i', '<C-;>', function() return vim.fn['codeium#CycleCompletions'](1) end, { silent = true, expr = true })
--- keymap('i', '<C-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { silent = true, expr = true })
--- keymap('i', '<C-x>', function() return vim.fn['codeium#Clear']() end, { silent = true, expr = true })
+keymap("i", "<C-f>", function()
+  return vim.fn["codeium#Accept"]()
+end, { silent = true, expr = true })
+keymap("i", "<C-;>", function()
+  return vim.fn["codeium#CycleCompletions"](1)
+end, { silent = true, expr = true })
+keymap("i", "<C-,>", function()
+  return vim.fn["codeium#CycleCompletions"](-1)
+end, { silent = true, expr = true })
+keymap("i", "<C-x>", function()
+  return vim.fn["codeium#Clear"]()
+end, { silent = true, expr = true })
 
 -- rest
 keymap("n", "<Leader>rr", "<Plug>RestNvim", opts)
