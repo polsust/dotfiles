@@ -94,7 +94,7 @@ nvim_tree.setup({
         },
       },
     },
-    special_files = { "init.lua" },
+    special_files = { "init.lua", "index.js", "index.ts" },
   },
   update_focused_file = {
     enable = true,
