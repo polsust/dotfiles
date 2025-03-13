@@ -46,6 +46,10 @@ telescope.setup({
       i = {
         ["<C-k>"] = "move_selection_previous",
         ["<C-j>"] = "move_selection_next",
+        ["<C-o>"] = function(prompt_bufnr)
+          require("telescope.actions").select_default(prompt_bufnr)
+          require("telescope.builtin").resume()
+        end,
       },
     },
   },
