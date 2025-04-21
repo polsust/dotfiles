@@ -113,3 +113,10 @@ vim.api.nvim_create_autocmd({ "User" }, {
     require("nvim-tree.api").tree.toggle(false, true)
   end,
 })
+
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = { "dotenv" },
+	callback = function()
+		vim.treesitter.language.register("bash", "dotenv")
+	end,
+})
