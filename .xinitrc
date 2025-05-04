@@ -40,7 +40,9 @@ steam -silent &
 
 flameshot &
 
-"$HOME"/.scripts/pulse-volume-watcher.py | xob &
 blueman-applet &
+
+"$HOME"/.scripts/volume-watcher | xob &
+"$HOME"/.scripts/brightness-bar &
 
 exec qtile start
