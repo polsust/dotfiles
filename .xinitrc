@@ -41,5 +41,6 @@ steam -silent &
 flameshot &
 
 "$HOME"/.scripts/pulse-volume-watcher.py | xob &
+blueman-applet &
 
 exec qtile start
