@@ -34,6 +34,10 @@ megasync &
 
 firefox &
 
+discord &
+
+steam -silent &
+
 flameshot &
 
 "$HOME"/.scripts/pulse-volume-watcher.py | xob &
