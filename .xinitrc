@@ -5,7 +5,7 @@ autorandr main
 
 ~/.fehbg &
 
-picom --experimental-backends &
+picom &
 
 setxkbmap -option ctrl:nocaps &
 
