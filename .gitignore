@@ -17,3 +17,6 @@ packer_compiled
 alacritty.yml.*
 
 .config/lazygit/state.yml
+
+.config/yarn/*
+.config/go/*
