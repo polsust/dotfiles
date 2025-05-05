@@ -124,8 +124,8 @@ vim.api.nvim_create_autocmd("FileChangedShellPost", {
 })
 
 vim.api.nvim_create_autocmd("FileType", {
-	pattern = { "dotenv" },
-	callback = function()
-		vim.treesitter.language.register("bash", "dotenv")
-	end,
+  pattern = { "dotenv" },
+  callback = function()
+    vim.treesitter.language.register("bash", "dotenv")
+  end,
 })

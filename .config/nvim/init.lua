@@ -9,3 +9,4 @@ require("user.lsp")
 -- require "user.plugins.dap"
 require("user.helpers")
 require("user.commands")
+require("user.filetypes")
