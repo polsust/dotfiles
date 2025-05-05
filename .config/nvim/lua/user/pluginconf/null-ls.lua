@@ -35,10 +35,9 @@ null_ls.setup({
     --     end
     --   end,
     -- }),
-    a.eslint_d,
 
-    d.eslint_d,
-    -- a.eslint,
+    require("none-ls.diagnostics.eslint_d"),
+    require("none-ls.code_actions.eslint_d"),
 
     f.prettierd,
     d.stylelint,
@@ -68,7 +67,13 @@ null_ls.setup({
           group = augroup,
           buffer = bufnr,
           callback = function()
-            vim.lsp.buf.format({ bufnr = bufnr })
+            vim.lsp.buf.format({
+              bufnr = bufnr,
+              filter = function(client)
+                -- return client.name == "null-ls"
+                return client.name ~= "ts_ls"
+              end,
+            })
           end,
         })
       end

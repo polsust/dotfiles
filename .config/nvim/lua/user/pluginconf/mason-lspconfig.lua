@@ -12,10 +12,6 @@ mason_lspconfig.setup({
 local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 local on_attach = function(client, bufnr)
-  if client.name == "sumneko_lua" or client.name == "tsserver" or client.name == "html" then
-    client.server_capabilities.document_formatting = false
-  end
-
   -- Mappings.
   -- See `:help vim.lsp.*` for documentation on any of the below functions
   local bufopts = { noremap = true, silent = true, buffer = bufnr }
@@ -36,7 +32,6 @@ local on_attach = function(client, bufnr)
   vim.keymap.set("v", "<Leader>la", "<cmd>lua require('cosmic-ui').range_code_actions()<cr>", bufopts)
   vim.keymap.set("n", "<Leader>ls", "<cmd>Telescope lsp_document_symbols<CR>", bufopts)
   vim.keymap.set("n", "<Leader>ld", "<cmd>Telescope diagnostics<CR>", bufopts)
-  vim.keymap.set("n", "<Leader>lf", vim.lsp.buf.formatting, bufopts)
 end
 
 local function setup_lsp(server_name, extraopts)
