@@ -14,8 +14,8 @@ local a = null_ls.builtins.code_actions
 null_ls.setup({
   sources = {
     ---- pyhton ----
-    d.mypy,
-    f.blue,
+    -- d.mypy,
+    -- f.blue,
 
     ---- webdev ----
     -- d.eslint_d.with({
@@ -42,7 +42,7 @@ null_ls.setup({
     f.prettierd,
     d.stylelint,
 
-    f.rustywind,
+    -- f.rustywind,
 
     ---- lua ----
     -- d.selene,
