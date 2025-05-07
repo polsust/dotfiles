@@ -38,7 +38,10 @@ local plugins = {
   "karb94/neoscroll.nvim",
   "chentoast/marks.nvim",
   "norcalli/nvim-colorizer.lua",
-  "ThePrimeagen/harpoon",
+  {
+    "ThePrimeagen/harpoon",
+    branch = "harpoon2",
+  },
   -- Colorschemes
   "folke/tokyonight.nvim",
   "lunarvim/darkplus.nvim",

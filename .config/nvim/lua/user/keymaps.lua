@@ -154,17 +154,6 @@ keymap("n", "<leader>a", "<cmd>AerialToggle<CR>", opts)
 keymap("n", "<c-g>", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
 keymap("t", "<c-g>", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
 
--- Harpoon
-keymap("n", "<Leader>ha", "<cmd>lua require('harpoon.mark').add_file()<CR>", opts)
-keymap("n", "<Leader>hh", "<cmd>lua require('harpoon.ui').toggle_quick_menu()<CR>", opts)
--- keymap("n", "<Leader>hl", "<cmd>lua require('harpoon.ui').nav_next()<CR>")
--- keymap("n", "<Leader>hh", "<cmd>lua require('harpoon.ui').nav_prev()<CR>")
-
-keymap("n", "<a-1>", "<cmd>lua require('harpoon.ui').nav_file(1)<CR>", opts)
-keymap("n", "<a-2>", "<cmd>lua require('harpoon.ui').nav_file(2)<CR>", opts)
-keymap("n", "<a-3>", "<cmd>lua require('harpoon.ui').nav_file(3)<CR>", opts)
-keymap("n", "<a-4>", "<cmd>lua require('harpoon.ui').nav_file(4)<CR>", opts)
-
 -- spectre
 keymap("n", "<leader>fr", "<cmd>lua require('spectre').open()<CR>", opts)
 
