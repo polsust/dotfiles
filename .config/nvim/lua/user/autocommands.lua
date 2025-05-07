@@ -94,6 +94,10 @@ vim.api.nvim_create_autocmd({ "TextChanged", "InsertLeave" }, {
       return
     end
 
+    if string.find(data.file, "__harpoon") then
+      return
+    end
+
     -- this will affect also any file which it's path contains spectre
     if string.find(data.file, "spectre") or data.file == "" then
       return
