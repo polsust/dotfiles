@@ -103,9 +103,9 @@ local plugins = {
   "ziontee113/color-picker.nvim",
   "Shatur/neovim-session-manager",
   "tiagovla/scope.nvim",
-  "github/copilot.vim",
+  -- "github/copilot.vim",
   "jackMort/ChatGPT.nvim",
-  -- "Exafunction/codeium.vim",
+  "Exafunction/codeium.vim",
 
   { "toppair/peek.nvim",               build = "deno task --quiet build:fast" },
   "jay-babu/mason-null-ls.nvim",
