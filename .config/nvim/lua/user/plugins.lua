@@ -60,8 +60,7 @@ local plugins = {
   "rafamadriz/friendly-snippets", -- a bunch of snippets to use
 
   -- LSP
-  "neovim/nvim-lspconfig",            -- enable LSP
-  "nvimtools/none-ls.nvim",           -- for formatters and linters
+  "neovim/nvim-lspconfig", -- enable LSP
   { "mason-org/mason.nvim",           branch = "v1.x" },
   { "mason-org/mason-lspconfig.nvim", branch = "v1.x" },
   "RRethy/vim-illuminate",
@@ -111,7 +110,15 @@ local plugins = {
   { "toppair/peek.nvim",               build = "deno task --quiet build:fast" },
   "jay-babu/mason-null-ls.nvim",
   "jose-elias-alvarez/null-ls.nvim",
-  { "catppuccin/nvim", name = "catppuccin" },
+
+  {
+    "nvimtools/none-ls.nvim",
+    dependencies = {
+      "nvimtools/none-ls-extras.nvim",
+    },
+  },
+
+  { "catppuccin/nvim",                  name = "catppuccin" },
 
   {
     "nfrid/markdown-togglecheck",
