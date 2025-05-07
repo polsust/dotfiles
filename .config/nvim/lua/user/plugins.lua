@@ -101,7 +101,6 @@ local plugins = {
 
   "phaazon/hop.nvim",
   "ziontee113/color-picker.nvim",
-  "Shatur/neovim-session-manager",
   "tiagovla/scope.nvim",
   -- "github/copilot.vim",
   "jackMort/ChatGPT.nvim",
