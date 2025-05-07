@@ -114,9 +114,18 @@ vim.api.nvim_create_autocmd({ "User" }, {
   end,
 })
 
+
+
+-- Notification after file change
+vim.api.nvim_create_autocmd("FileChangedShellPost", {
+  callback = function()
+    vim.api.nvim_echo({ { "File changed on disk. Buffer reloaded.", "WarningMsg" } }, false, {})
+  end,
+})
+
 vim.api.nvim_create_autocmd("FileType", {
-	pattern = { "dotenv" },
-	callback = function()
-		vim.treesitter.language.register("bash", "dotenv")
-	end,
+  pattern = { "dotenv" },
+  callback = function()
+    vim.treesitter.language.register("bash", "dotenv")
+  end,
 })

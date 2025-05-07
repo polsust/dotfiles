@@ -68,9 +68,55 @@ local on_attach = function(bufnr)
   vim.keymap.set("n", "<2-RightMouse>", api.tree.change_root_to_node, opts("CD"))
 end
 
+local function natural_cmp(left, right)
+	-- Put directories before files
+	if left.type == "directory" and right.type ~= "directory" then
+		return true
+	elseif left.type ~= "directory" and right.type == "directory" then
+		return false
+	end
+
+	-- Natural compare
+	local l_name = left.name:lower()
+	local r_name = right.name:lower()
+
+	if l_name == r_name then
+		return false
+	end
+
+	local i = 1
+	while i <= #l_name and i <= #r_name do
+		local l_char = l_name:sub(i, i)
+		local r_char = r_name:sub(i, i)
+
+		local l_num = l_name:sub(i):match("^(%d+)")
+		local r_num = r_name:sub(i):match("^(%d+)")
+
+		if l_num and r_num then
+			l_num = tonumber(l_num)
+			r_num = tonumber(r_num)
+			if l_num ~= r_num then
+				return l_num < r_num
+			end
+			i = i + #tostring(l_num)
+		else
+			if l_char ~= r_char then
+				return l_char < r_char
+			end
+			i = i + 1
+		end
+	end
+
+	-- If one name is a prefix of the other
+	return #l_name < #r_name
+end
+
 nvim_tree.setup({
   on_attach = on_attach,
-  sort_by = "name",
+  -- sort_by = "name",
+  sort_by = function(nodes)
+		table.sort(nodes, natural_cmp)
+	end,
   view = {
     side = "left",
     relativenumber = true,
