@@ -186,6 +186,7 @@ local plugins = {
     dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons" },
   },
   { "cbochs/grapple.nvim" },
+    "habamax/vim-godot",
 }
 
 require("lazy").setup(plugins)

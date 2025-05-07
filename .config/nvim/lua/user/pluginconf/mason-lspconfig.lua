@@ -63,3 +63,7 @@ mason_lspconfig.setup_handlers({
     })
   end,
 })
+
+-- outside of mason
+
+setup_lsp("gdscript")
