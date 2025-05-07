@@ -1,0 +1,30 @@
+local harpoon = require("harpoon")
+
+harpoon:setup()
+
+vim.keymap.set("n", "<a-a>", function()
+  vim.notify("Harpoon added: "..vim.fn.expand("%:t"))
+  harpoon:list():add()
+end)
+vim.keymap.set("n", "<a-h>", function()
+  harpoon.ui:toggle_quick_menu(harpoon:list())
+end)
+
+vim.keymap.set("n", "<a-1>", function()
+  harpoon:list():select(1)
+end)
+vim.keymap.set("n", "<a-2>", function()
+  harpoon:list():select(2)
+end)
+vim.keymap.set("n", "<a-3>", function()
+  harpoon:list():select(3)
+end)
+vim.keymap.set("n", "<a-4>", function()
+  harpoon:list():select(4)
+end)
+
+-- -- Harpoon
+-- keymap("n", "<Leader>ha", "<cmd>lua require('harpoon.mark').add_file()<CR>", opts)
+-- keymap("n", "<Leader>hh", "<cmd>lua require('harpoon.ui').toggle_quick_menu()<CR>", opts)
+-- -- keymap("n", "<Leader>hl", "<cmd>lua require('harpoon.ui').nav_next()<CR>")
+-- -- keymap("n", "<Leader>hh", "<cmd>lua require('harpoon.ui').nav_prev()<CR>")
