@@ -131,4 +131,6 @@ if status is-interactive
     # Remove greeting
     set fish_greeting
 
+    export CM_LAUNCHER=rofi
+
 end
