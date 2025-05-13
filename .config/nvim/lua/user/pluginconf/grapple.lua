@@ -1,6 +1,6 @@
 local grapple = require("grapple")
 
-vim.keymap.set("n", "<a-h>", require("grapple").toggle_tags)
+vim.keymap.set("n", "<a-h>", grapple.toggle_tags)
 
 vim.keymap.set("n", "<a-a>", function()
   grapple.tag()
