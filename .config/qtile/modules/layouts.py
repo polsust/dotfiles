@@ -44,5 +44,6 @@ floating_layout = layout.Floating(
         Match(wm_class='blueman-manager'),
         Match(title='NoiseTorch'),
         Match(title='Event Tester'),  # xev
+        Match(title='Friends List', wm_class='steam'),
     ],
 )
