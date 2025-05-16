@@ -60,23 +60,26 @@ null_ls.setup({
   },
   -- Format on save
   on_attach = function(client, bufnr)
-    if format_on_save == true then
-      if client.supports_method("textDocument/formatting") then
-        vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
-        vim.api.nvim_create_autocmd("BufWritePre", {
-          group = augroup,
-          buffer = bufnr,
-          callback = function()
-            vim.lsp.buf.format({
-              bufnr = bufnr,
-              filter = function(client)
-                -- return client.name == "null-ls"
-                return client.name ~= "ts_ls"
-              end,
-            })
+    if format_on_save == false then
+      return
+    end
+    if not client.supports_method("textDocument/formatting") then
+      return
+    end
+
+    vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+    vim.api.nvim_create_autocmd("BufWritePre", {
+      group = augroup,
+      buffer = bufnr,
+      callback = function()
+        vim.lsp.buf.format({
+          bufnr = bufnr,
+          filter = function(client)
+            -- return client.name == "null-ls"
+            return client.name ~= "ts_ls"
           end,
         })
-      end
-    end
+      end,
+    })
   end,
 })
