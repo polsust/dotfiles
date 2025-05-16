@@ -68,7 +68,7 @@ keymap("n", "<Esc>", "<cmd>nohlsearch<CR>", opts)
 
 -- Close buffers
 keymap("n", "<Leader>c", "<cmd>bdelete<CR>", opts)
-keymap("n", "<Leader>C", "<cmd>BufferLineGroupClose ungrouped<CR><cmd>bdelete<CR>", opts)
+keymap("n", "<Leader>C", "<cmd>BufferLineGroupClose ungrouped<CR><cmd>close<CR>", opts)
 
 -- Better paste
 keymap("v", "p", '"_dP', opts)
