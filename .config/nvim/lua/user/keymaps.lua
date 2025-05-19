@@ -105,6 +105,7 @@ keymap("n", "gs", "<cmd>ToggleAlternate<CR>", opts)
 
 -- NvimTree
 keymap("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", opts)
+keymap("n", "<a-e>", "<cmd>NvimTreeToggle<CR>", opts)
 
 -- Telescope
 -- keymap("n", "<C-t>", "<cmd>Telescope<CR>", opts)
