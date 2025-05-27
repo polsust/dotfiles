@@ -121,6 +121,7 @@ if status is-interactive
     alias r ranger
     alias z zathura
     alias lg lazygit
+    alias nv nvim
 
     ### END ALIASES ###
 
