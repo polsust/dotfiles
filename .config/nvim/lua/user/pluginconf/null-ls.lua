@@ -36,8 +36,23 @@ null_ls.setup({
     --   end,
     -- }),
 
-    require("none-ls.diagnostics.eslint_d"),
-    require("none-ls.code_actions.eslint_d"),
+    require("none-ls.diagnostics.eslint_d").with({
+      condition = function(utils)
+        return utils.root_has_file({
+          "eslint.config.js",
+          "eslint.config.mjs",
+          "eslint.config.cjs",
+          ".eslintrc",
+          ".eslintrc.json",
+          ".eslintrc.js",
+          ".eslintrc.yaml",
+          ".eslintrc.yml",
+        })
+      end,
+    }),
+
+    -- require("none-ls.formatting.eslint_d"),
+    -- require("none-ls.code_actions.eslint_d"),
 
     f.prettierd,
     d.stylelint,

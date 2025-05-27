@@ -71,22 +71,6 @@ vim.api.nvim_create_autocmd({ "InsertLeave" }, {
 -- 	end,
 -- })
 
--- open nvim-tree
-vim.api.nvim_create_autocmd({ "VimEnter" }, {
-  callback = function(data)
-    -- buffer is a directory
-    local directory = vim.fn.isdirectory(data.file) == 1
-
-    if not directory then
-      return
-    end
-
-    -- change to the directory
-    vim.cmd.cd(data.file)
-    require("nvim-tree.api").tree.open()
-  end,
-})
-
 -- autosave
 vim.api.nvim_create_autocmd({ "TextChanged", "InsertLeave" }, {
   callback = function(data)
@@ -106,15 +90,6 @@ vim.api.nvim_create_autocmd({ "TextChanged", "InsertLeave" }, {
     if vim.fn.getbufvar(data.buf, "&modifiable") == 1 then
       vim.cmd([[ silent write ]])
     end
-  end,
-})
-
-vim.api.nvim_create_autocmd({ "User" }, {
-  pattern = "SessionLoadPost",
-  desc = "open nvim tree",
-  callback = function()
-    -- use this instead of .open() bc else it would select the tree split
-    require("nvim-tree.api").tree.toggle(false, true)
   end,
 })
 
