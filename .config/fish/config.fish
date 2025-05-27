@@ -82,7 +82,6 @@ if status is-interactive
     export PATH="$PATH:/opt/nvim-linux64/bin"
     export PATH="$HOME/go/bin/:$PATH"
 
-
     ### ALIASES ####
     alias n notes
     alias c conf
