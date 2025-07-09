@@ -99,6 +99,7 @@ if status is-interactive
     #     command mv $argv "~/.dotfiles/$insideHomeFilePath"
     # end
     alias rgf "rg --files | rg"
+    alias cdwindows "cd /mnt/c/Users/psust/"
 
     # paru 
     alias I "paru -S"

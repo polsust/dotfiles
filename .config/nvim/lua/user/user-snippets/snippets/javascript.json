@@ -11,7 +11,7 @@
   "fastArrowFunction": {
     "prefix": "fa",
     "body": [
-      "() => {$1}"
+      "() => $1"
     ]
   },
   "LogEffect": {
@@ -39,5 +39,21 @@
       "});"
     ],
     "description": "useQuery"
+  },
+  "useCase": {
+    "prefix": "useCaseSnippet",
+    "body": [
+      "import { Injectable } from '@nestjs/common';",
+      "",
+      "@Injectable()",
+      "export class ${1:$(pascalcaseFilename)}UseCase {",
+      "  constructor(private readonly ${2:$(camelcaseSubject)}Repository: ${3:$(pascalcaseSubject)}Repository) {}",
+      "",
+      "  async execute() {",
+      "    ",
+      "  }",
+      "}"
+    ],
+    "description": "NestJS use case boilerplate"
   }
 }

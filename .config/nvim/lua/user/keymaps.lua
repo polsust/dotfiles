@@ -46,6 +46,7 @@ keymap("n", "<C-S-h>", "<cmd>vertical resize -2<CR>", opts)
 -- Navigate buffers
 keymap("n", "<S-l>", "<cmd>bnext<CR>", opts)
 keymap("n", "<S-h>", "<cmd>bprevious<CR>", opts)
+keymap("n", "<Leader>0", "<cmd>BufferLineGoToBuffer 1<CR>", opts)
 keymap("n", "<Leader>1", "<cmd>BufferLineGoToBuffer 1<CR>", opts)
 keymap("n", "<Leader>2", "<cmd>BufferLineGoToBuffer 2<CR>", opts)
 keymap("n", "<Leader>3", "<cmd>BufferLineGoToBuffer 3<CR>", opts)
@@ -135,7 +136,6 @@ keymap("n", "<leader>gu", "<cmd>Gitsigns undo_stage_hunk<CR>", opts)
 -- LSP
 keymap("n", "<leader>li", "<cmd>LspInfo<cr>", opts)
 keymap("n", "<leader>lI", "<cmd>Mason<cr>", opts)
-keymap("n", "<leader>lf", "<cmd>lua vim.lsp.buf.format()<cr>", opts)
 
 -- DAP
 keymap("n", "<leader>db", "<cmd>lua require'dap'.toggle_breakpoint()<cr>", opts)
@@ -182,4 +182,27 @@ keymap("n", "<Leader>rl", "<Plug>RestNvimLast", opts)
 
 -- markdown
 -- toggle checked / create checkbox if it doesn't exist
-keymap("n", "<A-l>", "<cmd>lua require('markdown-togglecheck').toggle()<CR>", opts)
+keymap("n", "<a-m>", "<cmd>lua require('markdown-togglecheck').toggle()<CR>", opts)
+
+local function OpenAllGitPending()
+  if vim.fn.isdirectory(".git") == 0 then
+    vim.notify("Not inside a Git repository")
+    return
+  end
+
+  local handle = io.popen("git ls-files --modified --others --exclude-standard")
+  if not handle then
+    return
+  end
+
+  local output = handle:read("*a")
+  handle:close()
+
+  for file in output:gmatch("[^\r\n]+") do
+    if vim.fn.filereadable(file) == 1 then
+      vim.cmd("edit " .. vim.fn.fnameescape(file))
+    end
+  end
+end
+
+keymap("n", "<a-g>", OpenAllGitPending, opts)

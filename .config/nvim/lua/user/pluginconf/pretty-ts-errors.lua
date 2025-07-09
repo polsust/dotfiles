@@ -1,0 +1,41 @@
+-- require("pretty-ts-errors").setup({
+--   -- Whether to enable the plugin by default
+--   enabled = true,
+--
+--   -- Maximum height of the error window
+--   max_height = 12,
+--
+--   -- Styling options
+--   styling = {
+--     -- Prefix for each simplified error message
+--     prefix = "→ ",
+--
+--     -- Highlight colors
+--     colors = {
+--       error = "#FF5555",
+--       warning = "#FFAA55",
+--       info = "#55AAFF",
+--     },
+--   },
+--
+--   -- Prettify error patterns (regex replacements)
+--   prettify_patterns = {
+--     -- Replace TS specific language
+--     {
+--       pattern = "Type '(.+)' is not assignable to type '(.+)'",
+--       replace = "Expected type '$2', but got '$1'",
+--     },
+--
+--     -- Simplify property errors
+--     {
+--       pattern = "Property '(.+)' does not exist on type '(.+)'",
+--       replace = "The object '$2' doesn't have a property named '$1'",
+--     },
+--
+--     -- Simplify missing parameters
+--     {
+--       pattern = "Expected (%d+) arguments, but got (%d+)",
+--       replace = "This function takes $1 parameters, but you provided $2",
+--     },
+--   },
+-- })
