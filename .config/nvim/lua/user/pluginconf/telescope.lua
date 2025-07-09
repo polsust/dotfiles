@@ -31,6 +31,7 @@ local ignore_patterns = {
   "composer.lock",
   "package-lock.json",
   "yarn.lock",
+  "documentation",
 }
 
 for _, ignore_pattern in ipairs(ignore_patterns) do

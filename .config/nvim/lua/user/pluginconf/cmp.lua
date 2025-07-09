@@ -81,7 +81,7 @@ cmp.setup({
     ["<C-u>"] = cmp.mapping(cmp.mapping.scroll_docs(-4), allModes),
     ["<C-d>"] = cmp.mapping(cmp.mapping.scroll_docs(4), allModes),
     ["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), allModes),
-    ["<C-e>"] = cmp.mapping(cmp.mapping.abort(), allModes),
+    -- ["<C-e>"] = cmp.mapping(cmp.mapping.abort(), allModes),
     ["<CR>"] = cmp.mapping(cmp.mapping.confirm({ select = true }), { "i" }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
     ["<C-k>"] = cmp.mapping(cmp.mapping.select_prev_item(), allModes),
     ["<C-j>"] = cmp.mapping(cmp.mapping.select_next_item(), allModes),
@@ -136,6 +136,7 @@ cmp.setup({
     },
   },
   sources = cmp.config.sources({
+    { name = "ecolog" },
     { name = "nvim_lsp" },
     { name = "luasnip" },
     { name = "path" },

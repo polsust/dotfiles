@@ -201,7 +201,7 @@ nvim_tree.setup({
   actions = {
     use_system_clipboard = true,
     open_file = {
-      quit_on_open = false,
+      quit_on_open = true,
       resize_window = true,
     },
   },

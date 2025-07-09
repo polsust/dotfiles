@@ -16,5 +16,13 @@
       "  );",
       "}"
     ]
+  },
+  "propTypes": {
+    "prefix": "propTypes",
+    "body": [
+      "type Props = {",
+      "$1",
+      "}"
+    ]
   }
 }

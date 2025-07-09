@@ -26,6 +26,7 @@ if status is-interactive
     alias restart-qtile "qtile cmd-obj -o cmd -f restart"
     alias hfzf "history -n 1000 | fzf | xargs -I {} fish -ic "{}""
     alias rgf "rg --files | rg"
+    alias cdwindows "cd /mnt/c/Users/psust/"
 
     # paru 
     alias I "paru -S"

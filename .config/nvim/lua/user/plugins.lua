@@ -18,6 +18,10 @@ local plugins = {
   "windwp/nvim-autopairs", -- Autopairs, integrates with both cmp and treesitter
   "numToStr/Comment.nvim",
   "kyazdani42/nvim-web-devicons",
+  {
+    "echasnovski/mini.icons",
+    version = false,
+  },
   "kyazdani42/nvim-tree.lua",
   "akinsho/bufferline.nvim",
   "moll/vim-bbye",
@@ -126,10 +130,10 @@ local plugins = {
     dependencies = "nvim-treesitter/nvim-treesitter",
     config = true, -- or `opts = {}`
   },
-  {
-    "nfrid/treesitter-utils",
-    ft = { "markdown" },
-  },
+  -- {
+  --   "nfrid/treesitter-utils",
+  --   ft = { "markdown" },
+  -- },
   {
     "phelipetls/jsonpath.nvim",
     ft = { "json" },
@@ -179,9 +183,14 @@ local plugins = {
     },
   },
   {
+    "youyoumu/pretty-ts-errors.nvim",
+  },
+  {
     "MeanderingProgrammer/render-markdown.nvim",
     dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons" },
   },
+
+  { "dmmulroy/ts-error-translator.nvim" },
   { "cbochs/grapple.nvim" },
   { "mrjones2014/smart-splits.nvim" },
 }

@@ -11,48 +11,33 @@ local f = null_ls.builtins.formatting
 local d = null_ls.builtins.diagnostics
 local a = null_ls.builtins.code_actions
 
+function eslint_d_condition(utils)
+  return utils.root_has_file({
+    "eslint.config.js",
+    "eslint.config.mjs",
+    "eslint.config.cjs",
+    ".eslintrc",
+    ".eslintrc.json",
+    ".eslintrc.js",
+    ".eslintrc.yaml",
+    ".eslintrc.yml",
+  })
+end
+
 null_ls.setup({
   sources = {
     ---- pyhton ----
     -- d.mypy,
     -- f.blue,
 
-    ---- webdev ----
-    -- d.eslint_d.with({
-    --   extra_args = function(params)
-    --     local files = Ls(params.root)
-    --     -- TODO: make this recursive
-    --
-    --     local conf = false
-    --     for _, file in pairs(files) do
-    --       if string.find(file, ".eslintrc.*") then
-    --         conf = true
-    --       end
-    --     end
-    --
-    --     if not conf then
-    --       -- return { "-c" }
-    --     end
-    --   end,
-    -- }),
-
     require("none-ls.diagnostics.eslint_d").with({
-      condition = function(utils)
-        return utils.root_has_file({
-          "eslint.config.js",
-          "eslint.config.mjs",
-          "eslint.config.cjs",
-          ".eslintrc",
-          ".eslintrc.json",
-          ".eslintrc.js",
-          ".eslintrc.yaml",
-          ".eslintrc.yml",
-        })
-      end,
+      condition = eslint_d_condition,
     }),
 
     -- require("none-ls.formatting.eslint_d"),
-    -- require("none-ls.code_actions.eslint_d"),
+    require("none-ls.code_actions.eslint_d").with({
+      condition = eslint_d_condition,
+    }),
 
     f.prettierd,
     d.stylelint,
@@ -95,3 +80,14 @@ null_ls.setup({
     })
   end,
 })
+
+function format()
+  vim.lsp.buf.format({
+    filter = function(client)
+      -- return client.name == "null-ls"
+      return client.name ~= "ts_ls"
+    end,
+  })
+end
+
+vim.keymap.set("n", "<Leader>lf", format)
