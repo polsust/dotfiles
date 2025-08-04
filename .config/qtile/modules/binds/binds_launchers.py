@@ -48,6 +48,12 @@ binds_launchers = [
         lazy.spawn(spawn_in_terminal(apps['bluetooth_manager'])),
         desc='Launch bluetooth manager',
     ),
+    Key(
+        [mod, "shift"],
+        'b',
+        lazy.spawn(spawn_in_terminal('btop')),
+        desc='Launch bashtop',
+    ),
     #
     Key(
         [mod, 'shift'],
