@@ -63,15 +63,11 @@ null_ls.setup({
     -- d.selene,
     f.stylua,
 
-    ---- php ----
-    f.blade_formatter,
-    -- f.phpcsfixer,
-
     ---- shells ----
-    f.fish_indent,
     d.fish,
     f.shellharden,
-    d.shellcheck,
+
+    f.gdformat,
   },
   -- Format on save
   on_attach = function(client, bufnr)
