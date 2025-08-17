@@ -68,55 +68,86 @@ local on_attach = function(bufnr)
   vim.keymap.set("n", "<2-RightMouse>", api.tree.change_root_to_node, opts("CD"))
 end
 
+local function parse_date(s)
+  -- Strip the extension (anything after last dot)
+  local name_without_ext = s:match("^(.*)%.%w+$") or s
+  -- Match dd-mm-yyyy exactly on the name without extension
+  local day, month, year = name_without_ext:match("^(%d%d)%-(%d%d)%-(%d%d%d%d)$")
+  if day and month and year then
+    day = tonumber(day)
+    month = tonumber(month)
+    year = tonumber(year)
+    if day >= 1 and day <= 31 and month >= 1 and month <= 12 then
+      return { day = day, month = month, year = year }
+    end
+  end
+  return nil
+end
+
+local function compare_dates(d1, d2)
+  if d1.year ~= d2.year then
+    return d1.year < d2.year
+  elseif d1.month ~= d2.month then
+    return d1.month < d2.month
+  else
+    return d1.day < d2.day
+  end
+end
+
 local function natural_cmp(left, right)
-	-- Put directories before files
-	if left.type == "directory" and right.type ~= "directory" then
-		return true
-	elseif left.type ~= "directory" and right.type == "directory" then
-		return false
-	end
+  -- Directories first
+  if left.type == "directory" and right.type ~= "directory" then
+    return true
+  elseif left.type ~= "directory" and right.type == "directory" then
+    return false
+  end
 
-	-- Natural compare
-	local l_name = left.name:lower()
-	local r_name = right.name:lower()
+  local l_name = left.name:lower()
+  local r_name = right.name:lower()
 
-	if l_name == r_name then
-		return false
-	end
+  -- Check if both are dates (ignoring extensions)
+  local l_date = parse_date(l_name)
+  local r_date = parse_date(r_name)
+  if l_date and r_date then
+    return compare_dates(l_date, r_date)
+  end
 
-	local i = 1
-	while i <= #l_name and i <= #r_name do
-		local l_char = l_name:sub(i, i)
-		local r_char = r_name:sub(i, i)
+  if l_name == r_name then
+    return false
+  end
 
-		local l_num = l_name:sub(i):match("^(%d+)")
-		local r_num = r_name:sub(i):match("^(%d+)")
+  local i = 1
+  while i <= #l_name and i <= #r_name do
+    local l_char = l_name:sub(i, i)
+    local r_char = r_name:sub(i, i)
 
-		if l_num and r_num then
-			l_num = tonumber(l_num)
-			r_num = tonumber(r_num)
-			if l_num ~= r_num then
-				return l_num < r_num
-			end
-			i = i + #tostring(l_num)
-		else
-			if l_char ~= r_char then
-				return l_char < r_char
-			end
-			i = i + 1
-		end
-	end
+    local l_num = l_name:sub(i):match("^(%d+)")
+    local r_num = r_name:sub(i):match("^(%d+)")
 
-	-- If one name is a prefix of the other
-	return #l_name < #r_name
+    if l_num and r_num then
+      l_num = tonumber(l_num)
+      r_num = tonumber(r_num)
+      if l_num ~= r_num then
+        return l_num < r_num
+      end
+      i = i + #tostring(l_num)
+    else
+      if l_char ~= r_char then
+        return l_char < r_char
+      end
+      i = i + 1
+    end
+  end
+
+  return #l_name < #r_name
 end
 
 nvim_tree.setup({
   on_attach = on_attach,
   -- sort_by = "name",
   sort_by = function(nodes)
-		table.sort(nodes, natural_cmp)
-	end,
+    table.sort(nodes, natural_cmp)
+  end,
   view = {
     side = "left",
     relativenumber = true,
