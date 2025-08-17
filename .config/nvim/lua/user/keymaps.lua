@@ -182,4 +182,4 @@ keymap("n", "<Leader>rl", "<Plug>RestNvimLast", opts)
 
 -- markdown
 -- toggle checked / create checkbox if it doesn't exist
-keymap("n", "<A-l>", "<cmd>lua require('markdown-togglecheck').toggle()<CR>", opts)
+keymap("n", "<A-m>", "<cmd>lua require('markdown-togglecheck').toggle()<CR>", opts)
