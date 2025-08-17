@@ -115,7 +115,7 @@ local plugins = {
     },
   },
 
-  { "catppuccin/nvim",                  name = "catppuccin" },
+  { "catppuccin/nvim",    name = "catppuccin" },
 
   {
     "nfrid/markdown-togglecheck",
@@ -184,7 +184,7 @@ local plugins = {
     dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons" },
   },
   { "cbochs/grapple.nvim" },
-    "habamax/vim-godot",
+  { "habamax/vim-godot" },
 }
 
 require("lazy").setup(plugins)
