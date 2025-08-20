@@ -18,6 +18,7 @@ groups_blueprint = [
             Match(wm_class=re.compile(r'Minecraft Launcher.*')),
             Match(wm_class=re.compile(r'steam.*')),
             Match(wm_class='artofrally.x64'),
+            Match(wm_class=re.compile(r'(?i).*godot.*')),
         ],
     ),
     Group('5', label="5"),
