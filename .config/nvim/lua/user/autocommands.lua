@@ -117,6 +117,17 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+  pattern = "*",
+  callback = function()
+    if vim.bo.filetype == "" then
+      vim.bo.filetype = "unknown"
+    end
+  end,
+})
+
+vim.treesitter.language.register("bash", "unknown")
+
 -- paths to check for project.godot file
 local paths_to_check = { "/", "/../" }
 local is_godot_project = false
