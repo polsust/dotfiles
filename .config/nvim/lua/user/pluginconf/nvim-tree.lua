@@ -190,7 +190,7 @@ nvim_tree.setup({
   },
   filters = {
     dotfiles = false,
-    custom = { "^\\.git$", "\\.gd\\.uid$" },
+    custom = { "^\\.git$", "\\.gd\\.uid$", "^\\.null-ls" },
   },
   git = {
     enable = true,
