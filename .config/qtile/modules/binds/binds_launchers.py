@@ -129,9 +129,13 @@ binds_launchers = [
     Key(
         [mod, 'shift'],
         'p',
-        lazy.spawn(
-            'xdotool key --delay 100 "Super_L+Shift_L+Return" --delay KP_Space p o'
-        ),
-        desc='Launch obsidian',
+        lazy.spawn('spotify-launcher'),
+        desc='Launch spotify',
+    ),
+    Key(
+        [mod],
+        'o',
+        lazy.spawn(spawn_in_terminal('calcurse')),
+        desc='Launch calcurse',
     ),
 ]
