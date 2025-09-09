@@ -121,10 +121,10 @@ binds_launchers = [
         desc='Launch youtube videos search bar',
     ),
     Key(
-        [mod],
-        'o',
-        lazy.spawn('obsidian'),
-        desc='Launch obsidian',
+        [mod, 'shift'],
+        'z',
+        lazy.spawn(os.path.expanduser('~/.scripts/get-window-class')),
+        desc='Get the class of a window',
     ),
     Key(
         [mod, 'shift'],
