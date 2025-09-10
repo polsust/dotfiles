@@ -135,7 +135,7 @@ binds_launchers = [
     Key(
         [mod],
         'o',
-        lazy.spawn(spawn_in_terminal('calcurse')),
+        lazy.spawn( os.path.expanduser('~/.scripts/run-on-term "calcurse"')),
         desc='Launch calcurse',
     ),
 ]
