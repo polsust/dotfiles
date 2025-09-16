@@ -42,7 +42,7 @@ flameshot &
 
 blueman-applet &
 
-"$HOME"/.scripts/volume-watcher | xob &
-"$HOME"/.scripts/brightness-bar &
+~/.scripts/volume-bar &
+~/.scripts/brightness-bar &
 
 exec qtile start
