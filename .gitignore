@@ -20,3 +20,5 @@ alacritty.yml.*
 
 .config/yarn/*
 .config/go/*
+
+userstate.cbor
