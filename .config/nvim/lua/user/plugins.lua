@@ -102,7 +102,6 @@ local plugins = {
   "ziontee113/color-picker.nvim",
   "tiagovla/scope.nvim",
   -- "github/copilot.vim",
-  "jackMort/ChatGPT.nvim",
   "Exafunction/codeium.vim",
 
   { "toppair/peek.nvim",               build = "deno task --quiet build:fast" },
