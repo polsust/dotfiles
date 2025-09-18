@@ -183,3 +183,43 @@ keymap("n", "<Leader>rl", "<Plug>RestNvimLast", opts)
 -- markdown
 -- toggle checked / create checkbox if it doesn't exist
 keymap("n", "<A-m>", "<cmd>lua require('markdown-togglecheck').toggle()<CR>", opts)
+
+local function calc()
+  local line = vim.api.nvim_get_current_line()
+  local s, e
+
+  -- Normal mode: find number under cursor
+  local col = vim.api.nvim_win_get_cursor(0)[2] + 1
+  s, e = line:find("%d+%.?%d*", col)
+  if not s then
+    s, e = line:find("%d+%.?%d*") -- fallback: first number in line
+    if not s then
+      return
+    end
+  end
+
+  local number = tonumber(line:sub(s, e))
+  if not number then
+    return
+  end
+
+  local expr = vim.fn.input({ prompt = " Calculator (" .. number .. "): ", default = "n" })
+  if expr == "" then
+    return
+  end
+
+  local func = load("local n=" .. number .. "; return " .. expr)
+  local ok, result = pcall(func)
+  if not ok then
+    print("Invalid expression")
+    return
+  end
+
+  local new_line = line:sub(1, s - 1) .. result .. line:sub(e + 1)
+  vim.api.nvim_set_current_line(new_line)
+end
+
+-- Mappings
+keymap("n", "<C-c>", function()
+  return calc()
+end, { noremap = true, silent = true })
