@@ -30,7 +30,7 @@ binds_system = [
     Key(
         [mod, alt],
         'b',
-        lazy.spawn(os.path.expanduser('~/.scripts/toggleJabra')),
+        lazy.spawn('toggleJabra'),
     ),
     #
     Key(
@@ -54,4 +54,5 @@ binds_system = [
         'u',
         lazy.spawn('setxkbmap us'),
     ),
+    # TODO: make control+j actually be Down, and control+k be Up, maybe use keyboard firmware config instead
 ]

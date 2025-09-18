@@ -1,8 +1,8 @@
 from libqtile.config import Key
 from libqtile.lazy import lazy
-from modules.settings import mod, apps, alt
+from modules.settings import mod, apps, alt, home
 from modules.helpers import spawn_in_terminal
-import os.path
+
 
 binds_launchers = [
     Key([mod], 't', lazy.spawn(apps['terminal']), desc='Launch terminal'),
@@ -76,7 +76,7 @@ binds_launchers = [
     Key(
         [mod],
         'r',
-        lazy.spawn(os.path.expanduser('~/.scripts/run-on-term ranger')),
+        lazy.spawn(spawn_in_terminal('ranger')),
         desc='Launch tui file manager',
     ),
     Key(
@@ -88,7 +88,9 @@ binds_launchers = [
     Key(
         [mod, 'shift'],
         'w',
-        lazy.spawn(f"{apps['web_browser']} -new-window https://web.whatsapp.com"),
+        lazy.spawn(
+            f"{apps['web_browser']} -new-window https://web.whatsapp.com"
+        ),
         desc='Launch web browser',
     ),
     Key(
@@ -100,18 +102,19 @@ binds_launchers = [
     Key(
         [mod],
         'n',
-        lazy.spawn(
-            os.path.expanduser('~/.scripts/run-on-term "nvim ~/notes"')
-        ),
-        # lazy.spawn('xdotool key Super_L+f'),
-        # lazy.spawn('xdotool key Super_L+f'),
+        lazy.spawn(spawn_in_terminal("nvim")),
+        desc='Launch nvim',
+    ),
+    Key(
+        [mod, 'shift'],
+        'n',
+        lazy.spawn(spawn_in_terminal(f"nvim {home}/notes")),
         desc='Launch notes',
     ),
     Key(
         [mod],
         'm',
-        lazy.spawn(os.path.expanduser('~/.scripts/run-on-term dailyNote')),
-        # lazy.spawn('xdotool key Super_L+f'),
+        lazy.spawn(spawn_in_terminal('dailyNote')),
         desc='Launch dailynote',
     ),
     Key(
@@ -123,7 +126,7 @@ binds_launchers = [
     Key(
         [mod, 'shift'],
         'z',
-        lazy.spawn(os.path.expanduser('~/.scripts/get-window-class')),
+        lazy.spawn('get-window-class'),
         desc='Get the class of a window',
     ),
     Key(
@@ -135,7 +138,7 @@ binds_launchers = [
     Key(
         [mod],
         'o',
-        lazy.spawn( os.path.expanduser('~/.scripts/run-on-term "calcurse"')),
+        lazy.spawn(spawn_in_terminal('calcurse')),
         desc='Launch calcurse',
     ),
 ]

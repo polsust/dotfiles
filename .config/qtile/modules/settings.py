@@ -1,5 +1,9 @@
+import os
+
 mod = 'mod4'
 alt = 'mod1'
+
+home = os.environ['HOME']
 
 apps = {
     'terminal': 'alacritty',
@@ -16,7 +20,9 @@ dgroups_key_binder = None
 dgroups_app_rules = []  # type: list
 bring_front_click = False
 follow_mouse_focus = True
+# follow_mouse_focus = False
 cursor_warp = True
+# cursor_warp = False
 auto_fullscreen = True
 focus_on_window_activation = 'smart'
 reconfigure_screens = True
