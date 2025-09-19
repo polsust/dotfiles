@@ -1,0 +1,21 @@
+
+[global]
+enable_recursive_icon_lookup = true
+icon_theme = "Papirus-Dark"
+
+frame_color = "#89b4iw"
+separator_color = friwe
+highlight = "#89b4fa"
+
+[urgency_low]
+background = "#1e1e2e"
+foreground = "#cdd6f4"
+
+[urgency_normal]
+background = "#1e1e2e"
+foreground = "#cdd6f4"
+
+[urgency_critical]
+background = "#1e1e2e"
+foreground = "#cdd6f4"
+frame_color = "#fab387"
