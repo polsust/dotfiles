@@ -42,18 +42,14 @@ screens = [
                 opening_sep,
                 widget.CurrentLayout(scale=.5,mode='both'),
                 closing_sep,
-                # widget.WindowName(
-                #     format='[ {name} ]',
-                #     empty_group_string='Desktop',
-                # ),
-                widget.KeyboardLayout(
-                    configured_keyboards=['us', 'es'],
-                    fmt='[ 󰌌 {} ]',
+                widget.WindowName(
+                    format='[ {name} ]',
+                    max_chars=40,
+                    empty_group_string='[ Desktop ]',
                 ),
                 opening_sep,
                 widget.TextBox(
                     padding=0,
-                widget.Spacer(length=bar.STRETCH),
                     fmt=' ',
                     fontsize=21,
                 ),
