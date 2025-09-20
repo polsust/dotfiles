@@ -40,10 +40,7 @@ screens = [
                 ),
                 closing_sep,
                 opening_sep,
-                widget.CurrentLayoutIcon(
-                    scale=0.5,
-                ),
-                widget.CurrentLayout(),
+                widget.CurrentLayout(scale=.5,mode='both'),
                 closing_sep,
                 # widget.WindowName(
                 #     format='[ {name} ]',
@@ -53,10 +50,10 @@ screens = [
                     configured_keyboards=['us', 'es'],
                     fmt='[ 󰌌 {} ]',
                 ),
-                widget.Spacer(length=bar.STRETCH),
                 opening_sep,
                 widget.TextBox(
                     padding=0,
+                widget.Spacer(length=bar.STRETCH),
                     fmt=' ',
                     fontsize=21,
                 ),
