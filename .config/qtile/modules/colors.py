@@ -1,9 +1,8 @@
 class Colors:
-    dark = '#282C34'
-    darker = '#16181C'
-    light = '#5C6370'
-    lighter = '#ABB2BF'
+    dark = '#1e1e2e'
+    light = '#7f849c'
+    lighter = '#cdd6f4'
 
     class special:
-        light = ('#E5C07B',)
-        dark = '#967e51'
+        light = '#f5c2e7'
+        dark = '#f38ba8'
