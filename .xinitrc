@@ -1,5 +1,7 @@
 #!/bin/sh
 
+xset r rate 300 30 &
+
 # This has to be without the "&" so the monitors are configured properly before proceading
 autorandr main
 
