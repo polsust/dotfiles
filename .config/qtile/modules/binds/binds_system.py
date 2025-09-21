@@ -17,8 +17,11 @@ binds_system = [
     Key([], 'XF86AudioLowerVolume', lazy.spawn('pamixer -d 5')),
     Key([], 'XF86AudioMute', lazy.spawn('pamixer -t')),
     #
-    Key([mod, 'control'], 'Up', lazy.spawn('pamixer -i 5')),
-    Key([mod, 'control'], 'Down', lazy.spawn('pamixer -d 5')),
+    Key([mod, alt], 'Up', lazy.spawn('pamixer -i 5')),
+    Key([mod, alt], 'Down', lazy.spawn('pamixer -d 5')),
+
+    Key([mod, alt], 'k', lazy.spawn('pamixer -i 5')),
+    Key([mod, alt], 'j', lazy.spawn('pamixer -d 5')),
     #
     Key([mod, 'control'], 'Shift_R', lazy.spawn('pamixer -t')),
     #
