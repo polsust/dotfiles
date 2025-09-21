@@ -17,6 +17,7 @@ if status is-interactive
     alias xclass "xprop | grep CLASS"
     alias e exit
     alias restart-qtile "qtile cmd-obj -o cmd -f restart"
+    alias hfzf "history | fzf | xargs -I {} fish -ic "{}""
     # function dotadd
     #     set -l absoluteFilePath "$(pwd)"
     #     set -l insideHomeFilePath (string split "$USER/" -- $absoluteFilePath)[2]
