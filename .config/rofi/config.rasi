@@ -23,4 +23,4 @@ configuration {
     // kb-mode-previous:            "Shift+Left,Control+Shift+Tab,Control+h";
 }
 
-@theme "~/.local/share/rofi/themes/one-dark.rasi"
+@theme "/home/polsust/.local/share/rofi/themes/slate/style.rasi"
