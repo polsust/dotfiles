@@ -35,6 +35,8 @@ binds_system = [
         'b',
         lazy.spawn('toggleJabra'),
     ),
+    Key([mod, 'shift'], 'o', lazy.spawn('set-default-output-source')),
+    Key([mod, 'shift'], 'i', lazy.spawn('set-default-input-source')),
     #
     Key(
         [mod, alt],
