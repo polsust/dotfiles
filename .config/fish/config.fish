@@ -24,7 +24,7 @@ if status is-interactive
     alias xclass "xprop | grep CLASS"
     alias e exit
     alias restart-qtile "qtile cmd-obj -o cmd -f restart"
-    alias hfzf "history | fzf | xargs -I {} fish -ic "{}""
+    alias hfzf "history -n 1000 | fzf | xargs -I {} fish -ic "{}""
     alias rgf "rg --files | rg"
 
     # paru 
