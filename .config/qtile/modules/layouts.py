@@ -45,5 +45,15 @@ floating_layout = layout.Floating(
         Match(title='NoiseTorch'),
         Match(title='Event Tester'),  # xev
         Match(title='Friends List', wm_class='steam'),
+        Match(wm_class='makebranch'),
+        Match(wm_class='maketag'),
+        Match(wm_class='nextcloud'),
+        Match(wm_class='system-config-printer'),
+        Match(title='branchdialog'),
+        Match(title='pinentry'),
+        Match(wm_class='ssh-askpass'),
+        Match(wm_class='Unity'),
+        Match(wm_class='scrcpy'),
+        Match(wm_class='iwgtk'),
     ],
 )
