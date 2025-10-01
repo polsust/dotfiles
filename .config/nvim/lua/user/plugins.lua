@@ -80,8 +80,8 @@ local plugins = {
 
   -- DAP
   "mfussenegger/nvim-dap",
-  "rcarriga/nvim-dap-ui",
-  "ravenxrz/DAPInstall.nvim",
+  { "rcarriga/nvim-dap-ui",            dependencies = { "nvim-neotest/nvim-nio" } },
+  "theHamsta/nvim-dap-virtual-text",
 
   "navarasu/onedark.nvim",
   "gpanders/editorconfig.nvim",
@@ -104,8 +104,9 @@ local plugins = {
   -- "github/copilot.vim",
   "Exafunction/codeium.vim",
 
-  { "toppair/peek.nvim",               build = "deno task --quiet build:fast" },
+  { "toppair/peek.nvim", build = "deno task --quiet build:fast" },
   "jay-babu/mason-null-ls.nvim",
+  "jay-babu/mason-nvim-dap.nvim",
 
   {
     "nvimtools/none-ls.nvim",
@@ -114,7 +115,7 @@ local plugins = {
     },
   },
 
-  { "catppuccin/nvim",    name = "catppuccin" },
+  { "catppuccin/nvim",   name = "catppuccin" },
 
   {
     "nfrid/markdown-togglecheck",
@@ -183,7 +184,20 @@ local plugins = {
     dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons" },
   },
   { "cbochs/grapple.nvim" },
-  { "habamax/vim-godot" },
+  { "mrjones2014/smart-splits.nvim" },
 }
 
 require("lazy").setup(plugins)
+
+-- put this in your init.lua
+vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
+  pattern = { "*.yuck" },
+  callback = function(event)
+    -- print(string.format("starting yuck;s for %s", vim.inspect(event)))
+    vim.lsp.start({
+      name = "YuckLs",
+      cmd = { "yuckls" },
+      root_dir = vim.fn.getcwd(),
+    })
+  end,
+})
