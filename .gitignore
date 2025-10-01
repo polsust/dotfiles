@@ -25,3 +25,5 @@ alacritty.yml.*
 userstate.cbor
 .config/nvim/lazy-lock.json
 .config/ranger/plugins/ranger_devicons
+
+node_modules
