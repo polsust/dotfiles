@@ -7,6 +7,5 @@ require("user.colorscheme")
 require("user.pluginconf")
 require("user.lsp")
 -- require "user.plugins.dap"
-require("user.helpers")
 require("user.commands")
 require("user.filetypes")
