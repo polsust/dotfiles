@@ -1,6 +1,13 @@
 if status is-interactive
     fish_vi_key_bindings
     fish_vi_cursor 
+
+    bind yy fish_clipboard_copy
+    bind Y fish_clipboard_copy
+    bind y fish_clipboard_copy
+    bind p fish_clipboard_paste
+    bind P fish_clipboard_paste
+
     function fish_mode_prompt; end # remove vi indicator
     bind -M insert \cf accept-autosuggestion
 
