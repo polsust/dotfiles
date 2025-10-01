@@ -20,6 +20,7 @@ local ignore_patterns = {
   "build",
   ".build",
   ".debris",
+  ".godot",
 
   -- php
   "vendor",
