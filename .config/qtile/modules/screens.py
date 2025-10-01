@@ -1,7 +1,7 @@
 from libqtile import bar, widget
-from libqtile.lazy import lazy
 from libqtile.config import Screen
 from modules.colors import Colors
+from modules.helpers import spawn_in_terminal
 
 widget_defaults = dict(
     font='Mononoki',
@@ -74,6 +74,8 @@ screens = [
                     fmt='󰚰  {}',
                     no_update_string='0',
                     custom_command='paru -Qu',
+                    execute={spawn_in_terminal('paru -Syu')},
+                    update_interval=60,
                 ),
                 closing_sep,
                 opening_sep,
