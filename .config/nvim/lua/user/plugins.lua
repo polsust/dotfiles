@@ -73,7 +73,6 @@ local plugins = {
   "JoosepAlviste/nvim-ts-context-commentstring",
   "hiphish/rainbow-delimiters.nvim",
   "windwp/nvim-ts-autotag",
-  "nvim-treesitter/nvim-treesitter-context",
 
   -- Git
   "lewis6991/gitsigns.nvim",
