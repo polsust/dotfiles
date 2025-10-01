@@ -158,3 +158,60 @@ local is_server_running = vim.uv.fs_stat(godot_project_path .. "/server.pipe")
 if is_godot_project and not is_server_running then
   vim.fn.serverstart(godot_project_path .. "/server.pipe")
 end
+
+-- PRINT SIGNS --
+-- Define the sign once
+vim.fn.sign_define("PrintSign", { text = "", texthl = "WarningMsg" })
+
+-- List of regex patterns (Lua patterns, not PCRE)
+local patterns = {
+  "print",
+  "console%.",
+}
+
+-- Collect comment lines using Tree-sitter
+local function get_comment_lines(buf)
+  local lang = vim.bo[buf].filetype
+  local ok, parser = pcall(vim.treesitter.get_parser, buf, lang)
+  if not ok then
+    return {}
+  end
+  local tree = parser:parse()[1]
+  local root = tree:root()
+
+  -- Try to load a query for comments
+  local ok_q, query = pcall(vim.treesitter.query.parse, lang, "(comment) @c")
+  if not ok_q or not query then
+    return {}
+  end
+
+  local comments = {}
+  for _, node in query:iter_captures(root, buf, 0, -1) do
+    local srow, _, erow, _ = node:range()
+    for l = srow, erow do
+      comments[l + 1] = true
+    end
+  end
+  return comments
+end
+
+-- Re-run whenever buffer changes
+vim.api.nvim_create_autocmd({ "BufEnter", "TextChanged", "TextChangedI", "BufWritePost" }, {
+  callback = function(args)
+    local buf = args.buf
+    vim.fn.sign_unplace("printgroup", { buffer = buf })
+    local comments = get_comment_lines(buf)
+
+    for lnum = 1, vim.api.nvim_buf_line_count(buf) do
+      if not comments[lnum] then
+        local line = vim.api.nvim_buf_get_lines(buf, lnum - 1, lnum, false)[1]
+        for _, pat in ipairs(patterns) do
+          if line:match(pat) then
+            vim.fn.sign_place(0, "printgroup", "PrintSign", buf, { lnum = lnum })
+            break
+          end
+        end
+      end
+    end
+  end,
+})
