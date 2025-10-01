@@ -64,8 +64,8 @@ binds_launchers = [
     Key(
         [mod, 'shift'],
         's',
-        lazy.spawn('flameshot gui'),
-        desc='Launch flameshot',
+        lazy.spawn('screenshot'),
+        desc='Take a screenshot',
     ),
     Key(
         [mod],
@@ -132,13 +132,25 @@ binds_launchers = [
     Key(
         [mod, 'shift'],
         'p',
-        lazy.spawn('spotify-launcher'),
-        desc='Launch spotify',
+        lazy.spawn(spawn_in_terminal('ncspot')),
+        desc='Launch ncspot',
     ),
     Key(
         [mod],
         'o',
         lazy.spawn(spawn_in_terminal('calcurse')),
         desc='Launch calcurse',
+    ),
+    Key(
+        [mod, 'shift'],
+        'm',
+        lazy.spawn(spawn_in_terminal('neomutt')),
+        desc='Launch neomutt',
+    ),
+    Key(
+        [mod, 'shift'],
+        'g',
+        lazy.spawn("record-toggle"),
+        desc='record',
     ),
 ]

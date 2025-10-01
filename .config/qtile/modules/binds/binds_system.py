@@ -2,6 +2,7 @@ import os
 from libqtile.config import Key
 from libqtile.lazy import lazy
 from modules.settings import mod, alt
+from modules.helpers import spawn_in_terminal
 
 binds_system = [
     Key([mod, 'control'], 'r', lazy.reload_config(), desc='Reload the config'),
@@ -10,8 +11,8 @@ binds_system = [
     Key([], 'XF86MonBrightnessUp', lazy.spawn('brightnessctl set 5%+ -q')),
     Key([], 'XF86MonBrightnessDown', lazy.spawn('brightnessctl set 5%- -q')),
     #
-    Key([mod, 'control'], 'Right', lazy.spawn('brightnessctl set 5%+ -q')),
-    Key([mod, 'control'], 'Left', lazy.spawn('brightnessctl set 5%- -q')),
+    Key([mod, alt], 'Right', lazy.spawn('brightnessctl set 5%+ -q')),
+    Key([mod, alt], 'Left', lazy.spawn('brightnessctl set 5%- -q')),
     #
     Key([], 'XF86AudioRaiseVolume', lazy.spawn('pamixer -i 5')),
     Key([], 'XF86AudioLowerVolume', lazy.spawn('pamixer -d 5')),
@@ -22,6 +23,8 @@ binds_system = [
 
     Key([mod, alt], 'k', lazy.spawn('pamixer -i 5')),
     Key([mod, alt], 'j', lazy.spawn('pamixer -d 5')),
+    Key([mod, alt], 'h', lazy.spawn('brightnessctl set 5%- -q')),
+    Key([mod, alt], 'l', lazy.spawn('brightnessctl set 5%+ -q')),
     #
     Key([mod, 'control'], 'Shift_R', lazy.spawn('pamixer -t')),
     #
@@ -29,7 +32,7 @@ binds_system = [
     Key([], 'XF86AudioNext', lazy.spawn('playerctl next')),
     Key([], 'XF86AudioPrev', lazy.spawn('playerctl previous')),
     #
-    Key([mod, alt], 'l', lazy.spawn('betterlockscreen -l')),
+    Key([mod, 'shift','control'], 'l', lazy.spawn('betterlockscreen -l')),
     Key(
         [mod, alt],
         'b',
@@ -48,6 +51,11 @@ binds_system = [
         'r',
         lazy.spawn("reboot"),
     ),
+    Key(
+        [mod, alt],
+        'u',
+        lazy.spawn(spawn_in_terminal("paru -Syu")),
+    ),
     #
     Key(
         [mod, 'shift'],
@@ -59,5 +67,4 @@ binds_system = [
         'u',
         lazy.spawn('setxkbmap us'),
     ),
-    # TODO: make control+j actually be Down, and control+k be Up, maybe use keyboard firmware config instead
 ]
