@@ -3,4 +3,4 @@ if not status_ok then
 	return
 end
 
-require("user.lsp.lsp_config")
+require("lsp.lsp_config")

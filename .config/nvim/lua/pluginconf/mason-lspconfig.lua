@@ -54,12 +54,12 @@ mason_lspconfig.setup_handlers({
   end,
   ["lua_ls"] = function()
     setup_lsp("lua_ls", {
-      settings = require("user.lsp.settings.lua_ls"),
+      settings = require("lsp.settings.lua_ls"),
     })
   end,
   ["jsonls"] = function()
     setup_lsp("jsonls", {
-      settings = require("user.lsp.settings.jsonls"),
+      settings = require("lsp.settings.jsonls"),
     })
   end,
   ["tailwindcss"] = function()
