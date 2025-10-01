@@ -1,5 +1,5 @@
 gui:
-  showFileTree: false # for rendering changes files in a tree format
+  showFileTree: true # for rendering changes files in a tree format
   showIcons: true
 
 git:
