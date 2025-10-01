@@ -62,6 +62,18 @@ mason_lspconfig.setup_handlers({
       settings = require("user.lsp.settings.jsonls"),
     })
   end,
+  ["tailwindcss"] = function()
+    setup_lsp("tailwindcss", {
+      filetypes = { "yuck", "css" }, -- extend to whatever you use in eww
+      settings = {
+        tailwindCSS = {
+          includeLanguages = {
+            yuck = "html",
+          },
+        },
+      },
+    })
+  end,
 })
 
 -- outside of mason
