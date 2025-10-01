@@ -1,0 +1,6 @@
+.recording-indicator {
+  background-color: transparent;
+}
+
+/* THIS HAS TO GO LAST */
+@tailwind utilities;

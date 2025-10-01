@@ -1,0 +1,16 @@
+{
+  "name": "eww",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile-tailwind": "tailwindcss -c ./tailwind.config.js -i ./input.css -o ./eww.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.17.0",
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}

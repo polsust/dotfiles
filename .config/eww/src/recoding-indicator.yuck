@@ -1,0 +1,13 @@
+(defwindow recording-indicator
+  :geometry (geometry 
+            :x -20
+            :y 80
+            :width "30"
+            :height "30"
+            :anchor "right top"
+          )
+  :stacking "fg"
+  :wm-ignore true
+  :windowtype "dock"
+  
+(box :class "bg-red-500 rounded-full"))
