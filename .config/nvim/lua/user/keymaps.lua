@@ -26,22 +26,6 @@ keymap("i", "<A-CR>", "<esc>A;", opts)
 keymap("n", "k", "gk", opts)
 keymap("n", "j", "gj", opts)
 
--- Better splits navigation
-keymap("n", "<C-h>", "<C-w>h", opts)
-keymap("n", "<C-j>", "<C-w>j", opts)
-keymap("n", "<C-k>", "<C-w>k", opts)
-keymap("n", "<C-l>", "<C-w>l", opts)
-
--- Resize with arrows
-keymap("n", "<C-Up>", "<cmd>resize -2<CR>", opts)
-keymap("n", "<C-Down>", "<cmd>resize +2<CR>", opts)
-keymap("n", "<C-Left>", "<cmd>vertical resize -2<CR>", opts)
-keymap("n", "<C-Right>", "<cmd>vertical resize +2<CR>", opts)
-
-keymap("n", "<C-S-k>", "<cmd>resize -2<CR>", opts)
-keymap("n", "<C-S-j>", "<cmd>resize +2<CR>", opts)
-keymap("n", "<C-S-l>", "<cmd>vertical resize +2<CR>", opts)
-keymap("n", "<C-S-h>", "<cmd>vertical resize -2<CR>", opts)
 
 -- Navigate buffers
 keymap("n", "<S-l>", "<cmd>bnext<CR>", opts)
