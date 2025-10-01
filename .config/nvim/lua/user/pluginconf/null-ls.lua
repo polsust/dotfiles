@@ -68,6 +68,7 @@ null_ls.setup({
     f.shellharden,
 
     f.gdformat,
+    d.gdlint,
   },
   -- Format on save
   on_attach = function(client, bufnr)
