@@ -87,6 +87,10 @@ vim.api.nvim_create_autocmd({ "TextChanged", "InsertLeave" }, {
       return
     end
 
+    if string.find(data.file, "dap") or data.file == "" then
+      return
+    end
+
     if vim.fn.getbufvar(data.buf, "&modifiable") == 1 then
       vim.cmd([[ silent write ]])
     end
