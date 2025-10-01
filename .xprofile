@@ -10,7 +10,7 @@ export CM_LAUNCHER=rofi # clipmenud
 export ZEIT_DB="$HOME/.config/zeit.db"
 export ANDROID_SDK_ROOT="$HOME/Library/Android/Sdk"
 export ANDROID_HOME="$HOME/Android/Sdk"
-export DOTNET_ROOT="$HOME/.dotnet"
+export DOTNET_ROOT=/usr/share/dotnet
 
 export FZF_DEFAULT_OPTS="--cycle --preview 'bat --color=always --style=numbers --line-range=:500 {} 2>/dev/null || tree -L 2 -a --noreport {} | bat -l sh'"
 export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
