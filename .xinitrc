@@ -1,19 +1,20 @@
 #!/bin/sh
 
-xset r rate 300 30 &
-
 # This has to be without the "&" so the monitors are configured properly before proceading
 autorandr main
+
+xset r rate 300 30 &
+setxkbmap -option compose:ralt,caps:escape_shifted_capslock
 
 ~/.fehbg &
 
 picom &
 
-setxkbmap -option ctrl:nocaps &
-
 unclutter -idle 5 &
 
 # Daemons
+
+eww daemon &
 
 snixembed & # compatibility for certain trail apps like iwgtk
 
@@ -22,9 +23,7 @@ clipmenud &
 
 dunst &
 
-rescuetime &
-
-panorama &
+poweralertd -s &
 
 # Applications
 
@@ -40,11 +39,9 @@ discord &
 
 steam -silent &
 
-flameshot &
-
 blueman-applet &
 
-~/.scripts/volume-bar &
-~/.scripts/brightness-bar &
+volume-bar &
+brightness-bar &
 
 exec qtile start
