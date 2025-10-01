@@ -127,6 +127,11 @@ vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
     if vim.bo.filetype == "" then
       vim.bo.filetype = "unknown"
     end
+
+    local fname = vim.fn.expand("%:t")
+    if fname:match("^calcurse%-note") then
+      vim.bo.filetype = "markdown"
+    end
   end,
 })
 
