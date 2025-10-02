@@ -23,5 +23,4 @@ configuration {
     // kb-mode-previous:            "Shift+Left,Control+Shift+Tab,Control+h";
 }
 
-// Run this to install: curl -sSL "https://raw.githubusercontent.com/Heus-Sueh/rofi-themes/main/installer.sh" | sh
-@theme "/home/polsust/.local/share/rofi/themes/slate/style.rasi"
+@theme "./style.rasi"
