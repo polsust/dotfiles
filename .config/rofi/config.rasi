@@ -10,7 +10,7 @@ configuration {
     kb-remove-to-eol:               "";
 
     kb-row-down:                    "Down,Control+j";
-    kb-accept-entry:                "Return";
+    kb-accept-entry:                "Return,Control+o";
 
     kb-row-left:                    "Control+h";
     kb-remove-char-back:            "BackSpace";
