@@ -53,13 +53,11 @@ if status is-interactive
 
     ### END ALIASES ###
 
-    # select a random fish
-    set -lx fish_number (random 1 (/bin/ls ~/.config/fish/ascii/ | count))
-    # print the random fish 
+    # set -lx fish_number (random 1 (/bin/ls ~/.config/fish/ascii/ | count))
     # /bin/cat ~/.config/fish/ascii/fish$fish_number | lolcat
+
     # Remove greeting
     set fish_greeting
-
 end
 
 zoxide init --cmd cd fish | source
