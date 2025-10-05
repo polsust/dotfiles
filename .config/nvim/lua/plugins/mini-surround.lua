@@ -1,6 +1,7 @@
 return {
   {
     "nvim-mini/mini.surround",
+    event = "VeryLazy",
     version = false,
     opts = {
       -- Add custom surroundings to be used on top of builtin ones. For more
