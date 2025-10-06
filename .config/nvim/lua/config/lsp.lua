@@ -36,4 +36,5 @@ vim.api.nvim_create_autocmd("LspAttach", {
   end,
 })
 
+-- servers not managed by mason
 vim.lsp.enable("gdscript")
