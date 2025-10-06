@@ -9,20 +9,12 @@ end
 
 -- Convert kebab-case to PascalCase
 helpers.to_pascal_case = function(str)
-  return str:gsub("(%-)(%l)", function(_, c)
-        return c:upper()
-      end)
-      :gsub("^%l", string.upper)
-      :gsub("%-", "")
+  return str:gsub("(%-)(%l)", function(_, c) return c:upper() end):gsub("^%l", string.upper):gsub("%-", "")
 end
 
 -- Convert kebab-case to camelCase
 helpers.to_camel_case = function(str)
-  return str:gsub("(%-)(%l)", function(_, c)
-        return c:upper()
-      end)
-      :gsub("^%u", string.lower)
-      :gsub("%-", "")
+  return str:gsub("(%-)(%l)", function(_, c) return c:upper() end):gsub("^%u", string.lower):gsub("%-", "")
 end
 
 return helpers

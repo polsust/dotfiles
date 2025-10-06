@@ -6,7 +6,6 @@ return {
       "nvimtools/none-ls-extras.nvim",
     },
     opts = function()
-
       return {
         sources = {},
       }

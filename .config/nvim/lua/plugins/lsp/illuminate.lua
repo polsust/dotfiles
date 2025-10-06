@@ -1,21 +1,21 @@
 return {
-	{
-		"RRethy/vim-illuminate",
+  {
+    "RRethy/vim-illuminate",
     event = "VeryLazy",
-		config = function()
-			require("illuminate").configure({
-				providers = {
-					"lsp",
-					"treesitter",
-					"regex",
-				},
-				delay = 0,
-				filetypes_denylist = {
-					"alpha",
-					"NvimTree",
-					"TelescopePrompt",
-				},
-			})
-		end,
-	},
+    config = function()
+      require("illuminate").configure({
+        providers = {
+          "lsp",
+          "treesitter",
+          "regex",
+        },
+        delay = 0,
+        filetypes_denylist = {
+          "alpha",
+          "NvimTree",
+          "TelescopePrompt",
+        },
+      })
+    end,
+  },
 }
