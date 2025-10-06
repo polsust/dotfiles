@@ -4,7 +4,7 @@ from modules.colors import Colors
 from modules.helpers import spawn_in_terminal
 
 widget_defaults = dict(
-    font='Mononoki',
+    font="Mononoki",
     fontsize=15,
     padding=8,
     border=Colors.light,
@@ -14,9 +14,9 @@ widget_defaults = dict(
 )
 extension_defaults = widget_defaults.copy()
 
-opening_sep = widget.TextBox(fmt='[')
+opening_sep = widget.TextBox(fmt="[")
 
-closing_sep = widget.TextBox(fmt=']')
+closing_sep = widget.TextBox(fmt="]")
 
 screens = [
     Screen(
@@ -24,8 +24,8 @@ screens = [
             [
                 opening_sep,
                 widget.GroupBox(
-                    highlight_method='text',
-                    fmt='[{}]',
+                    highlight_method="text",
+                    fmt="[{}]",
                     disable_drag=True,
                     padding=0,
                     margin_y=3,
@@ -35,26 +35,26 @@ screens = [
                     # other_screen_border=colors['darker'], #Border or line colour for group on other screen when unfocused.
                     this_current_screen_border=Colors.lighter,  # Border or line colour for group on this screen when focused.
                     # this_screen_border=colors['lighter'], #Border or line colour for group on this screen when unfocused.
-                    urgent_alert_method='text',
+                    urgent_alert_method="text",
                     urgent_text=Colors.special.light,  # Urgent group font color
                 ),
                 closing_sep,
                 opening_sep,
-                widget.CurrentLayout(scale=.5,mode='both'),
+                widget.CurrentLayout(scale=0.5, mode="both"),
                 closing_sep,
                 widget.WindowName(
-                    format='[ {name} ]',
+                    format="[ {name} ]",
                     max_chars=40,
-                    empty_group_string='[ Desktop ]',
+                    empty_group_string="[ Desktop ]",
                 ),
                 opening_sep,
                 widget.TextBox(
                     padding=0,
-                    fmt=' ',
+                    fmt=" ",
                     fontsize=21,
                 ),
                 widget.Clock(
-                    format='%d-%m-%Y %A ] [ 󰥔  %H:%M:%S ]',
+                    format="%d-%m-%Y %A ] [ 󰥔  %H:%M:%S ]",
                 ),
                 widget.Spacer(length=bar.STRETCH),
                 opening_sep,
@@ -70,35 +70,35 @@ screens = [
                 widget.CheckUpdates(
                     colour_have_updates=Colors.lighter,
                     colour_no_updates=Colors.lighter,
-                    display_format='{updates}',
-                    fmt='󰚰  {}',
-                    no_update_string='0',
-                    custom_command='paru -Qu',
-                    execute={spawn_in_terminal('paru -Syu')},
+                    display_format="{updates}",
+                    fmt="󰚰  {}",
+                    no_update_string="0",
+                    custom_command="paru -Qu",
+                    execute={spawn_in_terminal("paru -Syu")},
                     update_interval=60,
                 ),
                 closing_sep,
                 opening_sep,
                 widget.Wlan(
-                    disconnected_message='󰖪  No signal',
-                    format='󰖩  {essid} {percent:2.0%}',
-                    interface='wlan0',
+                    disconnected_message="󰖪  No signal",
+                    format="󰖩  {essid} {percent:2.0%}",
+                    interface="wlan0",
                     update_interval=5,
                 ),
                 closing_sep,
                 opening_sep,
                 widget.BatteryIcon(
-                    theme_path='~/.config/qtile/assets/battery/',
+                    theme_path="~/.config/qtile/assets/battery/",
                     scale=0.9,
                 ),
                 widget.Battery(
-                    format='{percent:1.0%}',
+                    format="{percent:1.0%}",
                     show_short_text=False,
                 ),
                 closing_sep,
                 opening_sep,
                 widget.Volume(
-                    theme_path='~/.config/qtile/assets/volume/',
+                    theme_path="~/.config/qtile/assets/volume/",
                     padding=0,
                 ),
                 widget.Volume(),

@@ -35,26 +35,26 @@ floating_layout = layout.Floating(
     float_rules=[
         # Run the utility of `xprop` to see the wm class and name of an X client.
         *layout.Floating.default_float_rules,
-        Match(wm_class='ssh-askpass'),  # ssh-askpass
-        Match(title='pinentry'),  # GPG key password entry
+        Match(wm_class="ssh-askpass"),  # ssh-askpass
+        Match(title="pinentry"),  # GPG key password entry
         #
-        Match(wm_class='megasync'),
-        Match(wm_class='bluetuith'),
-        Match(wm_class='pulsemixer'),
-        Match(wm_class='blueman-manager'),
-        Match(title='NoiseTorch'),
-        Match(title='Event Tester'),  # xev
-        Match(title='Friends List', wm_class='steam'),
-        Match(wm_class='makebranch'),
-        Match(wm_class='maketag'),
-        Match(wm_class='nextcloud'),
-        Match(wm_class='system-config-printer'),
-        Match(title='branchdialog'),
-        Match(title='pinentry'),
-        Match(wm_class='ssh-askpass'),
-        Match(wm_class='Unity'),
-        Match(wm_class='scrcpy'),
-        Match(wm_class='iwgtk'),
-        Match(wm_class='Godot'),
+        Match(wm_class="megasync"),
+        Match(wm_class="bluetuith"),
+        Match(wm_class="pulsemixer"),
+        Match(wm_class="blueman-manager"),
+        Match(title="NoiseTorch"),
+        Match(title="Event Tester"),  # xev
+        Match(title="Friends List", wm_class="steam"),
+        Match(wm_class="makebranch"),
+        Match(wm_class="maketag"),
+        Match(wm_class="nextcloud"),
+        Match(wm_class="system-config-printer"),
+        Match(title="branchdialog"),
+        Match(title="pinentry"),
+        Match(wm_class="ssh-askpass"),
+        Match(wm_class="Unity"),
+        Match(wm_class="scrcpy"),
+        Match(wm_class="iwgtk"),
+        Match(wm_class="Godot"),
     ],
 )

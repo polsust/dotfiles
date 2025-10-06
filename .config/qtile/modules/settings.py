@@ -1,18 +1,18 @@
 import os
 
-mod = 'mod4'
-alt = 'mod1'
+mod = "mod4"
+alt = "mod1"
 
-home = os.environ['HOME']
+home = os.environ["HOME"]
 
 apps = {
-    'terminal': 'alacritty',
-    'gui_file_manager': 'pcmanfm',
-    'tui_file_manager': 'ranger',
-    'web_browser': 'firefox',
-    'code_editor': 'nvim',
-    'bluetooth_manager': 'bluetuith',
-    'calculator': 'rofi -show calc',
+    "terminal": "alacritty",
+    "gui_file_manager": "pcmanfm",
+    "tui_file_manager": "ranger",
+    "web_browser": "firefox",
+    "code_editor": "nvim",
+    "bluetooth_manager": "bluetuith",
+    "calculator": "rofi -show calc",
 }
 
 
@@ -24,7 +24,7 @@ follow_mouse_focus = True
 cursor_warp = True
 # cursor_warp = False
 auto_fullscreen = True
-focus_on_window_activation = 'smart'
+focus_on_window_activation = "smart"
 reconfigure_screens = True
 
 # If things like steam games want to auto-minimize themselves when losing
@@ -34,4 +34,4 @@ auto_minimize = True
 # When using the Wayland backend, this can be used to configure input devices.
 wl_input_rules = None
 
-wmname = 'LG3D'
+wmname = "LG3D"
