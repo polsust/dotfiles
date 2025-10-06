@@ -12,6 +12,10 @@ return {
   opts = function()
     local on_attach = function(bufnr)
       local api = require("nvim-tree.api")
+      vim.api.nvim_create_autocmd("BufEnter", {
+        pattern = "NvimTree_*",
+        callback = function() api.tree.reload() end,
+      })
 
       local function open_file_and_stay_in_tree()
         local node = api.tree.get_node_under_cursor()
