@@ -1,5 +1,6 @@
 return {
   {
+    enabled = true,
     "phelipetls/jsonpath.nvim",
     ft = { "json", "json5", "jsonc", "jsonnet" },
     keys = {

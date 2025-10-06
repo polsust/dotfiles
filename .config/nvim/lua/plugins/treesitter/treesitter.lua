@@ -1,5 +1,6 @@
 return {
   {
+    enabled = true,
     "nvim-treesitter/nvim-treesitter",
     branch = "master",
     lazy = false,

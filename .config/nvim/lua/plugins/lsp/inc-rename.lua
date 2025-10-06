@@ -1,5 +1,6 @@
 return {
   {
+    enabled = true,
     "smjonas/inc-rename.nvim",
     keys = {
       { "grn" },

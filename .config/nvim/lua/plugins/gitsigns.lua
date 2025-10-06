@@ -1,5 +1,6 @@
 return {
   {
+    enabled = true,
     "lewis6991/gitsigns.nvim",
     event = "BufRead",
     keys = {

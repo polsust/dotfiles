@@ -1,5 +1,6 @@
 return {
   {
+    enabled = true,
     "mason-org/mason.nvim",
     keys = {
       { "<leader>lI", "<cmd>Mason<cr>" },

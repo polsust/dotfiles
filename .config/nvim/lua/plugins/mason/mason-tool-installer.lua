@@ -1,5 +1,6 @@
 return {
   {
+    enabled = true,
     "WhoIsSethDaniel/mason-tool-installer.nvim",
     lazy = false,
     opts = {

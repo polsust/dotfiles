@@ -5,6 +5,7 @@ local function down() require("smart-splits").move_cursor_down() end
 
 return {
   {
+    enabled = true,
     "mrjones2014/smart-splits.nvim",
     keys = {
       { "<C-S-h>", function() require("smart-splits").resize_left() end, mode = { "n", "t" } },

@@ -1,5 +1,6 @@
 return {
   {
+    enabled = true,
     "RRethy/vim-illuminate",
     event = "VeryLazy",
     config = function()

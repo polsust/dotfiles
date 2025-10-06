@@ -1,5 +1,6 @@
 return {
   {
+    enabled = true,
     "nfrid/markdown-togglecheck",
     dependencies = { "nfrid/treesitter-utils" },
     ft = { "markdown" },

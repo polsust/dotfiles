@@ -1,5 +1,6 @@
 return {
   {
+    enabled = true,
     "jay-babu/mason-null-ls.nvim",
     dependencies = {
       "mason-org/mason.nvim",

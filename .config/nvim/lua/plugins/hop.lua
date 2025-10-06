@@ -1,5 +1,6 @@
 return {
   {
+    enabled = true,
     "smoka7/hop.nvim",
     version = "*",
     opts = {

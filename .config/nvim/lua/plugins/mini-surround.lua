@@ -1,5 +1,6 @@
 return {
   {
+    enabled = true,
     "nvim-mini/mini.surround",
     event = "VeryLazy",
     version = false,
