@@ -55,5 +55,6 @@ floating_layout = layout.Floating(
         Match(wm_class='Unity'),
         Match(wm_class='scrcpy'),
         Match(wm_class='iwgtk'),
+        Match(wm_class='Godot'),
     ],
 )
