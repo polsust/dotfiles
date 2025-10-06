@@ -32,17 +32,8 @@ vim.api.nvim_create_autocmd("LspAttach", {
     vim.keymap.set("n", "glq", vim.diagnostic.setloclist, opts)
 
     vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, opts)
-
-    vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
-    vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
-    vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
-
-    vim.keymap.set("n", "gr", "<cmd>Telescope lsp_references<CR>", opts)
-    vim.keymap.set("n", "gt", vim.lsp.buf.type_definition, opts)
-
-    vim.keymap.set("n", "gla", vim.lsp.buf.code_action, opts)
-    vim.keymap.set("n", "gls", "<cmd>Telescope lsp_document_symbols<CR>", opts)
-    vim.keymap.set("n", "glS", "<cmd>Telescope lsp_dynamic_workspace_symbols<CR>", opts)
-    vim.keymap.set("n", "gld", "<cmd>Telescope diagnostics<CR>", opts)
+    vim.keymap.set("n", "ga", vim.lsp.buf.code_action, opts)
   end,
 })
+
+vim.lsp.enable("gdscript")

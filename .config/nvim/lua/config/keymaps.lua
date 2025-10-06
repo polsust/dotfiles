@@ -11,12 +11,13 @@ vim.g.mapleader = " "
 --   term_mode = "t",
 --   command_mode = "c",
 
-key("n", "<A-a>", "ggVG<C-o>", opts)
-key("n", "<A-d>", "ggVGd", opts)
-key("n", "<A-c>", "ggVGy<C-o>", opts)
+key("n", "<m-a>", "ggVG<C-o>", opts)
+key("n", "<m-d>", "ggVGd", opts)
+key("n", "<m-c>", "ggVGy<C-o>", opts)
+key("n", "<m-r>", "<cmd>restart<cr>", opts)
 
-key("n", "<A-CR>", "A;<esc>", opts)
-key("i", "<A-CR>", "<esc>A;", opts)
+key("n", "<m-CR>", "A;<esc>", opts)
+key("i", "<m-CR>", "<esc>A;", opts)
 
 -- Navigate visual lines
 key("n", "k", "gk", opts)
@@ -46,10 +47,6 @@ key("n", "<Leader>H", "<cmd>tabp<CR>", opts)
 -- Clear highlights
 key("n", "<Esc>", "<cmd>nohlsearch<CR>", opts)
 
--- Close buffers
-key("n", "<Leader>c", "<cmd>bp | bd #<CR>", opts)
-key("n", "<Leader>C", "<cmd>BufferLineGroupClose ungrouped<CR><cmd>close<CR>", opts)
-
 -- Better paste
 key("v", "p", '"_dP', opts)
 
@@ -64,12 +61,12 @@ key({ "n", "t", "i" }, "<C-q>", "<cmd>q<CR>")
 key({ "n", "i" }, "<C-S>", "<cmd>w<CR>")
 
 -- Move text
-key("n", "<A-K>", ":m .-2<CR>==", opts)
-key("n", "<A-J>", ":m .+1<CR>==", opts)
-key("i", "<A-K>", "<Esc>:m .-2<CR>==gi", opts)
-key("i", "<A-J>", "<Esc>:m .+1<CR>==gi", opts)
-key("v", "<A-K>", ":m '<-2<CR>gv-gv", opts)
-key("v", "<A-J>", ":m '>+1<CR>gv-gv", opts)
+key("n", "<m-K>", ":m .-2<CR>==", opts)
+key("n", "<m-J>", ":m .+1<CR>==", opts)
+key("i", "<m-K>", "<Esc>:m .-2<CR>==gi", opts)
+key("i", "<m-J>", "<Esc>:m .+1<CR>==gi", opts)
+key("v", "<m-K>", ":m '<-2<CR>gv-gv", opts)
+key("v", "<m-J>", ":m '>+1<CR>gv-gv", opts)
 
 -- LSP
 key("n", "<leader>li", "<cmd>LspInfo<cr>", opts)
@@ -137,4 +134,4 @@ local function OpenAllGitPending()
   end
 end
 
-key("n", "<a-g>", OpenAllGitPending, opts)
+key("n", "<m-g>", OpenAllGitPending, opts)

@@ -1,5 +1,6 @@
 return {
   {
+    enabled = true,
     "nvim-mini/mini.ai",
     version = false,
     dependencies = { "nvim-treesitter/nvim-treesitter-textobjects" },

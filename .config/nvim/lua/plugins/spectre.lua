@@ -5,7 +5,7 @@ return {
       "nvim-lua/plenary.nvim",
     },
     keys = {
-      { "<leader>fr", function() require("spectre").toggle() end },
+      { "<leader>sr", function() require("spectre").toggle() end },
     },
   },
 }

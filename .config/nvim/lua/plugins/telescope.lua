@@ -1,11 +1,12 @@
 return {
   {
+    enabled = false,
     "nvim-telescope/telescope.nvim",
     tag = "0.1.8",
     dependencies = { "nvim-lua/plenary.nvim" },
     cmd = "Telescope",
     keys = {
-      { "<C-p>", "<cmd>Telescope find_files<CR>" },
+      -- { "<C-p>", "<cmd>Telescope find_files<CR>" },
       { "<leader>fW", "<cmd>Telescope live_grep<CR>" },
       { "<leader>fw", "<cmd>Telescope current_buffer_fuzzy_find<CR>" },
       { "<leader>fb", "<cmd>Telescope buffers<CR>" },
@@ -56,8 +57,6 @@ return {
 
       return {
         defaults = {
-          -- Default configuration for telescope goes here:
-          -- config_key = value,
           mappings = {
             i = {
               ["<C-k>"] = "move_selection_previous",

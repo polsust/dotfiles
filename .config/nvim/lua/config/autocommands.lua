@@ -29,7 +29,7 @@ vim.api.nvim_create_autocmd({ "InsertEnter" }, {
 -- Relative numbers only for normal mode
 vim.api.nvim_create_autocmd({ "InsertLeave" }, {
   callback = function()
-    if vim.bo.filetype == "TelescopePrompt" or vim.bo.filetype == "grapple" then
+    if vim.bo.filetype == "TelescopePrompt" or vim.bo.filetype == "grapple" or vim.bo.filetype == "snacks_picker_input" then
       return
     end
     vim.opt.relativenumber = true

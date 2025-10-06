@@ -46,7 +46,6 @@ return {
         },
       },
       lualine_x = {
-        function() return vim.t.maximized and "   Maximized" or "" end,
         "encoding",
         "fileformat",
         "filetype",

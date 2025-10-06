@@ -13,7 +13,7 @@ return {
 
       -- Module mappings. Use `''` (empty string) to disable one.
       mappings = {
-        add = "ys", -- Add surrounding in Normal and Visual modes
+        add = "<m-s>", -- Add surrounding in Normal and Visual modes
         delete = "ds", -- Delete surrounding
         find = "", -- Find surrounding (to the right)
         find_left = "", -- Find surrounding (to the left)
