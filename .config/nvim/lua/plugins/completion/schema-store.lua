@@ -1,6 +1,4 @@
 return {
-  {
-    enabled = true,
-    "b0o/schemastore.nvim",
-  },
+  enabled = true,
+  "b0o/schemastore.nvim",
 }

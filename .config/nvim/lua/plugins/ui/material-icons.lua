@@ -1,7 +1,5 @@
 return {
-  {
-    enabled = true,
-    "DaikyXendo/nvim-material-icon",
-    opts = {},
-  },
+  enabled = true,
+  "DaikyXendo/nvim-material-icon",
+  opts = {},
 }

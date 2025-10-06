@@ -1,8 +1,6 @@
 return {
-  {
-    enabled = true,
-    "norcalli/nvim-colorizer.lua",
-    event = "BufRead",
-    opts = { "*" },
-  },
+  enabled = true,
+  "norcalli/nvim-colorizer.lua",
+  event = "BufRead",
+  opts = { "*" },
 }

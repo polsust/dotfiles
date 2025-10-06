@@ -1,9 +1,7 @@
 return {
-  {
-    enabled = true,
-    "folke/todo-comments.nvim",
-    dependencies = { "nvim-lua/plenary.nvim" },
-    event = "BufEnter",
-    opts = {},
-  },
+  enabled = true,
+  "folke/todo-comments.nvim",
+  dependencies = { "nvim-lua/plenary.nvim" },
+  event = "BufEnter",
+  opts = {},
 }
