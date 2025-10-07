@@ -28,6 +28,8 @@ vim.g.lsp_kind_icons = {
 }
 -- stylua: ignore end
 
+vim.g.autosave = true
+
 _G.format_file = function(bufnr)
   local clients = vim.lsp.get_clients({ bufnr = bufnr })
   -- print(vim.inspect(vim.iter(clients):map(function(client) return client.name end)))
