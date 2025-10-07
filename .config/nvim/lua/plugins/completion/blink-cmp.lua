@@ -11,6 +11,7 @@ return {
     -- ?? "lukas-reineke/cmp-under-comparator",
   },
   version = "1.*",
+  event = "VeryLazy",
   config = function(_, opts)
     local blink_cmp = require("blink.cmp")
 

@@ -4,6 +4,7 @@ return {
   dependencies = {
     "nvim-tree/nvim-web-devicons",
   },
+  event = "VeryLazy",
   opts = {
     sections = {
       lualine_a = { "mode" },

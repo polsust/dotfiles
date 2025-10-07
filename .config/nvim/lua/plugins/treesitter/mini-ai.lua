@@ -3,6 +3,7 @@ return {
   "nvim-mini/mini.ai",
   version = false,
   dependencies = { "nvim-treesitter/nvim-treesitter-textobjects" },
+  event = "VeryLazy",
   opts = function()
     local gen_spec = require("mini.ai").gen_spec
 

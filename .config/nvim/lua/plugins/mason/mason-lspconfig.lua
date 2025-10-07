@@ -6,6 +6,7 @@ return {
     "neovim/nvim-lspconfig",
     "saghen/blink.cmp",
   },
+  event = "VeryLazy",
   opts = {
     automatic_enable = true,
   },

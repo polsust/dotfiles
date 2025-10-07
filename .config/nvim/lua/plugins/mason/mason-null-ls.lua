@@ -6,6 +6,7 @@ return {
     "nvimtools/none-ls.nvim",
     "nvimtools/none-ls-extras.nvim",
   },
+  event = "VeryLazy",
   opts = {
     ensure_installed = {},
     automatic_installation = false,

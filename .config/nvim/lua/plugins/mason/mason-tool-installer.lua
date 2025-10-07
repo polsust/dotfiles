@@ -1,7 +1,7 @@
 return {
   enabled = true,
   "WhoIsSethDaniel/mason-tool-installer.nvim",
-  lazy = false,
+  event = "VeryLazy",
   opts = {
     ensure_installed = {
       -- NOTE: LSP
