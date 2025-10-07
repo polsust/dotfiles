@@ -46,8 +46,3 @@ vim.opt.shortmess:append("c")
 for k, v in pairs(options) do
   vim.opt[k] = v
 end
-
-
--- vim.cmd "set whichwrap+=<,>,[,],h,l"
--- vim.cmd([[set iskeyword+=-]]) -- count "asdasd-asdasd-ad" as one word
--- vim.cmd([[set formatoptions-=cro]]) -- TODO: this doesn't seem to work
