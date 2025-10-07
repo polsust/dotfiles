@@ -7,7 +7,6 @@ return {
     "nvim-tree/nvim-web-devicons",
     { "saghen/blink.compat", version = "2.*", lazy = true, opts = {} },
     -- NOTE: EXTRA SOURCES
-    "hrsh7th/cmp-calc",
     -- ?? "lukas-reineke/cmp-under-comparator",
   },
   version = "1.*",
@@ -139,7 +138,6 @@ return {
     },
     sources = {
       default = {
-        "calc",
         "lazydev",
         "lsp",
         "path",
@@ -151,11 +149,6 @@ return {
           name = "LazyDev",
           module = "lazydev.integrations.blink",
           score_offset = 100,
-        },
-
-        calc = {
-          name = "calc",
-          module = "blink.compat.source",
         },
       },
     },
