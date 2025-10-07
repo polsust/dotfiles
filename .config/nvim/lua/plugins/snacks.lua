@@ -47,6 +47,9 @@ return {
     { "<leader>fr", function() Snacks.picker.recent() end, desc = "Recent" },
     { "<leader>fh", function() Snacks.picker.help() end, desc = "Help Pages" },
     { "<leader>fd", function() Snacks.picker.diagnostics() end, desc = "Diagnostics" },
+    ---@diagnostic disable-next-line: undefined-field
+    { "<leader>ft", function() Snacks.picker.todo_comments({ keywords = { "TODO", "FIX", "FIXME" } }) end, desc = "Todo" },
+    { "<leader>fn", "<cmd>NoiceSnacks<cr>" },
     -- git
     { "<leader>gb", function() Snacks.picker.git_branches() end, desc = "Git Branches" },
     -- { "<leader>gl", function() Snacks.picker.git_log() end, desc = "Git Log" },
