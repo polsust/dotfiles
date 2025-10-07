@@ -32,10 +32,16 @@ vim.g.autosave = true
 
 _G.format_file = function(bufnr)
   local clients = vim.lsp.get_clients({ bufnr = bufnr })
+  local filtered_clients = vim.iter(clients):filter(function(client) return client.name ~= "GitHub Copilot" end):totable()
+
+  if #filtered_clients == 0 then
+    return
+  end
+
   -- print(vim.inspect(vim.iter(clients):map(function(client) return client.name end)))
 
   -- check if null-ls is available
-  local null_ls_active = vim.iter(clients):any(function(client) return client.name == "null-ls" end)
+  local null_ls_active = vim.iter(filtered_clients):any(function(client) return client.name == "null-ls" end)
 
   vim.lsp.buf.format({
     bufnr = bufnr,
