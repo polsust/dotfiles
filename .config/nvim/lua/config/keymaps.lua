@@ -11,6 +11,8 @@ vim.g.mapleader = " "
 --   term_mode = "t",
 --   command_mode = "c",
 
+key({ "n", "i" }, "<D-`>", "`")
+
 key("n", "<m-a>", "ggVG<C-o>", opts)
 key("n", "<m-d>", "ggVGd", opts)
 key("n", "<m-c>", "ggVGy<C-o>", opts)
