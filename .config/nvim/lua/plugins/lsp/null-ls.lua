@@ -5,9 +5,5 @@ return {
     "nvim-lua/plenary.nvim",
     "nvimtools/none-ls-extras.nvim",
   },
-  opts = function()
-    return {
-      sources = {},
-    }
-  end,
+  opts = {},
 }
