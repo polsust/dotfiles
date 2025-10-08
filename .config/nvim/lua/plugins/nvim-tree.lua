@@ -42,6 +42,8 @@ return {
       key("n", "glk", api.node.navigate.diagnostics.prev, opts("Prev Diagnostic"))
       key("n", "glj", api.node.navigate.diagnostics.next, opts("Next Diagnostic"))
 
+      key("n", "<C-.>", api.tree.toggle_hidden_filter, opts("Toggle Dotfiles"))
+
       key("n", "<C-]>", api.tree.change_root_to_node, opts("CD"))
       key("n", "<C-e>", api.node.open.replace_tree_buffer, opts("Open: In Place"))
       key("n", "<C-k>", api.node.show_info_popup, opts("Info"))
@@ -66,7 +68,6 @@ return {
       key("n", "f", api.live_filter.start, opts("Filter"))
       key("n", "g?", api.tree.toggle_help, opts("Help"))
       key("n", "gy", api.fs.copy.absolute_path, opts("Copy Absolute Path"))
-      key("n", "H", api.tree.toggle_hidden_filter, opts("Toggle Dotfiles"))
       key("n", "I", api.tree.toggle_gitignore_filter, opts("Toggle Git Ignore"))
       key("n", "J", api.node.navigate.sibling.last, opts("Last Sibling"))
       key("n", "K", api.node.navigate.sibling.first, opts("First Sibling"))
