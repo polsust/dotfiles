@@ -15,6 +15,15 @@ return {
         "NvimTree",
         "TelescopePrompt",
       },
+      filetype_overrides = {
+        gdscript = {
+          providers = {
+            "regex",
+            "lsp",
+            "treesitter",
+          },
+        },
+      },
     })
   end,
 }
