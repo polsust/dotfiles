@@ -28,3 +28,5 @@ require("lazy").setup({
     notify = true,
   },
 })
+
+key("n", "<leader>ps", "<cmd>Lazy sync<CR>", {})

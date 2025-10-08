@@ -20,19 +20,22 @@ vim.diagnostic.config({
   },
 })
 
+key("n", "<leader>li", "<cmd>LspInfo<cr>")
+key("n", "<leader>lf", function() format_file(vim.api.nvim_get_current_buf()) end)
+
 vim.api.nvim_create_autocmd("LspAttach", {
   callback = function(args)
     -- local client = assert(vim.lsp.get_client_by_id(args.data.client_id))
 
-    local opts = { noremap = true, silent = true, buffer = args.buf }
+    local opts = { noremap = true, buffer = args.buf }
 
-    vim.keymap.set("n", "gli", vim.diagnostic.open_float, opts)
-    vim.keymap.set("n", "glk", function() vim.diagnostic.jump({ count = -1, float = true }) end, opts)
-    vim.keymap.set("n", "glj", function() vim.diagnostic.jump({ count = 1, float = true }) end, opts)
-    vim.keymap.set("n", "glq", vim.diagnostic.setloclist, opts)
+    key("n", "gli", vim.diagnostic.open_float, opts)
+    key("n", "glk", function() vim.diagnostic.jump({ count = -1, float = true }) end, opts)
+    key("n", "glj", function() vim.diagnostic.jump({ count = 1, float = true }) end, opts)
+    key("n", "glq", vim.diagnostic.setloclist, opts)
 
-    vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, opts)
-    vim.keymap.set("n", "ga", vim.lsp.buf.code_action, opts)
+    key("n", "<C-k>", vim.lsp.buf.signature_help, opts)
+    key("n", "ga", vim.lsp.buf.code_action, opts)
   end,
 })
 

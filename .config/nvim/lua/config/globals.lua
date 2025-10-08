@@ -54,3 +54,12 @@ _G.format_file = function(bufnr)
     end,
   })
 end
+
+_G.key = function(mode, key, result, opts)
+  local options = { noremap = true, silent = true }
+  if opts then
+    options = vim.tbl_extend("force", options, opts)
+  end
+
+  vim.keymap.set(mode, key, result, options)
+end
