@@ -16,7 +16,7 @@ key({ "n", "i" }, "<D-`>", "`")
 key("n", "<m-a>", "ggVG<C-o>", opts)
 key("n", "<m-d>", "ggVGd", opts)
 key("n", "<m-c>", "ggVGy<C-o>", opts)
-key("n", "<m-r>", "<cmd>mksession! Session.vim | restart source Session.vim<cr>", opts)
+key("n", "<m-r>", "<cmd>mksession! /tmp/Session.vim | restart source /tmp/Session.vim<cr>", opts)
 
 key("n", "<m-CR>", "A;<esc>", opts)
 key("i", "<m-CR>", "<esc>A;", opts)
