@@ -36,7 +36,6 @@ return {
   end,
   keys = {
     --   -- Top Pickers & Explorer
-    { "<leader>,", function() Snacks.picker.buffers() end, desc = "Buffers" },
     { "<leader>:", function() Snacks.picker.command_history() end, desc = "Command History" },
     -- find
     { "<leader>fb", function() Snacks.picker.buffers() end, desc = "Buffers" },
