@@ -7,7 +7,7 @@ return {
   event = "VeryLazy",
   opts = function()
     local macro = {
-      color = { fg = "#171A27", gui = "bold" },
+      color = { fg = "#efc86b", gui = "bold" },
       function()
         local reg = vim.fn.reg_recording()
         if reg == "" then
@@ -47,9 +47,9 @@ return {
       sections = {
         lualine_a = {
           "mode",
-          macro,
         },
         lualine_b = {
+          macro,
           "branch",
           "diff",
           "diagnostics",
