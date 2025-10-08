@@ -32,7 +32,7 @@ vim.opt.linebreak = true
 vim.opt.scrolloff = 8
 vim.opt.sidescrolloff = 8
 vim.opt.guifont = "mononoki Nerd Font:h11"
-vim.opt.spelllang = "en-US"
+vim.opt.spelllang = "en"
 vim.opt.winborder = "solid"
 vim.opt.syntax = "OFF"
 vim.opt.shortmess:append("c")
