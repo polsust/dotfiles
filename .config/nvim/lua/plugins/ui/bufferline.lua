@@ -1,5 +1,5 @@
 return {
-  enabled = true,
+  enabled = false,
   "akinsho/bufferline.nvim",
   version = "*",
   dependencies = "nvim-tree/nvim-web-devicons",
@@ -27,8 +27,8 @@ return {
         reveal = { "close" },
       },
       custom_filter = function(buf, buf_nums)
-        -- vim.print(vim.bo[buf].ft)
-        return vim.bo[buf].filetype ~= "oil"
+        -- print(vim.inspect(vim.bo[buf]), vim.inspect(buf_nums))
+        return vim.bo[buf].modifiable
 
         --
         -- return not vim.bo[buf].filetype == "help"

@@ -8,14 +8,14 @@ return {
   cmd = "Grapple",
   keys = {
     {
-      "<a-i>",
+      "<M-i>",
       function()
         require("grapple").tag()
         vim.notify("Grapple tagged: " .. vim.fn.expand("%:t"))
       end,
     },
     {
-      "<a-o>",
+      "<M-o>",
       function()
         local tags = require("grapple").tags()
         if not tags or #tags == 0 then
@@ -27,18 +27,19 @@ return {
 
         -- Add remaining files to the buffer list
         for i = 2, #tags do
-          vim.cmd("badd " .. vim.fn.fnameescape(tags[i].path))
+          vim.cmd("edit " .. vim.fn.fnameescape(tags[i].path))
+          vim.cmd("BufferGoto 1")
         end
       end,
     },
-    { "<a-h>", function() require("grapple").toggle_tags() end },
-    { "<a-j>", "<cmd>Grapple select index=1<cr>" },
-    { "<a-k>", "<cmd>Grapple select index=2<cr>" },
-    { "<a-l>", "<cmd>Grapple select index=3<cr>" },
-    { "<a-;>", "<cmd>Grapple select index=4<cr>" },
-    { "<a-'>", "<cmd>Grapple select index=5<cr>" },
+    { "<M-h>", function() require("grapple").toggle_tags() end },
+    { "<M-j>", "<cmd>Grapple select index=1<cr>" },
+    { "<M-k>", "<cmd>Grapple select index=2<cr>" },
+    { "<M-l>", "<cmd>Grapple select index=3<cr>" },
+    { "<M-;>", "<cmd>Grapple select index=4<cr>" },
+    { "<M-'>", "<cmd>Grapple select index=5<cr>" },
   },
   opts = {
-    scope = "cwd",
+    -- scope = "cwd",
   },
 }
