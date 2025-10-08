@@ -1,5 +1,5 @@
 return {
-  enabled = true,
+  enabled = false,
   "DaikyXendo/nvim-material-icon",
   lazy = true,
   opts = {},

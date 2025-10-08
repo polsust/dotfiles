@@ -9,7 +9,7 @@ return {
       func = nil,
     },
     exchange = {
-      prefix = "gX",
+      prefix = "ge",
       reindent_linewise = true,
     },
     multiply = {
@@ -20,9 +20,9 @@ return {
       prefix = "gS",
       func = nil,
     },
-    -- replace = {
-    --   prefix = "gr",
-    --   reindent_linewise = true,
-    -- },
+    replace = {
+      prefix = "",
+      reindent_linewise = true,
+    },
   },
 }

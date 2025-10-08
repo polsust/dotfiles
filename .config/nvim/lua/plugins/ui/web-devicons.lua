@@ -1,5 +1,5 @@
 return {
-  enabled = false,
+  enabled = true,
   lazy = true,
   "kyazdani42/nvim-web-devicons",
   opts = {

@@ -17,6 +17,8 @@ return {
       ["true,"] = "false,",
       ["true"] = "false",
       ["local"] = "global",
+      ["on"] = "off",
+      ["ON"] = "OFF",
     },
   },
 }
