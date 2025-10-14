@@ -29,15 +29,14 @@ groups_blueprint = [
     Group("0", label="0"),
 ]
 
-# for i,group in enumerate(groups_blueprint):
-#     # add additonl matches
-#     group.matches.append(Match(title=''))
+for group in groups_blueprint:
+    group.matches.append(Match(title=f"ws-{group.name}"))
 
 
 groups = groups_blueprint
 
 
-@lazy.function
+@lazy.function()
 def swap_groups(qtile):
     logger.warning("swap")
     qtile.cmd_del_group("4")
