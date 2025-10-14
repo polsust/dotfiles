@@ -20,6 +20,12 @@ binds_launchers = [
     ),
     Key(
         [mod],
+        "x",
+        lazy.spawn("rofi -show ssh"),
+        desc="Launch rofi ssh mode",
+    ),
+    Key(
+        [mod],
         "period",
         lazy.spawn("rofimoji"),
         desc="Launch rofi emoji picker",
@@ -148,7 +154,7 @@ binds_launchers = [
     Key(
         [mod, "shift"],
         "g",
-        lazy.spawn("record-toggle"),
+        lazy.spawn("record"),
         desc="record",
     ),
 ]
