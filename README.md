@@ -1,7 +1,7 @@
 # These are my config files
 
-Clone the repo and run
+## Setup:
 
 ```bash
-stow .
+git clone https://github.com/polsust/.dotfiles && git clone https://github.com/polsust/.scripts && cd .dotfiles && stow .
 ```
