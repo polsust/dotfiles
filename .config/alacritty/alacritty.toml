@@ -6,7 +6,7 @@ general.import = [
 TERM = "alacritty"
 
 [font]
-size = 9.0
+size = 14.0
 
 [font.normal]
 family = "mononoki Nerd Font"
