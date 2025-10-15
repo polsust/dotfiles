@@ -21,21 +21,6 @@ vim.api.nvim_create_autocmd({ "TextYankPost" }, {
   callback = function() vim.hl.on_yank({ higroup = "Visual", timeout = 200 }) end,
 })
 
--- Relative numbers only for normal mode
-vim.api.nvim_create_autocmd({ "InsertEnter" }, {
-  callback = function() vim.opt.relativenumber = false end,
-})
-
--- Relative numbers only for normal mode
-vim.api.nvim_create_autocmd({ "InsertLeave" }, {
-  callback = function()
-    if vim.bo.filetype == "TelescopePrompt" or vim.bo.filetype == "grapple" or vim.bo.filetype == "snacks_picker_input" then
-      return
-    end
-    vim.opt.relativenumber = true
-  end,
-})
-
 -- -- special files lsp
 -- vim.api.nvim_create_autocmd("LspAttach", {
 -- 	callback = function()
@@ -56,6 +41,14 @@ vim.api.nvim_create_autocmd({ "TextChanged", "InsertLeave" }, {
     end
 
     if string.find(data.file, "__harpoon") then
+      return
+    end
+
+    if string.find(data.file, "oil") then
+      return
+    end
+
+    if string.find(data.file, "minifiles") then
       return
     end
 
@@ -214,3 +207,13 @@ vim.api.nvim_create_autocmd("BufReadPost", {
 --     vim.cmd("wincmd L")
 --   end,
 -- })
+
+vim.api.nvim_create_autocmd("VimEnter", {
+  callback = function()
+    local arg = vim.fn.argv(0)
+
+    if arg ~= "" and vim.fn.isdirectory(arg) == 1 then
+      vim.cmd("cd " .. arg)
+    end
+  end,
+})
