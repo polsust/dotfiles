@@ -17,6 +17,8 @@ return {
     {
       "<M-o>",
       function()
+        miniFilesClose()
+
         local tags = require("grapple").tags()
         if not tags or #tags == 0 then
           return
@@ -33,13 +35,46 @@ return {
       end,
     },
     { "<M-h>", function() require("grapple").toggle_tags() end },
-    { "<M-j>", "<cmd>Grapple select index=1<cr>" },
-    { "<M-k>", "<cmd>Grapple select index=2<cr>" },
-    { "<M-l>", "<cmd>Grapple select index=3<cr>" },
-    { "<M-;>", "<cmd>Grapple select index=4<cr>" },
-    { "<M-'>", "<cmd>Grapple select index=5<cr>" },
+    {
+      "<M-j>",
+      function()
+        miniFilesClose()
+        require("grapple").select({ index = 1 })
+      end,
+    },
+    {
+      "<M-k>",
+      function()
+        miniFilesClose()
+        require("grapple").select({ index = 2 })
+      end,
+    },
+    {
+      "<M-l>",
+      function()
+        miniFilesClose()
+        require("grapple").select({ index = 3 })
+      end,
+    },
+    {
+      "<M-;>",
+      function()
+        miniFilesClose()
+        require("grapple").select({ index = 4 })
+      end,
+    },
+    {
+      "<M-'>",
+      function()
+        miniFilesClose()
+        require("grapple").select({ index = 5 })
+      end,
+    },
   },
   opts = {
-    -- scope = "cwd",
+    statusline = {
+      -- active = "|%s|",
+      inactive = " %s ",
+    },
   },
 }

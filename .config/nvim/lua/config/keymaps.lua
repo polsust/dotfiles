@@ -66,6 +66,7 @@ local function OpenAllGitPending()
 
   for file in output:gmatch("[^\r\n]+") do
     if vim.fn.filereadable(file) == 1 then
+      miniFilesClose()
       vim.cmd("edit " .. vim.fn.fnameescape(file))
     end
   end

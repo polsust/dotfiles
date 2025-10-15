@@ -63,3 +63,9 @@ _G.key = function(mode, key, result, opts)
 
   vim.keymap.set(mode, key, result, options)
 end
+
+_G.miniFilesClose = function()
+  if MiniFiles then
+    MiniFiles.close()
+  end
+end
