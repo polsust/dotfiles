@@ -1,4 +1,5 @@
 return {
+  enabled = true,
   "romgrk/barbar.nvim",
   dependencies = {
     "lewis6991/gitsigns.nvim",
@@ -29,7 +30,7 @@ return {
     { "<M-9>", "<cmd>BufferLast<cr>" },
 
     -- Pin/unpin buffer
-    { "<M-p>", "<Cmd>BufferPin<CR>" },
+    { "<leader>pp", "<Cmd>BufferPin<CR>" },
 
     -- Goto pinned/unpinned buffer
     --                 :BufferGotoPinned
@@ -51,12 +52,12 @@ return {
       buffer_index = false,
       buffer_number = false,
       button = "",
-      gitsigns = {
-        added = { enabled = true, icon = "+" },
-        changed = { enabled = true, icon = "~" },
-        deleted = { enabled = true, icon = "-" },
-      },
-      separator_at_end = false,
+      -- gitsigns = {
+      --   added = { enabled = true, icon = "+" },
+      --   changed = { enabled = true, icon = "~" },
+      --   deleted = { enabled = true, icon = "-" },
+      -- },
+      separator_at_end = true,
 
       -- Configure the icons on the bufferline when modified or pinned.
       -- Supports all the base icon options.
