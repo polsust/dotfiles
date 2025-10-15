@@ -40,7 +40,7 @@ return {
     -- find
     { "<leader>fb", function() Snacks.picker.buffers() end, desc = "Buffers" },
     { "<leader>fc", function() Snacks.picker.files({ cwd = vim.fn.stdpath("config") }) end, desc = "Find Config File" },
-    { "<c-p>", function() Snacks.picker.files() end, desc = "Find Files" },
+    { "<c-p>", function() Snacks.picker.files({ exclude = { "*.mp3" }, hidden = true }) end, desc = "Find Files" },
     { "<leader>fg", function() Snacks.picker.git_status() end, desc = "Git Status" },
     { "<leader>fp", function() Snacks.picker.projects() end, desc = "Projects" },
     { "<leader>fr", function() Snacks.picker.recent() end, desc = "Recent" },
